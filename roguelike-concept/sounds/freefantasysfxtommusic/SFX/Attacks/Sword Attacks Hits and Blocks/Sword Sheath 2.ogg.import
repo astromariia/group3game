@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://rfds0oparqhe"
+path="res://.godot/imported/Sword Sheath 2.ogg-814087c8e86eaeadfd03217c66719808.oggvorbisstr"
+
+[deps]
+
+source_file="res://sounds/freefantasysfxtommusic/SFX/Attacks/Sword Attacks Hits and Blocks/Sword Sheath 2.ogg"
+dest_files=["res://.godot/imported/Sword Sheath 2.ogg-814087c8e86eaeadfd03217c66719808.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

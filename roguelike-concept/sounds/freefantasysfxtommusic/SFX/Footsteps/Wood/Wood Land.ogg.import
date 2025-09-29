@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b1s7me2vnbfcq"
+path="res://.godot/imported/Wood Land.ogg-407d6a57e947d84dce6c74d6c7947aed.oggvorbisstr"
+
+[deps]
+
+source_file="res://sounds/freefantasysfxtommusic/SFX/Footsteps/Wood/Wood Land.ogg"
+dest_files=["res://.godot/imported/Wood Land.ogg-407d6a57e947d84dce6c74d6c7947aed.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

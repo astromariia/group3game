@@ -1,0 +1,110 @@
+[gd_scene load_steps=17 format=3 uid="uid://8vepqhl4tryp"]
+
+[ext_resource type="Script" uid="uid://c5bf1mlj8d284" path="res://arrow_projectile.gd" id="1_3mgg5"]
+[ext_resource type="Texture2D" uid="uid://ckban17ecijpd" path="res://Art/0x72_DungeonTilesetII_v1.7/Arrow_impact_pack.png" id="2_6wwwy"]
+[ext_resource type="Texture2D" uid="uid://df8s84h21p3fu" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/Arrows_pack.png" id="3_h7qt7"]
+[ext_resource type="AudioStream" uid="uid://bfvwsjg46lx6g" path="res://sounds/freefantasysfxtommusic/SFX/Attacks/Bow Attacks Hits and Blocks/Bow Impact Hit 1.ogg" id="4_6wwwy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3mgg5"]
+size = Vector2(10, 5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0sqvh"]
+atlas = ExtResource("2_6wwwy")
+region = Rect2(394, 155, 945, 551)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gqs37"]
+atlas = ExtResource("2_6wwwy")
+region = Rect2(1339, 155, 945, 551)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_37hfs"]
+atlas = ExtResource("2_6wwwy")
+region = Rect2(2284, 155, 945, 551)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_56qjb"]
+atlas = ExtResource("2_6wwwy")
+region = Rect2(3229, 155, 945, 551)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4tj4"]
+atlas = ExtResource("2_6wwwy")
+region = Rect2(4174, 155, 945, 551)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t8r5n"]
+atlas = ExtResource("2_6wwwy")
+region = Rect2(394, 706, 945, 551)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fwwms"]
+atlas = ExtResource("2_6wwwy")
+region = Rect2(2284, 706, 945, 551)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j4m13"]
+atlas = ExtResource("3_h7qt7")
+region = Rect2(0, 0, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jdhue"]
+atlas = ExtResource("3_h7qt7")
+region = Rect2(1024, 0, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mpaf0"]
+atlas = ExtResource("3_h7qt7")
+region = Rect2(2048, 0, 1024, 1024)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3wij8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0sqvh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gqs37")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_37hfs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_56qjb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4tj4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t8r5n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fwwms")
+}],
+"loop": false,
+"name": &"collide",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j4m13")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jdhue")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mpaf0")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 5.0
+}]
+
+[node name="normal_arrow" type="Area2D"]
+script = ExtResource("1_3mgg5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 0.5)
+shape = SubResource("RectangleShape2D_3mgg5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(5.68434e-14, 0)
+scale = Vector2(0.0138889, 0.0146325)
+sprite_frames = SubResource("SpriteFrames_3wij8")
+animation = &"fly"
+
+[node name="hitsound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_6wwwy")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://jshs343byo6h"
+path="res://.godot/imported/Sea.ogg-9c93b8bd6d2828c35ffa7be1d79d62b8.oggvorbisstr"
+
+[deps]
+
+source_file="res://sounds/freefantasysfxtommusic/BGS Loops/Sea/Sea.ogg"
+dest_files=["res://.godot/imported/Sea.ogg-9c93b8bd6d2828c35ffa7be1d79d62b8.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

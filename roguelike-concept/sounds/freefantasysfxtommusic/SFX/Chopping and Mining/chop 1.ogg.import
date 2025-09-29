@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bikbwrjjmq5l3"
+path="res://.godot/imported/chop 1.ogg-a940a5950589d2e9c10448533cb7b911.oggvorbisstr"
+
+[deps]
+
+source_file="res://sounds/freefantasysfxtommusic/SFX/Chopping and Mining/chop 1.ogg"
+dest_files=["res://.godot/imported/chop 1.ogg-a940a5950589d2e9c10448533cb7b911.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

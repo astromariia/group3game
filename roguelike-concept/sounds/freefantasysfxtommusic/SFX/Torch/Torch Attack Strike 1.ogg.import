@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c1w7jn37cnnlv"
+path="res://.godot/imported/Torch Attack Strike 1.ogg-974756e1194b0103c27c05eb43fa453d.oggvorbisstr"
+
+[deps]
+
+source_file="res://sounds/freefantasysfxtommusic/SFX/Torch/Torch Attack Strike 1.ogg"
+dest_files=["res://.godot/imported/Torch Attack Strike 1.ogg-974756e1194b0103c27c05eb43fa453d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bnmsa5f4dot3e"
+path="res://.godot/imported/Gate Close.ogg-08e6709e6d4ad143f68baaad5fd6ae3a.oggvorbisstr"
+
+[deps]
+
+source_file="res://sounds/freefantasysfxtommusic/SFX/Doors Gates and Chests/Gate Close.ogg"
+dest_files=["res://.godot/imported/Gate Close.ogg-08e6709e6d4ad143f68baaad5fd6ae3a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

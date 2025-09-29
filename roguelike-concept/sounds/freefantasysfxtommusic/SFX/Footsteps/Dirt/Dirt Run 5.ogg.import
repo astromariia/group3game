@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dxgpldgttd0ts"
+path="res://.godot/imported/Dirt Run 5.ogg-7de73f9445fcc89d62e15c91897851a1.oggvorbisstr"
+
+[deps]
+
+source_file="res://sounds/freefantasysfxtommusic/SFX/Footsteps/Dirt/Dirt Run 5.ogg"
+dest_files=["res://.godot/imported/Dirt Run 5.ogg-7de73f9445fcc89d62e15c91897851a1.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
