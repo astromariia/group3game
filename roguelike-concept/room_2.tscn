@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://bmxlj3lsgh06t"]
+[gd_scene load_steps=39 format=4 uid="uid://bmxlj3lsgh06t"]
 
 [ext_resource type="TileSet" uid="uid://bwed0al80aii" path="res://room2_tile_set.tres" id="1_7hp4u"]
 [ext_resource type="Script" uid="uid://bgn2n3h1802dy" path="res://room_2game.gd" id="1_66el0"]
@@ -22,6 +22,16 @@
 [ext_resource type="Texture2D" uid="uid://bw8kvtvo1ufrx" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/weapon_bow.png" id="20_kymty"]
 [ext_resource type="Texture2D" uid="uid://c1dexn2tle4t1" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/weapon_bow_2.png" id="21_dk8dn"]
 [ext_resource type="AudioStream" uid="uid://4kiq032brx18" path="res://sounds/freefantasysfxtommusic/SFX/Attacks/Bow Attacks Hits and Blocks/Bow Attack 1.ogg" id="22_alay5"]
+[ext_resource type="Script" uid="uid://tkxsny8wfjtd" path="res://goblin.gd" id="23_alay5"]
+[ext_resource type="Texture2D" uid="uid://bty58ouvfrwxs" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_idle_anim_f0.png" id="24_hlu58"]
+[ext_resource type="Texture2D" uid="uid://cs6ocv3c60cwy" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_idle_anim_f1.png" id="25_3nln7"]
+[ext_resource type="Texture2D" uid="uid://bpom3fwhdeni" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_idle_anim_f2.png" id="26_jl3ug"]
+[ext_resource type="Texture2D" uid="uid://vqac4hylcoq1" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_idle_anim_f3.png" id="27_7worf"]
+[ext_resource type="Texture2D" uid="uid://cruasmneh0e83" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_run_anim_f0.png" id="28_ksxq5"]
+[ext_resource type="Texture2D" uid="uid://b1g8du7fdoylr" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_run_anim_f1.png" id="29_7om1s"]
+[ext_resource type="Texture2D" uid="uid://vqdd7q78qyo" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_run_anim_f2.png" id="30_v6ghv"]
+[ext_resource type="Texture2D" uid="uid://d2orcfdtjq2pq" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_run_anim_f3.png" id="31_m8sas"]
+[ext_resource type="AudioStream" uid="uid://7c7pvausheuo" path="res://sounds/Minifantasy_Dungeon_SFX/17_orc_atk_sword_1.wav" id="32_sycg5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hlu58"]
 animations = [{
@@ -97,6 +107,46 @@ animations = [{
 }]
 
 [sub_resource type="GDScript" id="GDScript_7worf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_awxx7"]
+size = Vector2(10, 10)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_elfu4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_hlu58")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_3nln7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_jl3ug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_7worf")
+}],
+"loop": true,
+"name": &"goblin_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_ksxq5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_7om1s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_v6ghv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_m8sas")
+}],
+"loop": true,
+"name": &"goblin_run",
+"speed": 5.0
+}]
 
 [node name="room_2" type="Node2D"]
 script = ExtResource("1_66el0")
@@ -177,3 +227,22 @@ script = SubResource("GDScript_7worf")
 position = Vector2(-5.72205e-06, -1.43051e-06)
 stream = ExtResource("22_alay5")
 volume_db = 1.333
+
+[node name="goblin" type="CharacterBody2D" parent="." groups=["enemy"]]
+position = Vector2(200, 120)
+script = ExtResource("23_alay5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="goblin"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_awxx7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="goblin"]
+position = Vector2(-1, -1)
+sprite_frames = SubResource("SpriteFrames_elfu4")
+animation = &"goblin_run"
+
+[node name="AttackCooldownTimer" type="Timer" parent="goblin"]
+
+[node name="attacknoises" type="AudioStreamPlayer2D" parent="goblin"]
+stream = ExtResource("32_sycg5")
+volume_db = -2.0
