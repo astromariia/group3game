@@ -5,10 +5,15 @@ extends CharacterBody2D
 @onready var player : Node2D = %elf
 @onready var attackCooldown: Timer = $AttackCooldownTimer
 
+
 #time in between attacks, in seconds
 var attackSpeed = 1
+
 #damage in HP
 var damage = 1
+
+var HP = 5
+var currentHealth = HP
 
 func _ready():
 	attackCooldown.one_shot = true
@@ -37,11 +42,18 @@ func move():
 		
 func attack():
 	if(attackCooldown.is_stopped()):
-		print("ouch x" + str(damage))
 		if player.has_method("take_damage"):
 			player.take_damage(damage)
 			$attacknoises.play()
 		attackCooldown.start(attackSpeed)
+		
+func take_damage(amount: int):
+	currentHealth -= amount
+	print("goblin test")
+	if currentHealth < 0:
+		currentHealth = 0
+		print("goblin is dead")
+		self.queue_free()
 	
 
 func _physics_process(_delta):

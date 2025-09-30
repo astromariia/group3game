@@ -28,7 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://u0mi3jwawbam" path="res://inventorySlot.tscn" id="19_eu6ph"]
 [ext_resource type="Texture2D" uid="uid://vqdd7q78qyo" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_run_anim_f2.png" id="19_i2p71"]
 [ext_resource type="Texture2D" uid="uid://d2orcfdtjq2pq" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_run_anim_f3.png" id="20_xa8c5"]
-[ext_resource type="Script" path="res://door_open.gd" id="24_f1jbl"]
+[ext_resource type="Script" uid="uid://bblaq1vj5kxod" path="res://door_open.gd" id="24_f1jbl"]
 [ext_resource type="Texture2D" uid="uid://bioylb4ul2av6" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/muddy_anim_f0.png" id="25_5b14r"]
 [ext_resource type="PackedScene" uid="uid://dclfxak0qm0gw" path="res://mud_projectile.tscn" id="25_bnpwn"]
 [ext_resource type="Texture2D" uid="uid://y7xdqjysnb78" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/muddy_anim_f1.png" id="26_bnpwn"]
