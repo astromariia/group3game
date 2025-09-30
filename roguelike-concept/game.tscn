@@ -1,11 +1,10 @@
-[gd_scene load_steps=69 format=4 uid="uid://dg4rr1xjfhdqi"]
+[gd_scene load_steps=57 format=4 uid="uid://dg4rr1xjfhdqi"]
 
 [ext_resource type="Texture2D" uid="uid://c7bbb16dxp1xi" path="res://Art/0x72_DungeonTilesetII_v1.7/atlas_floor-16x16.png" id="1_feb5d"]
-[ext_resource type="Script" uid="uid://c2h8kh1qod130" path="res://game.gd" id="1_klri6"]
 [ext_resource type="Texture2D" uid="uid://cr106jf2dvlta" path="res://Art/0x72_DungeonTilesetII_v1.7/0x72_DungeonTilesetII_v1.7.png" id="2_fc0e3"]
 [ext_resource type="Texture2D" uid="uid://cubh2we3o4rt1" path="res://Art/0x72_DungeonTilesetII_v1.7/atlas_walls_high-16x32.png" id="3_7jktm"]
 [ext_resource type="Script" uid="uid://cnteeodvxavyd" path="res://elf.gd" id="4_iotsf"]
-[ext_resource type="Texture2D" uid="uid://dfhgu5rdwyr5m" path="res://UI/MediavelFree.png" id="4_qhcbd"]
+[ext_resource type="Texture2D" uid="uid://dfhgu5rdwyr5m" path="res://Art/MediavelFree.png" id="4_qhcbd"]
 [ext_resource type="Texture2D" uid="uid://sbp4q3qfpd8r" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_hit_anim_f0.png" id="5_hb5m1"]
 [ext_resource type="Texture2D" uid="uid://cd2gy0fi5i244" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_idle_anim_f0.png" id="5_lc2xo"]
 [ext_resource type="Texture2D" uid="uid://djrkholtnq4qj" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_idle_anim_f1.png" id="6_215e1"]
@@ -20,28 +19,19 @@
 [ext_resource type="Script" uid="uid://tkxsny8wfjtd" path="res://goblin.gd" id="14_x5p1p"]
 [ext_resource type="Script" uid="uid://wkmi37677kk7" path="res://health_bar.gd" id="15_36jdj"]
 [ext_resource type="Texture2D" uid="uid://bpom3fwhdeni" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_idle_anim_f2.png" id="15_x5p1p"]
-[ext_resource type="Texture2D" uid="uid://b2oafgopivhk0" path="res://UI/healthbarUnder.png" id="16_dhpj7"]
+[ext_resource type="Texture2D" uid="uid://b2oafgopivhk0" path="res://Art/healthbarUnder.png" id="16_dhpj7"]
 [ext_resource type="Texture2D" uid="uid://vqac4hylcoq1" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_idle_anim_f3.png" id="16_qhcbd"]
-[ext_resource type="Texture2D" uid="uid://calheuxqupogm" path="res://UI/healthbarProgress.png" id="17_7knny"]
+[ext_resource type="Texture2D" uid="uid://calheuxqupogm" path="res://Art/healthbarProgress.png" id="17_7knny"]
 [ext_resource type="Texture2D" uid="uid://cruasmneh0e83" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_run_anim_f0.png" id="17_f1jbl"]
 [ext_resource type="Texture2D" uid="uid://b1g8du7fdoylr" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_run_anim_f1.png" id="18_vaj68"]
-[ext_resource type="PackedScene" uid="uid://u0mi3jwawbam" path="res://inventorySlot.tscn" id="19_eu6ph"]
 [ext_resource type="Texture2D" uid="uid://vqdd7q78qyo" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_run_anim_f2.png" id="19_i2p71"]
 [ext_resource type="Texture2D" uid="uid://d2orcfdtjq2pq" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_run_anim_f3.png" id="20_xa8c5"]
-[ext_resource type="Script" path="res://door_open.gd" id="24_f1jbl"]
+[ext_resource type="Script" uid="uid://bblaq1vj5kxod" path="res://door_open.gd" id="24_f1jbl"]
 [ext_resource type="Texture2D" uid="uid://bioylb4ul2av6" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/muddy_anim_f0.png" id="25_5b14r"]
 [ext_resource type="PackedScene" uid="uid://dclfxak0qm0gw" path="res://mud_projectile.tscn" id="25_bnpwn"]
 [ext_resource type="Texture2D" uid="uid://y7xdqjysnb78" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/muddy_anim_f1.png" id="26_bnpwn"]
 [ext_resource type="Texture2D" uid="uid://dn0dd3uoo0v0y" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/muddy_anim_f2.png" id="27_36jdj"]
-[ext_resource type="AudioStream" uid="uid://7c7pvausheuo" path="res://sounds/Minifantasy_Dungeon_SFX/17_orc_atk_sword_1.wav" id="27_klri6"]
 [ext_resource type="Texture2D" uid="uid://bajqxu1jcb0db" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/muddy_anim_f3.png" id="28_xfvwf"]
-[ext_resource type="Script" uid="uid://bbefta1lpqh0f" path="res://pointy.gd" id="33_7knny"]
-[ext_resource type="PackedScene" uid="uid://8vepqhl4tryp" path="res://arrow_projectile.tscn" id="34_082n1"]
-[ext_resource type="AudioStream" uid="uid://bmhiulfewacnn" path="res://sounds/freefantasysfxtommusic/SFX/Spells/mudshot.ogg" id="34_r62pu"]
-[ext_resource type="Texture2D" uid="uid://c1dexn2tle4t1" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/weapon_bow_2.png" id="35_aa0lp"]
-[ext_resource type="Script" uid="uid://cevffci2qirxs" path="res://bow.gd" id="35_iu0sx"]
-[ext_resource type="Texture2D" uid="uid://bw8kvtvo1ufrx" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/weapon_bow.png" id="36_iu0sx"]
-[ext_resource type="AudioStream" uid="uid://4kiq032brx18" path="res://sounds/freefantasysfxtommusic/SFX/Attacks/Bow Attacks Hits and Blocks/Bow Attack 1.ogg" id="39_l1i01"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qhcbd"]
 texture = ExtResource("1_feb5d")
@@ -2159,33 +2149,6 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iotsf"]
 size = Vector2(15, 19)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_4v2jo"]
-animations = [{
-"frames": [],
-"loop": true,
-"name": &"new_animation",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("36_iu0sx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("35_aa0lp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("35_aa0lp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("36_iu0sx")
-}],
-"loop": false,
-"name": &"shoot",
-"speed": 6.0
-}]
-
-[sub_resource type="GDScript" id="GDScript_r62pu"]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5b14r"]
 size = Vector2(10, 10)
 
@@ -2231,26 +2194,21 @@ size = Vector2(9.05494, 20)
 
 [sub_resource type="GDScript" id="GDScript_36jdj"]
 script/source = "extends CharacterBody2D
-@onready var pointer : Node2D = $POINTY
 @onready var player : Node2D = %elf
 @onready var _animated_sprite = $AnimatedSprite2D
 @export var speed = 0.5
-@export var facingDir = \"left\"
 @export var mud : PackedScene
 @onready var attackCooldown: Timer = $ShootyCooldown
 func facing():
 	var playerPos = player.global_position
 	var selfPos = global_position
+	var facing = selfPos-playerPos
 	if playerPos.x > selfPos.x:
 		_animated_sprite.flip_h = false
 		_animated_sprite.play(\"spit\")
-		facingDir = \"left\"
 	else:
 		_animated_sprite.flip_h = true
 		_animated_sprite.play(\"spit\")
-		facingDir = \"right\"
-	
-	pointer.pointAt(self, facingDir)
 
 
 #time in between attacks, in seconds
@@ -2262,18 +2220,8 @@ func _ready():
 	attackCooldown.one_shot = true
 	attackCooldown.autostart = false
 func shoot():
-	$mudshot.play()
 	var b = mud.instantiate()
 	owner.add_child(b)
-	match facingDir.to_lower():
-		\"up\":
-			b.dir = Vector2(0,-1)
-		\"down\":
-			b.dir = Vector2(0,1)
-		\"left\":
-			b.dir = Vector2(1,0)
-		\"right\":
-			b.dir  = Vector2(-1,0)
 	b.transform = $POINTY.global_transform
 	
 func attack():
@@ -2310,7 +2258,6 @@ animations = [{
 
 [node name="Start" type="Node2D"]
 scale = Vector2(0.993936, 1.00339)
-script = ExtResource("1_klri6")
 metadata/_edit_vertical_guides_ = [-430.0]
 
 [node name="floor" type="TileMapLayer" parent="."]
@@ -2383,33 +2330,6 @@ texture_under = ExtResource("16_dhpj7")
 texture_progress = ExtResource("17_7knny")
 script = ExtResource("15_36jdj")
 
-[node name="InventoryGui" parent="elf/CanvasLayer" instance=ExtResource("19_eu6ph")]
-offset_left = 282.0
-offset_top = 88.0
-offset_right = -172.0
-offset_bottom = -156.0
-
-[node name="bow" type="CharacterBody2D" parent="elf"]
-position = Vector2(18.629, 6.46957)
-script = ExtResource("35_iu0sx")
-mud = ExtResource("34_082n1")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="elf/bow"]
-position = Vector2(-2.6226e-06, -3.8147e-06)
-sprite_frames = SubResource("SpriteFrames_4v2jo")
-animation = &"shoot"
-
-[node name="Marker2D" type="Marker2D" parent="elf/bow"]
-position = Vector2(11.0671, 0)
-script = SubResource("GDScript_r62pu")
-
-[node name="Timer" type="Timer" parent="elf/bow"]
-
-[node name="bowattack" type="AudioStreamPlayer2D" parent="elf/bow"]
-position = Vector2(-5.72205e-06, -1.43051e-06)
-stream = ExtResource("39_l1i01")
-volume_db = 1.333
-
 [node name="goblin" type="CharacterBody2D" parent="." groups=["enemy"]]
 position = Vector2(200, 120)
 script = ExtResource("14_x5p1p")
@@ -2425,10 +2345,6 @@ animation = &"goblin_run"
 frame_progress = 0.128271
 
 [node name="AttackCooldownTimer" type="Timer" parent="goblin"]
-
-[node name="attacknoises" type="AudioStreamPlayer2D" parent="goblin"]
-stream = ExtResource("27_klri6")
-volume_db = -2.0
 
 [node name="Door_open" type="Area2D" parent="."]
 position = Vector2(231.403, 84.7128)
@@ -2456,17 +2372,9 @@ frame_progress = 0.0676391
 
 [node name="POINTY" type="Marker2D" parent="muddy"]
 position = Vector2(21.1281, -0.996621)
-script = ExtResource("33_7knny")
 
 [node name="ShootyCooldown" type="Timer" parent="muddy"]
-
-[node name="mudshot" type="AudioStreamPlayer2D" parent="muddy"]
-stream = ExtResource("34_r62pu")
 
 [node name="muddy_mud" parent="." instance=ExtResource("25_bnpwn")]
 visible = false
 position = Vector2(153.933, 184.375)
-
-[node name="arrow" parent="." instance=ExtResource("34_082n1")]
-visible = false
-position = Vector2(156.952, 195.338)

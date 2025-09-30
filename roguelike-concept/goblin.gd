@@ -40,7 +40,6 @@ func attack():
 		print("ouch x" + str(damage))
 		if player.has_method("take_damage"):
 			player.take_damage(damage)
-			$attacknoises.play()
 		attackCooldown.start(attackSpeed)
 	
 

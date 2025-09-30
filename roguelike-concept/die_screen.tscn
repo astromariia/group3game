@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://chtnqlhv7bxva"]
 
 [ext_resource type="Script" uid="uid://b34ygh1yfv5rv" path="res://die_screen.gd" id="1_73b5d"]
-[ext_resource type="Texture2D" uid="uid://dfhgu5rdwyr5m" path="res://UI/MediavelFree.png" id="1_noejn"]
+[ext_resource type="Texture2D" uid="uid://dfhgu5rdwyr5m" path="res://Art/MediavelFree.png" id="1_noejn"]
 [ext_resource type="FontFile" uid="uid://cj663fh7wyfqj" path="res://Main Menu/Poco.ttf" id="2_73b5d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jqy3h"]

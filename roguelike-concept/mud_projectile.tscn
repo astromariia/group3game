@@ -1,7 +1,7 @@
 [gd_scene load_steps=20 format=3 uid="uid://dclfxak0qm0gw"]
 
 [ext_resource type="Script" uid="uid://ebh7s3q1sxjg" path="res://area_2d.gd" id="1_10hoy"]
-[ext_resource type="Texture2D" uid="uid://cahsu5tvdctht" path="res://UI/L.png" id="2_3k267"]
+[ext_resource type="Texture2D" uid="uid://cahsu5tvdctht" path="res://Art/L.png" id="2_3k267"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bnpwn"]
 size = Vector2(8.04879, 7.97296)
@@ -135,6 +135,6 @@ shape = SubResource("RectangleShape2D_bnpwn")
 position = Vector2(0, 1.81198e-05)
 scale = Vector2(0.627288, 0.654877)
 sprite_frames = SubResource("SpriteFrames_4v2jo")
-animation = &"splode"
+animation = &"shooty"
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
