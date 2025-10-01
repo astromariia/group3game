@@ -1,8 +1,7 @@
 extends Control
 
-@onready var icon: TextureRect = $Icon  # make sure the TextureRect is a child named "Icon"
+@onready var icon: TextureRect = $Icon 
 
-# Dictionary of item icons
 var item_icons = {
 	"Bow": preload("res://Art/0x72_DungeonTilesetII_v1.7/frames/weapon_bow.png")
 	# Add other items like "Sword" here
