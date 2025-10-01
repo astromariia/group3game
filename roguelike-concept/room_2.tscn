@@ -1,12 +1,105 @@
-[gd_scene load_steps=4 format=4 uid="uid://bmxlj3lsgh06t"]
+[gd_scene load_steps=27 format=4 uid="uid://bmxlj3lsgh06t"]
 
 [ext_resource type="TileSet" uid="uid://bwed0al80aii" path="res://room2_tile_set.tres" id="1_7hp4u"]
+[ext_resource type="Script" uid="uid://bgn2n3h1802dy" path="res://room_2game.gd" id="1_66el0"]
 [ext_resource type="TileSet" uid="uid://bhge3u3jwyois" path="res://walls.tres" id="2_h83ob"]
+[ext_resource type="Script" uid="uid://cnteeodvxavyd" path="res://elf.gd" id="4_66el0"]
+[ext_resource type="Texture2D" uid="uid://sbp4q3qfpd8r" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_hit_anim_f0.png" id="5_2tyel"]
+[ext_resource type="Texture2D" uid="uid://cd2gy0fi5i244" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_idle_anim_f0.png" id="6_5g4kq"]
+[ext_resource type="Texture2D" uid="uid://djrkholtnq4qj" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_idle_anim_f1.png" id="7_axslj"]
+[ext_resource type="Texture2D" uid="uid://cygaq8cwuxcpt" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_idle_anim_f2.png" id="8_6216m"]
+[ext_resource type="Texture2D" uid="uid://cdaorie6tys2p" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_idle_anim_f3.png" id="9_lbl28"]
+[ext_resource type="Texture2D" uid="uid://b7827kjfsgamw" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_run_anim_f0.png" id="10_gqsxl"]
+[ext_resource type="Texture2D" uid="uid://d1lgbdhjgkk6h" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_run_anim_f1.png" id="11_u4cue"]
+[ext_resource type="Texture2D" uid="uid://bwua1sputwhs4" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_run_anim_f2.png" id="12_vvilg"]
+[ext_resource type="Texture2D" uid="uid://r2ud12pu53g2" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_run_anim_f3.png" id="13_3ujfn"]
+[ext_resource type="Texture2D" uid="uid://b2oafgopivhk0" path="res://UI/healthbarUnder.png" id="14_tdtv1"]
+[ext_resource type="Texture2D" uid="uid://calheuxqupogm" path="res://UI/healthbarProgress.png" id="15_vwuv8"]
+[ext_resource type="Script" uid="uid://wkmi37677kk7" path="res://health_bar.gd" id="16_08dkn"]
+[ext_resource type="PackedScene" uid="uid://u0mi3jwawbam" path="res://inventorySlot.tscn" id="17_cf22k"]
+[ext_resource type="Script" uid="uid://cevffci2qirxs" path="res://bow.gd" id="18_rybfj"]
+[ext_resource type="PackedScene" uid="uid://8vepqhl4tryp" path="res://arrow_projectile.tscn" id="19_om8tl"]
+[ext_resource type="Texture2D" uid="uid://bw8kvtvo1ufrx" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/weapon_bow.png" id="20_kymty"]
+[ext_resource type="Texture2D" uid="uid://c1dexn2tle4t1" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/weapon_bow_2.png" id="21_dk8dn"]
+[ext_resource type="AudioStream" uid="uid://4kiq032brx18" path="res://sounds/freefantasysfxtommusic/SFX/Attacks/Bow Attacks Hits and Blocks/Bow Attack 1.ogg" id="22_alay5"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ttdm0"]
-size = Vector2(15, 20)
+[sub_resource type="SpriteFrames" id="SpriteFrames_hlu58"]
+animations = [{
+"frames": [{
+"duration": 0.9,
+"texture": ExtResource("5_2tyel")
+}],
+"loop": true,
+"name": &"elf_hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_5g4kq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_axslj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_6216m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_lbl28")
+}],
+"loop": true,
+"name": &"elf_m_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_gqsxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_u4cue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_vvilg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_3ujfn")
+}],
+"loop": true,
+"name": &"elf_m_run",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3nln7"]
+size = Vector2(15, 19)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jl3ug"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_kymty")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_dk8dn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_dk8dn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_kymty")
+}],
+"loop": false,
+"name": &"shoot",
+"speed": 6.0
+}]
+
+[sub_resource type="GDScript" id="GDScript_7worf"]
 
 [node name="room_2" type="Node2D"]
+script = ExtResource("1_66el0")
 
 [node name="floor_2" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAACAAEAAAABAAQAAAADAAEAAAABAAQAAAAEAAEAAAABAAQAAAAFAAEAAAABAAQAAAAGAAEAAAABAAQAAAAHAAEAAAABAAQAAAAHAAIAAAABAAQAAAAHAAMAAAABAAQAAAAHAAQAAAABAAQAAAAHAAUAAAABAAQAAAAHAAYAAAABAAQAAAAHAAcAAAABAAQAAAAHAAgAAAABAAQAAAAIAAgAAAABAAQAAAAJAAgAAAABAAQAAAAKAAgAAAABAAQAAAALAAgAAAABAAQAAAAMAAgAAAABAAQAAAAMAAcAAAABAAQAAAAMAAYAAAABAAQAAAANAAYAAAABAAQAAAAOAAYAAAABAAQAAAAPAAYAAAABAAQAAAAPAAUAAAABAAQAAAAQAAUAAAABAAQAAAARAAUAAAABAAQAAAASAAUAAAABAAQAAAATAAUAAAABAAQAAAATAAQAAAABAAQAAAATAAMAAAABAAQAAAAUAAMAAAABAAQAAAAUAAIAAAABAAQAAAAUAAEAAAABAAQAAAAVAAEAAAABAAQAAAAWAAEAAAABAAQAAAAXAAEAAAABAAQAAAAYAAEAAAABAAQAAAAYAAIAAAABAAQAAAAYAAMAAAABAAQAAAAYAAQAAAABAAQAAAAYAAUAAAABAAQAAAAYAAYAAAABAAQAAAAYAAcAAAABAAQAAAAYAAgAAAABAAQAAAAYAAkAAAABAAQAAAAYAAoAAAABAAQAAAAYAAsAAAABAAQAAAAYAAwAAAABAAQAAAAZAAEAAAABAAQAAAAZAAIAAAABAAQAAAAZAAMAAAABAAQAAAAZAAQAAAABAAQAAAAZAAUAAAABAAQAAAAZAAYAAAABAAQAAAAZAAcAAAABAAQAAAAZAAgAAAABAAQAAAAZAAkAAAABAAQAAAAZAAoAAAABAAQAAAAZAAsAAAABAAQAAAAVAAIAAAABAAQAAAAWAAIAAAABAAQAAAAXAAIAAAABAAQAAAAXAAQAAAABAAQAAAAXAAUAAAACAAUAAAAXAAYAAAACAAUAAAAXAAcAAAACAAUAAAAXAAgAAAACAAUAAAAXAAkAAAACAAUAAAAXAAoAAAABAAQAAAAXAAsAAAABAAQAAAAXAAwAAAABAAQAAAAXAAMAAAABAAQAAAAWAAMAAAABAAQAAAAVAAMAAAABAAQAAAAWAAQAAAACAAUAAAAWAAcAAAABAAQAAAAWAAgAAAABAAQAAAAWAAkAAAABAAQAAAAWAAoAAAABAAQAAAAWAAsAAAABAAQAAAAWAAwAAAABAAQAAAAZAAwAAAABAAQAAAAYAA0AAAABAAQAAAAXAA0AAAABAAQAAAAXAA4AAAABAAQAAAAWAA4AAAABAAQAAAAVAA4AAAABAAQAAAAUAA4AAAABAAQAAAATAA4AAAABAAQAAAASAA4AAAABAAQAAAARAA4AAAABAAQAAAAQAA4AAAABAAQAAAAPAA4AAAABAAQAAAAOAA4AAAABAAQAAAANAA4AAAACAAYAAAANAA8AAAABAAQAAAAMAA8AAAABAAQAAAALAA8AAAABAAQAAAAKAA8AAAABAAQAAAAJAA8AAAABAAQAAAAIAA8AAAABAAQAAAAHAA8AAAABAAQAAAAGAA8AAAABAAQAAAAFAA8AAAABAAQAAAAFAA4AAAABAAQAAAAEAA4AAQAEAAUAAAAEAA0AAAABAAQAAAADAA0AAAABAAQAAAACAA0AAAABAAQAAAACAAwAAAABAAQAAAACAAsAAAABAAQAAAACAAoAAAABAAQAAAACAAkAAAABAAQAAAACAAgAAAABAAQAAAACAAQAAAABAAQAAAACAAcAAAABAAQAAAACAAYAAAABAAQAAAACAAUAAAABAAQAAAACAAMAAAABAAQAAAACAAIAAAABAAQAAAADAAIAAAABAAQAAAAEAAIAAAABAAQAAAAFAAIAAAABAAQAAAAGAAIAAAABAAQAAAAGAAMAAAABAAQAAAAGAAQAAAABAAQAAAAGAAUAAAABAAQAAAAGAAYAAAABAAQAAAAGAAcAAAABAAQAAAAGAAgAAAABAAQAAAAGAAkAAAABAAQAAAAGAAoAAAABAAQAAAAGAAsAAAABAAQAAAAGAAwAAAACAAUAAAAHAAwAAAABAAQAAAAIAAwAAAABAAQAAAAIAAsAAAABAAQAAAAJAAsAAAABAAQAAAALAAoAAAABAAQAAAALAAkAAAABAAQAAAAKAAkAAAABAAQAAAAJAAkAAAABAAQAAAAIAAkAAAABAAQAAAAHAAkAAAABAAQAAAAHAAoAAAABAAQAAAAHAAsAAAABAAQAAAAIAAoAAAACAAUAAAAJAAoAAAACAAUAAAAKAAoAAAABAAQAAAAKAAsAAAACAAUAAAAKAAwAAAACAAUAAAAJAAwAAAABAAQAAAAJAA0AAAABAAQAAAAIAA0AAAABAAQAAAAHAA0AAAACAAUAAAAGAA0AAAACAAUAAAAFAA0AAAABAAQAAAAFAAwAAAACAAUAAAAFAAsAAAABAAQAAAAFAAoAAAABAAQAAAAFAAkAAAABAAQAAAAFAAgAAAABAAQAAAAFAAcAAAABAAQAAAAFAAYAAAABAAQAAAAFAAUAAAABAAQAAAAFAAQAAAABAAQAAAAFAAMAAAABAAQAAAAEAAMAAAABAAQAAAADAAMAAAABAAQAAAADAAQAAAABAAQAAAADAAUAAAABAAQAAAADAAYAAAABAAQAAAADAAcAAAABAAQAAAADAAgAAAABAAQAAAADAAkAAAABAAQAAAADAAoAAAABAAQAAAADAAsAAAABAAQAAAADAAwAAAABAAQAAAAEAAwAAAACAAUAAAAEAAsAAAACAAUAAAAEAAoAAAACAAUAAAAEAAkAAAACAAUAAAAEAAgAAAACAAUAAAAEAAcAAAABAAQAAAAEAAYAAAABAAQAAAAEAAUAAAABAAQAAAAEAAQAAAABAAQAAAAGAA4AAAABAAQAAAAHAA4AAAABAAQAAAAIAA4AAAABAAQAAAAJAA4AAAABAAQAAAAKAA4AAAABAAQAAAAKAA0AAAABAAQAAAALAA0AAAACAAUAAAALAAwAAAACAAUAAAALAAsAAAABAAQAAAAMAAsAAAABAAQAAAAMAAoAAAABAAQAAAAMAAkAAAABAAQAAAANAAkAAAABAAQAAAANAAgAAAABAAQAAAANAAcAAAABAAQAAAAOAAcAAAABAAQAAAAOAAgAAAABAAQAAAAOAAkAAAABAAQAAAAOAAoAAAABAAQAAAANAAoAAAABAAQAAAANAAsAAAABAAQAAAANAAwAAAABAAQAAAAMAAwAAAABAAQAAAAMAA0AAAABAAUAAAAMAA4AAAABAAYAAAALAA4AAAABAAQAAAANAA0AAAACAAUAAAAOAA0AAAABAAQAAAAOAAwAAAABAAQAAAAOAAsAAAABAAQAAAAPAAsAAAABAAQAAAAPAAoAAAABAAQAAAAPAAkAAAABAAQAAAAPAAgAAAABAAQAAAAPAAcAAAABAAQAAAAQAAcAAAABAAQAAAAQAAYAAAABAAQAAAARAAYAAAABAAQAAAARAAcAAAABAAQAAAARAAgAAAABAAQAAAAQAAgAAAABAAQAAAAQAAkAAAABAAQAAAAQAAoAAAABAAQAAAAQAAsAAAABAAQAAAAQAAwAAAABAAQAAAAPAAwAAAABAAQAAAAPAA0AAAABAAQAAAAQAA0AAAABAAQAAAARAA0AAAABAAQAAAARAAwAAAABAAQAAAARAAsAAAABAAQAAAARAAoAAAABAAQAAAARAAkAAAABAAQAAAASAAkAAAABAAQAAAASAAgAAAABAAQAAAASAAcAAAABAAQAAAASAAYAAAABAAQAAAATAAYAAAABAAQAAAATAAcAAAABAAQAAAATAAgAAAABAAQAAAATAAkAAAABAAQAAAATAAoAAAABAAQAAAASAAoAAAABAAQAAAASAAsAAAABAAQAAAASAAwAAAABAAQAAAASAA0AAAABAAQAAAATAA0AAAABAAQAAAATAAwAAAABAAQAAAATAAsAAAABAAQAAAAUAAsAAAABAAQAAAAUAAoAAAABAAQAAAAUAAkAAAACAAUAAAAUAAgAAAACAAUAAAAUAAcAAAACAAUAAAAUAAYAAAACAAUAAAAUAAUAAAACAAUAAAAUAAQAAAABAAQAAAAVAAQAAAACAAUAAAAVAAUAAAACAAUAAAAVAAYAAAABAAQAAAAVAAcAAAABAAQAAAAVAAgAAAABAAQAAAAVAAkAAAACAAUAAAAVAAoAAAABAAQAAAAVAAsAAAABAAQAAAAVAAwAAAABAAQAAAAUAAwAAAABAAQAAAAUAA0AAAABAAQAAAAVAA0AAAABAAQAAAAWAA0AAAABAAQAAAAWAAYAAAABAAQAAAAWAAUAAAACAAUAAAAIAAcAAAACAAUAAAAEAA8AAQAEAAUAAAABAA0AAQAEAAUAAAABAAwAAQAEAAUAAAABAAsAAQAEAAUAAAABAAoAAQAEAAUAAAABAAkAAQAEAAUAAAABAAgAAQAEAAUAAAABAAcAAQAEAAUAAAABAAYAAQAEAAUAAAABAAUAAQAEAAUAAAABAAQAAQAEAAUAAAABAAMAAQAEAAUAAAABAAIAAQAEAAUAAAABAAEAAQAEAAUAAAAaAAwAAQAFAAUAAAAaAAsAAQAFAAUAAAAaAAoAAQAFAAUAAAAaAAkAAQAFAAUAAAAaAAgAAQAFAAUAAAAaAAcAAQAFAAUAAAAaAAYAAQAFAAUAAAAaAAUAAQAFAAUAAAAaAAQAAQAFAAUAAAAaAAMAAQAFAAUAAAAaAAIAAQAFAAUAAAAaAAEAAQAFAAUAAAAZAA0AAQADAAEAAAAYAA4AAQAFAAUAAAAOAA8AAQAFAAUAAAA=")
@@ -28,9 +121,59 @@ tile_set = ExtResource("2_h83ob")
 tile_map_data = PackedByteArray("AAAEAAIAAQARAAcAAAAFAAIAAQASAAcAAAAEAAEAAQARAAYAAAAFAAEAAQASAAYAAAA=")
 tile_set = ExtResource("2_h83ob")
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(73, 40)
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(77, 71)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(6.5, -6)
-shape = SubResource("RectangleShape2D_ttdm0")
+[node name="elf" type="CharacterBody2D" parent="." groups=["player"]]
+unique_name_in_owner = true
+position = Vector2(78, 70)
+collision_mask = 2
+script = ExtResource("4_66el0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="elf"]
+position = Vector2(1, 0)
+sprite_frames = SubResource("SpriteFrames_hlu58")
+animation = &"elf_hit"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="elf"]
+auto_translate_mode = 1
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_3nln7")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="elf"]
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="elf/CanvasLayer"]
+offset_left = 354.0
+offset_top = 1.0
+offset_right = 418.0
+offset_bottom = 41.0
+texture_under = ExtResource("14_tdtv1")
+texture_progress = ExtResource("15_vwuv8")
+script = ExtResource("16_08dkn")
+
+[node name="InventoryGui" parent="elf/CanvasLayer" instance=ExtResource("17_cf22k")]
+offset_left = 387.0
+offset_top = 15.0
+offset_right = -67.0
+offset_bottom = -229.0
+
+[node name="bow" type="CharacterBody2D" parent="elf"]
+position = Vector2(18.629, 6.46957)
+script = ExtResource("18_rybfj")
+mud = ExtResource("19_om8tl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="elf/bow"]
+position = Vector2(-2.6226e-06, -3.8147e-06)
+sprite_frames = SubResource("SpriteFrames_jl3ug")
+animation = &"shoot"
+
+[node name="Marker2D" type="Marker2D" parent="elf/bow"]
+position = Vector2(11.0671, 0)
+script = SubResource("GDScript_7worf")
+
+[node name="Timer" type="Timer" parent="elf/bow"]
+
+[node name="bowattack" type="AudioStreamPlayer2D" parent="elf/bow"]
+position = Vector2(-5.72205e-06, -1.43051e-06)
+stream = ExtResource("22_alay5")
+volume_db = 1.333

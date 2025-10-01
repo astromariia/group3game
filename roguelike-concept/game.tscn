@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=4 uid="uid://dg4rr1xjfhdqi"]
+[gd_scene load_steps=70 format=4 uid="uid://dg4rr1xjfhdqi"]
 
 [ext_resource type="Texture2D" uid="uid://c7bbb16dxp1xi" path="res://Art/0x72_DungeonTilesetII_v1.7/atlas_floor-16x16.png" id="1_feb5d"]
 [ext_resource type="Script" uid="uid://c2h8kh1qod130" path="res://game.gd" id="1_klri6"]
@@ -40,6 +40,7 @@
 [ext_resource type="AudioStream" uid="uid://bmhiulfewacnn" path="res://sounds/freefantasysfxtommusic/SFX/Spells/mudshot.ogg" id="34_r62pu"]
 [ext_resource type="Texture2D" uid="uid://c1dexn2tle4t1" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/weapon_bow_2.png" id="35_aa0lp"]
 [ext_resource type="Script" uid="uid://cevffci2qirxs" path="res://bow.gd" id="35_iu0sx"]
+[ext_resource type="PackedScene" uid="uid://bmxlj3lsgh06t" path="res://room_2.tscn" id="36_edr7y"]
 [ext_resource type="Texture2D" uid="uid://bw8kvtvo1ufrx" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/weapon_bow.png" id="36_iu0sx"]
 [ext_resource type="AudioStream" uid="uid://4kiq032brx18" path="res://sounds/freefantasysfxtommusic/SFX/Attacks/Bow Attacks Hits and Blocks/Bow Attack 1.ogg" id="39_l1i01"]
 
@@ -2360,6 +2361,7 @@ tile_set = SubResource("TileSet_7jktm")
 [node name="elf" type="CharacterBody2D" parent="." groups=["player"]]
 unique_name_in_owner = true
 position = Vector2(250, 150)
+collision_mask = 2
 script = ExtResource("4_iotsf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="elf"]
@@ -2432,8 +2434,9 @@ volume_db = -2.0
 
 [node name="Door_open" type="Area2D" parent="."]
 position = Vector2(231.403, 84.7128)
-collision_mask = 2
+collision_layer = 2
 script = ExtResource("24_f1jbl")
+target_scene = ExtResource("36_edr7y")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door_open"]
 position = Vector2(6.19888e-06, 0)
