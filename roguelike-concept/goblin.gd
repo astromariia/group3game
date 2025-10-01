@@ -49,7 +49,6 @@ func attack():
 		
 func take_damage(amount: int):
 	currentHealth -= amount
-	print("goblin test")
 	if currentHealth < 0:
 		currentHealth = 0
 		print("goblin is dead")

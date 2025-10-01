@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=4 uid="uid://dg4rr1xjfhdqi"]
+[gd_scene load_steps=69 format=4 uid="uid://dg4rr1xjfhdqi"]
 
 [ext_resource type="Texture2D" uid="uid://c7bbb16dxp1xi" path="res://Art/0x72_DungeonTilesetII_v1.7/atlas_floor-16x16.png" id="1_feb5d"]
 [ext_resource type="Script" uid="uid://c2h8kh1qod130" path="res://game.gd" id="1_klri6"]
@@ -42,6 +42,7 @@
 [ext_resource type="Script" uid="uid://cevffci2qirxs" path="res://bow.gd" id="35_iu0sx"]
 [ext_resource type="PackedScene" uid="uid://bmxlj3lsgh06t" path="res://room_2.tscn" id="36_edr7y"]
 [ext_resource type="Texture2D" uid="uid://bw8kvtvo1ufrx" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/weapon_bow.png" id="36_iu0sx"]
+[ext_resource type="Script" uid="uid://sqiusg16xyyp" path="res://muddy.gd" id="37_kq12w"]
 [ext_resource type="AudioStream" uid="uid://4kiq032brx18" path="res://sounds/freefantasysfxtommusic/SFX/Attacks/Bow Attacks Hits and Blocks/Bow Attack 1.ogg" id="39_l1i01"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qhcbd"]
@@ -2185,8 +2186,6 @@ animations = [{
 "speed": 6.0
 }]
 
-[sub_resource type="GDScript" id="GDScript_r62pu"]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5b14r"]
 size = Vector2(10, 10)
 
@@ -2229,62 +2228,6 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vaj68"]
 size = Vector2(9.05494, 20)
-
-[sub_resource type="GDScript" id="GDScript_36jdj"]
-script/source = "extends CharacterBody2D
-@onready var pointer : Node2D = $POINTY
-@onready var player : Node2D = %elf
-@onready var _animated_sprite = $AnimatedSprite2D
-@export var speed = 0.5
-@export var facingDir = \"left\"
-@export var mud : PackedScene
-@onready var attackCooldown: Timer = $ShootyCooldown
-func facing():
-	var playerPos = player.global_position
-	var selfPos = global_position
-	if playerPos.x > selfPos.x:
-		_animated_sprite.flip_h = false
-		_animated_sprite.play(\"spit\")
-		facingDir = \"left\"
-	else:
-		_animated_sprite.flip_h = true
-		_animated_sprite.play(\"spit\")
-		facingDir = \"right\"
-	
-	pointer.pointAt(self, facingDir)
-
-
-#time in between attacks, in seconds
-var attackSpeed = 1
-#damage in HP
-var damage = 1
-
-func _ready():
-	attackCooldown.one_shot = true
-	attackCooldown.autostart = false
-func shoot():
-	$mudshot.play()
-	var b = mud.instantiate()
-	owner.add_child(b)
-	match facingDir.to_lower():
-		\"up\":
-			b.dir = Vector2(0,-1)
-		\"down\":
-			b.dir = Vector2(0,1)
-		\"left\":
-			b.dir = Vector2(1,0)
-		\"right\":
-			b.dir  = Vector2(-1,0)
-	b.transform = $POINTY.global_transform
-	
-func attack():
-	if(attackCooldown.is_stopped()):
-		shoot()
-		attackCooldown.start(attackSpeed)
-func _physics_process(_delta):
-	facing()
-	attack()
-"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dhpj7"]
 size = Vector2(18.0488, 14.9831)
@@ -2403,7 +2346,6 @@ animation = &"shoot"
 
 [node name="Marker2D" type="Marker2D" parent="elf/bow"]
 position = Vector2(11.0671, 0)
-script = SubResource("GDScript_r62pu")
 
 [node name="Timer" type="Timer" parent="elf/bow"]
 
@@ -2444,7 +2386,7 @@ shape = SubResource("RectangleShape2D_vaj68")
 
 [node name="muddy" type="CharacterBody2D" parent="." groups=["enemy"]]
 position = Vector2(183.11, 159.459)
-script = SubResource("GDScript_36jdj")
+script = ExtResource("37_kq12w")
 mud = ExtResource("25_bnpwn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="muddy"]
