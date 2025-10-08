@@ -1,57 +1,12 @@
-[gd_scene load_steps=75 format=4 uid="uid://dg4rr1xjfhdqi"]
+[gd_scene load_steps=21 format=4 uid="uid://dh8sscie082c"]
 
-[ext_resource type="Texture2D" uid="uid://c7bbb16dxp1xi" path="res://Art/0x72_DungeonTilesetII_v1.7/atlas_floor-16x16.png" id="1_feb5d"]
-[ext_resource type="Script" uid="uid://c2h8kh1qod130" path="res://game.gd" id="1_klri6"]
-[ext_resource type="Texture2D" uid="uid://cr106jf2dvlta" path="res://Art/0x72_DungeonTilesetII_v1.7/0x72_DungeonTilesetII_v1.7.png" id="2_fc0e3"]
-[ext_resource type="Texture2D" uid="uid://cubh2we3o4rt1" path="res://Art/0x72_DungeonTilesetII_v1.7/atlas_walls_high-16x32.png" id="3_7jktm"]
-[ext_resource type="Script" uid="uid://cnteeodvxavyd" path="res://elf.gd" id="4_iotsf"]
-[ext_resource type="Texture2D" uid="uid://dfhgu5rdwyr5m" path="res://UI/MediavelFree.png" id="4_qhcbd"]
-[ext_resource type="Texture2D" uid="uid://sbp4q3qfpd8r" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_hit_anim_f0.png" id="5_hb5m1"]
-[ext_resource type="Texture2D" uid="uid://cd2gy0fi5i244" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_idle_anim_f0.png" id="5_lc2xo"]
-[ext_resource type="Texture2D" uid="uid://djrkholtnq4qj" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_idle_anim_f1.png" id="6_215e1"]
-[ext_resource type="Texture2D" uid="uid://cygaq8cwuxcpt" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_idle_anim_f2.png" id="7_7sc4i"]
-[ext_resource type="Texture2D" uid="uid://cdaorie6tys2p" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_idle_anim_f3.png" id="8_80cx4"]
-[ext_resource type="Texture2D" uid="uid://b7827kjfsgamw" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_run_anim_f0.png" id="9_e8heu"]
-[ext_resource type="Texture2D" uid="uid://d1lgbdhjgkk6h" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_run_anim_f1.png" id="10_rvswv"]
-[ext_resource type="Texture2D" uid="uid://bwua1sputwhs4" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_run_anim_f2.png" id="11_boyg6"]
-[ext_resource type="Texture2D" uid="uid://r2ud12pu53g2" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_run_anim_f3.png" id="12_e36ub"]
-[ext_resource type="Texture2D" uid="uid://bty58ouvfrwxs" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_idle_anim_f0.png" id="13_e36ub"]
-[ext_resource type="Texture2D" uid="uid://cs6ocv3c60cwy" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_idle_anim_f1.png" id="14_hb5m1"]
-[ext_resource type="Script" uid="uid://tkxsny8wfjtd" path="res://goblin.gd" id="14_x5p1p"]
-[ext_resource type="Script" uid="uid://wkmi37677kk7" path="res://health_bar.gd" id="15_36jdj"]
-[ext_resource type="Texture2D" uid="uid://bpom3fwhdeni" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_idle_anim_f2.png" id="15_x5p1p"]
-[ext_resource type="Texture2D" uid="uid://b2oafgopivhk0" path="res://UI/healthbarUnder.png" id="16_dhpj7"]
-[ext_resource type="Texture2D" uid="uid://vqac4hylcoq1" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_idle_anim_f3.png" id="16_qhcbd"]
-[ext_resource type="Texture2D" uid="uid://calheuxqupogm" path="res://UI/healthbarProgress.png" id="17_7knny"]
-[ext_resource type="Texture2D" uid="uid://cruasmneh0e83" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_run_anim_f0.png" id="17_f1jbl"]
-[ext_resource type="Texture2D" uid="uid://b1g8du7fdoylr" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_run_anim_f1.png" id="18_vaj68"]
-[ext_resource type="PackedScene" uid="uid://u0mi3jwawbam" path="res://inventorySlot.tscn" id="19_eu6ph"]
-[ext_resource type="Texture2D" uid="uid://vqdd7q78qyo" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_run_anim_f2.png" id="19_i2p71"]
-[ext_resource type="Texture2D" uid="uid://d2orcfdtjq2pq" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_run_anim_f3.png" id="20_xa8c5"]
-[ext_resource type="Script" uid="uid://bblaq1vj5kxod" path="res://door_open.gd" id="24_f1jbl"]
-[ext_resource type="Texture2D" uid="uid://bioylb4ul2av6" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/muddy_anim_f0.png" id="25_5b14r"]
-[ext_resource type="PackedScene" uid="uid://dclfxak0qm0gw" path="res://mud_projectile.tscn" id="25_bnpwn"]
-[ext_resource type="AudioStream" uid="uid://emdob14a7i08" path="res://sounds/freefantasysfxtommusic/SFX/Footsteps/Stone/Stone Walk 1.ogg" id="25_lwlx3"]
-[ext_resource type="AudioStream" uid="uid://brx6fjbidl570" path="res://sounds/freefantasysfxtommusic/SFX/Footsteps/Stone/Stone Walk 2.ogg" id="26_0de7l"]
-[ext_resource type="Texture2D" uid="uid://y7xdqjysnb78" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/muddy_anim_f1.png" id="26_bnpwn"]
-[ext_resource type="Texture2D" uid="uid://dn0dd3uoo0v0y" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/muddy_anim_f2.png" id="27_36jdj"]
-[ext_resource type="AudioStream" uid="uid://sig3s3cton6h" path="res://sounds/freefantasysfxtommusic/SFX/Footsteps/Stone/Stone Walk 3.ogg" id="27_87ddb"]
-[ext_resource type="AudioStream" uid="uid://7c7pvausheuo" path="res://sounds/Minifantasy_Dungeon_SFX/17_orc_atk_sword_1.wav" id="27_klri6"]
-[ext_resource type="AudioStream" uid="uid://d21k5k8htkfuq" path="res://sounds/freefantasysfxtommusic/SFX/Footsteps/Stone/Stone Walk 4.ogg" id="28_mljfx"]
-[ext_resource type="Texture2D" uid="uid://bajqxu1jcb0db" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/muddy_anim_f3.png" id="28_xfvwf"]
-[ext_resource type="AudioStream" uid="uid://jvaej5726log" path="res://sounds/freefantasysfxtommusic/SFX/Footsteps/Stone/Stone Walk 5.ogg" id="29_qpefm"]
-[ext_resource type="Script" uid="uid://bbefta1lpqh0f" path="res://pointy.gd" id="33_7knny"]
-[ext_resource type="PackedScene" uid="uid://8vepqhl4tryp" path="res://arrow_projectile.tscn" id="34_082n1"]
-[ext_resource type="AudioStream" uid="uid://bmhiulfewacnn" path="res://sounds/freefantasysfxtommusic/SFX/Spells/mudshot.ogg" id="34_r62pu"]
-[ext_resource type="Texture2D" uid="uid://c1dexn2tle4t1" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/weapon_bow_2.png" id="35_aa0lp"]
-[ext_resource type="Script" uid="uid://cevffci2qirxs" path="res://bow.gd" id="35_iu0sx"]
-[ext_resource type="PackedScene" uid="uid://bmxlj3lsgh06t" path="res://room_2.tscn" id="36_edr7y"]
-[ext_resource type="Texture2D" uid="uid://bw8kvtvo1ufrx" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/weapon_bow.png" id="36_iu0sx"]
-[ext_resource type="Script" uid="uid://sqiusg16xyyp" path="res://muddy.gd" id="37_kq12w"]
-[ext_resource type="AudioStream" uid="uid://4kiq032brx18" path="res://sounds/freefantasysfxtommusic/SFX/Attacks/Bow Attacks Hits and Blocks/Bow Attack 1.ogg" id="39_l1i01"]
+[ext_resource type="Texture2D" uid="uid://c7bbb16dxp1xi" path="res://Art/0x72_DungeonTilesetII_v1.7/atlas_floor-16x16.png" id="1_4nfae"]
+[ext_resource type="Texture2D" uid="uid://cr106jf2dvlta" path="res://Art/0x72_DungeonTilesetII_v1.7/0x72_DungeonTilesetII_v1.7.png" id="2_4ukgh"]
+[ext_resource type="Texture2D" uid="uid://cubh2we3o4rt1" path="res://Art/0x72_DungeonTilesetII_v1.7/atlas_walls_high-16x32.png" id="3_s70ul"]
+[ext_resource type="Texture2D" uid="uid://dfhgu5rdwyr5m" path="res://UI/MediavelFree.png" id="4_s7v7q"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qhcbd"]
-texture = ExtResource("1_feb5d")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6he7n"]
+texture = ExtResource("1_4nfae")
 0:0/0 = 0
 1:0/0 = 0
 0:1/0 = 0
@@ -99,8 +54,8 @@ texture = ExtResource("1_feb5d")
 4:6/0 = 0
 5:6/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f1jbl"]
-texture = ExtResource("2_fc0e3")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mcr3i"]
+texture = ExtResource("2_4ukgh")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -732,8 +687,8 @@ texture = ExtResource("2_fc0e3")
 15:28/0 = 0
 16:28/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vaj68"]
-texture = ExtResource("3_7jktm")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xfuvt"]
+texture = ExtResource("3_s70ul")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -881,8 +836,8 @@ texture = ExtResource("3_7jktm")
 22:7/0 = 0
 23:7/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i2p71"]
-texture = ExtResource("4_qhcbd")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_onxn5"]
+texture = ExtResource("4_s7v7q")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -1008,14 +963,14 @@ texture = ExtResource("4_qhcbd")
 14:7/0 = 0
 15:7/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_vef74"]
-sources/0 = SubResource("TileSetAtlasSource_qhcbd")
-sources/1 = SubResource("TileSetAtlasSource_f1jbl")
-sources/2 = SubResource("TileSetAtlasSource_vaj68")
-sources/3 = SubResource("TileSetAtlasSource_i2p71")
+[sub_resource type="TileSet" id="TileSet_xt3l3"]
+sources/0 = SubResource("TileSetAtlasSource_6he7n")
+sources/1 = SubResource("TileSetAtlasSource_mcr3i")
+sources/2 = SubResource("TileSetAtlasSource_xfuvt")
+sources/3 = SubResource("TileSetAtlasSource_onxn5")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xa8c5"]
-texture = ExtResource("3_7jktm")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0rvij"]
+texture = ExtResource("3_s70ul")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1165,11 +1120,11 @@ texture = ExtResource("3_7jktm")
 22:7/0 = 0
 23:7/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_mfdv2"]
-sources/0 = SubResource("TileSetAtlasSource_xa8c5")
+[sub_resource type="TileSet" id="TileSet_obepi"]
+sources/0 = SubResource("TileSetAtlasSource_0rvij")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5b14r"]
-texture = ExtResource("3_7jktm")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rvs4j"]
+texture = ExtResource("3_s70ul")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1317,21 +1272,21 @@ texture = ExtResource("3_7jktm")
 22:7/0 = 0
 23:7/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_fc0e3"]
-sources/0 = SubResource("TileSetAtlasSource_5b14r")
+[sub_resource type="TileSet" id="TileSet_30j8w"]
+sources/0 = SubResource("TileSetAtlasSource_rvs4j")
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_e36ub"]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8w0im"]
 friction = 0.0
 bounce = 0.05
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hb5m1"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gboyb"]
 size = Vector2(5.25, 139.75)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_x5p1p"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_awda6"]
 size = Vector2(182, 20)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bnpwn"]
-texture = ExtResource("2_fc0e3")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_65fr0"]
+texture = ExtResource("2_4ukgh")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -1963,11 +1918,11 @@ texture = ExtResource("2_fc0e3")
 15:28/0 = 0
 16:28/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_ryrav"]
-sources/0 = SubResource("TileSetAtlasSource_bnpwn")
+[sub_resource type="TileSet" id="TileSet_msvxs"]
+sources/0 = SubResource("TileSetAtlasSource_65fr0")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_36jdj"]
-texture = ExtResource("3_7jktm")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4k1xp"]
+texture = ExtResource("3_s70ul")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -2115,319 +2070,51 @@ texture = ExtResource("3_7jktm")
 22:7/0 = 0
 23:7/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_7jktm"]
-sources/0 = SubResource("TileSetAtlasSource_36jdj")
+[sub_resource type="TileSet" id="TileSet_xy5wx"]
+sources/0 = SubResource("TileSetAtlasSource_4k1xp")
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_hb5m1"]
-animations = [{
-"frames": [{
-"duration": 0.9,
-"texture": ExtResource("5_hb5m1")
-}],
-"loop": true,
-"name": &"elf_hit",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_lc2xo")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_215e1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_7sc4i")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_80cx4")
-}],
-"loop": true,
-"name": &"elf_m_idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("9_e8heu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_rvswv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_boyg6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_e36ub")
-}],
-"loop": true,
-"name": &"elf_m_run",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_iotsf"]
-size = Vector2(15, 19)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_4v2jo"]
-animations = [{
-"frames": [],
-"loop": true,
-"name": &"new_animation",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("36_iu0sx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("35_aa0lp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("35_aa0lp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("36_iu0sx")
-}],
-"loop": false,
-"name": &"shoot",
-"speed": 6.0
-}]
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_tb2lt"]
-streams_count = 5
-stream_0/stream = ExtResource("25_lwlx3")
-stream_1/stream = ExtResource("26_0de7l")
-stream_2/stream = ExtResource("27_87ddb")
-stream_3/stream = ExtResource("28_mljfx")
-stream_4/stream = ExtResource("29_qpefm")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5b14r"]
-size = Vector2(10, 10)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_bnpwn"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("13_e36ub")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_hb5m1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_x5p1p")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_qhcbd")
-}],
-"loop": true,
-"name": &"goblin_idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("17_f1jbl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_vaj68")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_i2p71")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_xa8c5")
-}],
-"loop": true,
-"name": &"goblin_run",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vaj68"]
-size = Vector2(9.05494, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dhpj7"]
-size = Vector2(18.0488, 14.9831)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_7knny"]
-animations = [{
-"frames": [{
-"duration": 0.9,
-"texture": ExtResource("25_5b14r")
-}, {
-"duration": 0.9,
-"texture": ExtResource("26_bnpwn")
-}, {
-"duration": 0.9,
-"texture": ExtResource("27_36jdj")
-}, {
-"duration": 0.9,
-"texture": ExtResource("28_xfvwf")
-}],
-"loop": true,
-"name": &"spit",
-"speed": 5.0
-}]
-
-[node name="Start" type="Node2D"]
-scale = Vector2(0.993936, 1.00339)
-script = ExtResource("1_klri6")
-metadata/_edit_vertical_guides_ = [-430.0]
+[node name="Node2D" type="Node2D"]
 
 [node name="floor" type="TileMapLayer" parent="."]
 position = Vector2(200, 100)
 scale = Vector2(0.997776, 1)
 tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAP//AAAAAAAAAAD//wIAAAABAAAAAAD//wMAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAABAP//AAAAAAAAAAABAAAAAAAAAAAAAAABAAEAAAABAAAAAAABAAIAAAAAAAAAAAABAAMAAAAAAAAAAAACAP//AAAAAAAAAAACAAAAAAACAAAAAAACAAEAAAAAAAAAAAACAAIAAAAAAAAAAAACAAMAAAACAAAAAAADAP//AAAAAAAAAAADAAAAAAAAAAAAAAADAAEAAAAAAAAAAAADAAIAAAAAAAAAAAADAAMAAAABAAAAAAD/////AAAAAAAAAAADAAQAAAAAAAAAAAACAAQAAAAAAAAAAAABAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAD//wQAAAAAAAAAAAD+/wQAAAAAAAAAAAD+/wMAAAAAAAAAAAD+/wIAAAAAAAAAAAD+/wEAAAAAAAAAAAD+/wAAAAAAAAAAAAD+////AAAAAAAAAAD+//7/AAAAAAAAAAD///7/AAAAAAAAAAAAAP7/AAAAAAAAAAAEAP7/AAAAAAAAAAAEAP//AAAAAAAAAAAEAAAAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAIAAAAAAAAAAAAEAAMAAAAAAAAAAAAEAAQAAAAAAAAAAAD//wEAAAABAAEAAAD9//7/AAABAAEAAAD9////AAAAAAAAAAD9/wAAAAAAAAAAAAD9/wEAAAAAAAAAAAD9/wIAAAAAAAAAAAD9/wMAAAAAAAAAAAD9/wQAAAAAAAAAAAAEAAUAAAAAAAAAAAADAAUAAAAAAAAAAAACAAUAAAAAAAAAAAABAAUAAAAAAAAAAAAAAAUAAAAAAAAAAAD//wUAAAAAAAAAAAD+/wUAAAAAAAAAAAD9/wUAAAAAAAAAAAD9/wYAAAAAAAAAAAD+/wYAAAAAAAAAAAD//wYAAAAAAAAAAAAAAAYAAAAAAAAAAAABAAYAAAAAAAAAAAACAAYAAAAAAAAAAAADAAYAAAAAAAAAAAAEAAYAAAAAAAAAAAAFAAcAAAAAAAAAAAAEAAcAAAAAAAAAAAADAAcAAAAAAAAAAAABAAcAAAAAAAAAAAACAAcAAAAAAAAAAAAAAAcAAAAAAAAAAAD//wcAAAAAAAAAAAD+/wcAAAAAAAAAAAD9/wcAAAAAAAAAAAAFAAYAAAAAAAAAAAAFAAUAAAAAAAAAAAAFAAQAAAAAAAAAAAAFAAMAAAAAAAAAAAAFAAIAAAAAAAAAAAAFAAEAAAAAAAAAAAAFAAAAAAAAAAAAAAAFAP//AAAAAAAAAAAGAP7/AAAAAAAAAAAGAP//AAAAAAAAAAAGAAAAAAAAAAAAAAAGAAEAAAAAAAAAAAAGAAIAAAAAAAAAAAAGAAMAAAAAAAAAAAAGAAQAAAAAAAAAAAAGAAUAAAAAAAAAAAAGAAYAAAAAAAAAAAAGAAcAAAAAAAAAAAABAP7/AAAAAAAAAAADAP7/AAAAAAAAAAACAP7/AAAAAAAAAAD8////AAAEAAUAAAD8/wAAAAAEAAUAAAD8/wEAAAAEAAUAAAD8/wIAAAAEAAUAAAD8/wMAAAAEAAUAAAD8/wQAAAAEAAUAAAD8/wUAAAAEAAUAAAD8/wYAAAAEAAUAAAD8/wcAAAAEAAUAAAAHAP//AAAFAAUAAAAHAAAAAAAFAAUAAAAHAAEAAAAFAAUAAAAHAAIAAAAFAAUAAAAHAAMAAAAFAAUAAAAHAAQAAAAFAAUAAAAHAAUAAAAFAAUAAAAHAAYAAAAFAAUAAAAHAAcAAAAFAAUAAAA=")
-tile_set = SubResource("TileSet_vef74")
+tile_set = SubResource("TileSet_xt3l3")
 
 [node name="walls" type="TileMapLayer" parent="floor"]
 tile_map_data = PackedByteArray("AAAAAP7/AAAFAAcAAAADAP7/AAAFAAcAAAAEAP7/AAAFAAcAAAAGAP7/AAAFAAcAAAD///7/AAAFAAcAAAD+//7/AAAFAAcAAAAFAP7/AAAFAAcAAAD9//7/AAAJAAcAAAD8////AAAAAAMAAAD8/wAAAAAAAAMAAAD8/wEAAAAAAAMAAAD8/wIAAAAAAAMAAAD8/wMAAAAAAAMAAAD8/wQAAAAAAAMAAAD8/wUAAAAAAAMAAAAHAAcAAAADAAUAAAAHAAYAAAAAAAEAAAAHAAUAAAAAAAEAAAAHAAQAAAAAAAEAAAAHAAMAAAAAAAEAAAAHAAIAAAAAAAEAAAAHAAEAAAAAAAEAAAAHAAAAAAAAAAEAAAAHAP//AAAAAAEAAAD8/wcAAAABAAUAAAD8/wYAAAAAAAMAAAA=")
-tile_set = SubResource("TileSet_mfdv2")
+tile_set = SubResource("TileSet_obepi")
 
 [node name="walls2" type="TileMapLayer" parent="floor/walls"]
 scale = Vector2(0.993699, 0.995576)
 tile_map_data = PackedByteArray("AAD8/wYAAAAEAAQAAAAHAAYAAAAHAAQAAAD9/wYAAAACAAYAAAD+/wYAAAACAAYAAAD//wYAAAACAAYAAAAAAAYAAAACAAYAAAABAAYAAAACAAYAAAACAAYAAAACAAYAAAADAAYAAAACAAYAAAAEAAYAAAACAAYAAAAFAAYAAAACAAYAAAAGAAYAAAACAAYAAAD9/wcAAAACAAcAAAD+/wcAAAACAAcAAAD//wcAAAACAAcAAAAAAAcAAAACAAcAAAABAAcAAAACAAcAAAACAAcAAAACAAcAAAADAAcAAAACAAcAAAAEAAcAAAACAAcAAAAFAAcAAAACAAcAAAAGAAcAAAACAAcAAAD8//3/AAABAAAAAAAHAP3/AAADAAAAAAAHAP7/AAADAAEAAAD8//7/AAABAAEAAAD9//3/AAAJAAYAAAD///3/AAAJAAYAAAABAP3/AAAJAAYAAAADAP3/AAAJAAYAAAAFAP3/AAAJAAYAAAD+//3/AAACAAYAAAAAAP3/AAACAAYAAAACAP3/AAACAAYAAAAEAP3/AAACAAYAAAAGAP3/AAACAAYAAAA=")
-tile_set = SubResource("TileSet_fc0e3")
+tile_set = SubResource("TileSet_30j8w")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="floor/walls" groups=["Walls"]]
+[node name="StaticBody2D" type="StaticBody2D" parent="floor/walls"]
 collision_layer = 15
 collision_mask = 15
-physics_material_override = SubResource("PhysicsMaterial_e36ub")
+physics_material_override = SubResource("PhysicsMaterial_8w0im")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor/walls/StaticBody2D"]
 position = Vector2(-56.625, 40.125)
-shape = SubResource("RectangleShape2D_hb5m1")
+shape = SubResource("RectangleShape2D_gboyb")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="floor/walls/StaticBody2D"]
 position = Vector2(120, 41)
-shape = SubResource("RectangleShape2D_hb5m1")
+shape = SubResource("RectangleShape2D_gboyb")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="floor/walls/StaticBody2D"]
 position = Vector2(32, 119)
-shape = SubResource("RectangleShape2D_x5p1p")
+shape = SubResource("RectangleShape2D_awda6")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="floor/walls/StaticBody2D"]
 position = Vector2(34, -26)
-shape = SubResource("RectangleShape2D_x5p1p")
+shape = SubResource("RectangleShape2D_awda6")
 
 [node name="otherassets" type="TileMapLayer" parent="floor"]
 tile_map_data = PackedByteArray("AAAGAP7/AAAEAAUAAAD///3/AAAEAAAAAAAEAP3/AAAEAAAAAAD///7/AAAEAAEAAAAEAP7/AAAEAAEAAAD/////AAAEAAIAAAAEAP//AAAEAAIAAAAAAP7/AAACAAMAAAADAP7/AAACAAMAAAA=")
-tile_set = SubResource("TileSet_ryrav")
+tile_set = SubResource("TileSet_msvxs")
 
 [node name="DOOR" type="TileMapLayer" parent="floor"]
-tile_map_data = PackedByteArray("AAABAP7/AAARAAYAAAABAP//AAARAAcAAAACAP//AAASAAcAAAACAP7/AAASAAYAAAA=")
-tile_set = SubResource("TileSet_7jktm")
-
-[node name="elf" type="CharacterBody2D" parent="." groups=["player"]]
-unique_name_in_owner = true
-position = Vector2(250, 150)
-collision_mask = 2
-script = ExtResource("4_iotsf")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="elf"]
-position = Vector2(0, -2)
-sprite_frames = SubResource("SpriteFrames_hb5m1")
-animation = &"elf_hit"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="elf"]
-auto_translate_mode = 1
-position = Vector2(0, -1)
-shape = SubResource("RectangleShape2D_iotsf")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="elf"]
-
-[node name="TextureProgressBar" type="TextureProgressBar" parent="elf/CanvasLayer"]
-offset_left = 246.0
-offset_top = 77.0
-offset_right = 310.0
-offset_bottom = 117.0
-texture_under = ExtResource("16_dhpj7")
-texture_progress = ExtResource("17_7knny")
-script = ExtResource("15_36jdj")
-
-[node name="InventoryGui" parent="elf/CanvasLayer" instance=ExtResource("19_eu6ph")]
-offset_left = 282.0
-offset_top = 88.0
-offset_right = -172.0
-offset_bottom = -156.0
-
-[node name="bow" type="CharacterBody2D" parent="elf"]
-position = Vector2(18.629, 6.46957)
-script = ExtResource("35_iu0sx")
-mud = ExtResource("34_082n1")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="elf/bow"]
-position = Vector2(-2.6226e-06, -3.8147e-06)
-sprite_frames = SubResource("SpriteFrames_4v2jo")
-animation = &"shoot"
-
-[node name="Marker2D" type="Marker2D" parent="elf/bow"]
-position = Vector2(11.0671, 0)
-
-[node name="Timer" type="Timer" parent="elf/bow"]
-
-[node name="bowattack" type="AudioStreamPlayer2D" parent="elf/bow"]
-position = Vector2(-5.72205e-06, -1.43051e-06)
-stream = ExtResource("39_l1i01")
-volume_db = 1.333
-
-[node name="arrow" parent="elf" instance=ExtResource("34_082n1")]
-visible = false
-position = Vector2(-93.048, 45.338)
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="elf"]
-stream = SubResource("AudioStreamRandomizer_tb2lt")
-
-[node name="goblin" type="CharacterBody2D" parent="." groups=["enemy"]]
-position = Vector2(200, 120)
-script = ExtResource("14_x5p1p")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="goblin"]
-position = Vector2(0, 1)
-shape = SubResource("RectangleShape2D_5b14r")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="goblin"]
-position = Vector2(-1, -1)
-sprite_frames = SubResource("SpriteFrames_bnpwn")
-animation = &"goblin_run"
-frame_progress = 0.128271
-
-[node name="AttackCooldownTimer" type="Timer" parent="goblin"]
-
-[node name="attacknoises" type="AudioStreamPlayer2D" parent="goblin"]
-stream = ExtResource("27_klri6")
-volume_db = -2.0
-
-[node name="Door_open" type="Area2D" parent="."]
-position = Vector2(231.403, 84.7128)
-collision_layer = 2
-script = ExtResource("24_f1jbl")
-target_scene = ExtResource("36_edr7y")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Door_open"]
-position = Vector2(6.19888e-06, 0)
-shape = SubResource("RectangleShape2D_vaj68")
-
-[node name="muddy" type="CharacterBody2D" parent="." groups=["enemy"]]
-position = Vector2(183.11, 159.459)
-script = ExtResource("37_kq12w")
-mud = ExtResource("25_bnpwn")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="muddy"]
-position = Vector2(-9.53674e-06, 0)
-shape = SubResource("RectangleShape2D_dhpj7")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="muddy"]
-position = Vector2(-1.90735e-06, 0)
-sprite_frames = SubResource("SpriteFrames_7knny")
-animation = &"spit"
-frame_progress = 0.0676391
-
-[node name="POINTY" type="Marker2D" parent="muddy"]
-position = Vector2(21.1281, -0.996621)
-script = ExtResource("33_7knny")
-
-[node name="ShootyCooldown" type="Timer" parent="muddy"]
-
-[node name="mudshot" type="AudioStreamPlayer2D" parent="muddy"]
-stream = ExtResource("34_r62pu")
-
-[node name="muddy_mud" parent="muddy" instance=ExtResource("25_bnpwn")]
-visible = false
-position = Vector2(-29.177, 24.916)
+tile_map_data = PackedByteArray("AAABAP7/AAARAAYAAAACAP7/AAASAAYAAAABAP//AAARAAcAAAACAP//AAASAAcAAAA=")
+tile_set = SubResource("TileSet_xy5wx")
