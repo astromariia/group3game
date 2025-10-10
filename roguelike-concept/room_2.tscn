@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://bmxlj3lsgh06t"]
+[gd_scene load_steps=30 format=4 uid="uid://bmxlj3lsgh06t"]
 
 [ext_resource type="TileSet" uid="uid://bwed0al80aii" path="res://room2_tile_set.tres" id="1_7hp4u"]
 [ext_resource type="Script" uid="uid://bgn2n3h1802dy" path="res://room_2game.gd" id="1_66el0"]
@@ -22,6 +22,11 @@
 [ext_resource type="Texture2D" uid="uid://bw8kvtvo1ufrx" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/weapon_bow.png" id="20_kymty"]
 [ext_resource type="Texture2D" uid="uid://c1dexn2tle4t1" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/weapon_bow_2.png" id="21_dk8dn"]
 [ext_resource type="AudioStream" uid="uid://4kiq032brx18" path="res://sounds/freefantasysfxtommusic/SFX/Attacks/Bow Attacks Hits and Blocks/Bow Attack 1.ogg" id="22_alay5"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_66el0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_66el0"]
+size = Vector2(7.5, 219.5)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hlu58"]
 animations = [{
@@ -98,6 +103,9 @@ animations = [{
 
 [sub_resource type="GDScript" id="GDScript_7worf"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2tyel"]
+size = Vector2(34.75, 10.375)
+
 [node name="room_2" type="Node2D"]
 script = ExtResource("1_66el0")
 
@@ -121,6 +129,24 @@ tile_set = ExtResource("2_h83ob")
 tile_map_data = PackedByteArray("AAAEAAIAAQARAAcAAAAFAAIAAQASAAcAAAAEAAEAAQARAAYAAAAFAAEAAQASAAYAAAA=")
 tile_set = ExtResource("2_h83ob")
 
+[node name="door_2" type="TileMapLayer" parent="walls_2/door_2"]
+position = Vector2(286, 0)
+tile_map_data = PackedByteArray("AAAEAAIAAQARAAcAAAAFAAIAAQASAAcAAAAEAAEAAQARAAYAAAAFAAEAAQASAAYAAAA=")
+tile_set = ExtResource("2_h83ob")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="walls_2"]
+collision_layer = 15
+collision_mask = 15
+physics_material_override = SubResource("PhysicsMaterial_66el0")
+
+[node name="sidewalls" type="CollisionShape2D" parent="walls_2/StaticBody2D"]
+position = Vector2(24, 122)
+shape = SubResource("RectangleShape2D_66el0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls_2/StaticBody2D"]
+position = Vector2(424, 121)
+shape = SubResource("RectangleShape2D_66el0")
+
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(77, 71)
 
@@ -143,6 +169,7 @@ shape = SubResource("RectangleShape2D_3nln7")
 [node name="CanvasLayer" type="CanvasLayer" parent="elf"]
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="elf/CanvasLayer"]
+visible = false
 offset_left = 354.0
 offset_top = 1.0
 offset_right = 418.0
@@ -177,3 +204,10 @@ script = SubResource("GDScript_7worf")
 position = Vector2(-5.72205e-06, -1.43051e-06)
 stream = ExtResource("22_alay5")
 volume_db = 1.333
+
+[node name="door3" type="Area2D" parent="."]
+position = Vector2(365, 43)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door3"]
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_2tyel")
