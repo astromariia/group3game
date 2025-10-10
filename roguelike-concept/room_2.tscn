@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=4 uid="uid://bmxlj3lsgh06t"]
+[gd_scene load_steps=56 format=4 uid="uid://bmxlj3lsgh06t"]
 
 [ext_resource type="TileSet" uid="uid://bwed0al80aii" path="res://room2_tile_set.tres" id="1_7hp4u"]
 [ext_resource type="Script" uid="uid://bgn2n3h1802dy" path="res://room_2game.gd" id="1_66el0"]
@@ -22,6 +22,22 @@
 [ext_resource type="Texture2D" uid="uid://bw8kvtvo1ufrx" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/weapon_bow.png" id="20_kymty"]
 [ext_resource type="Texture2D" uid="uid://c1dexn2tle4t1" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/weapon_bow_2.png" id="21_dk8dn"]
 [ext_resource type="AudioStream" uid="uid://4kiq032brx18" path="res://sounds/freefantasysfxtommusic/SFX/Attacks/Bow Attacks Hits and Blocks/Bow Attack 1.ogg" id="22_alay5"]
+[ext_resource type="Script" uid="uid://tkxsny8wfjtd" path="res://goblin.gd" id="23_tdtv1"]
+[ext_resource type="Texture2D" uid="uid://bty58ouvfrwxs" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_idle_anim_f0.png" id="24_vwuv8"]
+[ext_resource type="Texture2D" uid="uid://cs6ocv3c60cwy" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_idle_anim_f1.png" id="25_08dkn"]
+[ext_resource type="Texture2D" uid="uid://bpom3fwhdeni" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_idle_anim_f2.png" id="26_cf22k"]
+[ext_resource type="Texture2D" uid="uid://vqac4hylcoq1" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_idle_anim_f3.png" id="27_rybfj"]
+[ext_resource type="Texture2D" uid="uid://cruasmneh0e83" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_run_anim_f0.png" id="28_om8tl"]
+[ext_resource type="Texture2D" uid="uid://b1g8du7fdoylr" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_run_anim_f1.png" id="29_kymty"]
+[ext_resource type="Texture2D" uid="uid://vqdd7q78qyo" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_run_anim_f2.png" id="30_dk8dn"]
+[ext_resource type="Texture2D" uid="uid://d2orcfdtjq2pq" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_run_anim_f3.png" id="31_alay5"]
+[ext_resource type="AudioStream" uid="uid://7c7pvausheuo" path="res://sounds/Minifantasy_Dungeon_SFX/17_orc_atk_sword_1.wav" id="32_hlu58"]
+[ext_resource type="Script" uid="uid://shfmnwekeoxb" path="res://slug.gd" id="33_om8tl"]
+[ext_resource type="Texture2D" uid="uid://dng6260qn11kq" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/slug_anim_f0.png" id="33_rybfj"]
+[ext_resource type="Texture2D" uid="uid://d05dlafr4tjow" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/slug_anim_f1.png" id="34_om8tl"]
+[ext_resource type="Texture2D" uid="uid://w73ax430kkug" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/slug_anim_f2.png" id="35_kymty"]
+[ext_resource type="Texture2D" uid="uid://cv6dk4xg2yaam" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/slug_anim_f3.png" id="36_dk8dn"]
+[ext_resource type="Script" uid="uid://sl7snjeqdxab" path="res://marker_2d.gd" id="38_kymty"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_66el0"]
 
@@ -44,7 +60,7 @@ size = Vector2(157, 37)
 size = Vector2(163, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u4cue"]
-size = Vector2(26, 27)
+size = Vector2(29, 27)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hlu58"]
 animations = [{
@@ -124,6 +140,69 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2tyel"]
 size = Vector2(34.75, 10.375)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jl3ug"]
+size = Vector2(10, 10)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7worf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_vwuv8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_08dkn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_cf22k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_rybfj")
+}],
+"loop": true,
+"name": &"goblin_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_om8tl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_kymty")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_dk8dn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_alay5")
+}],
+"loop": true,
+"name": &"goblin_run",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_alay5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("33_rybfj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_om8tl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_kymty")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_dk8dn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hlu58"]
+size = Vector2(17.25, 18.5)
+
 [node name="room_2" type="Node2D"]
 script = ExtResource("1_66el0")
 
@@ -152,7 +231,7 @@ position = Vector2(286, 0)
 tile_map_data = PackedByteArray("AAAEAAIAAQARAAcAAAAFAAIAAQASAAcAAAAEAAEAAQARAAYAAAAFAAEAAQASAAYAAAA=")
 tile_set = ExtResource("2_h83ob")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="walls_2"]
+[node name="StaticBody2D" type="StaticBody2D" parent="walls_2" groups=["walls"]]
 collision_layer = 15
 collision_mask = 15
 physics_material_override = SubResource("PhysicsMaterial_66el0")
@@ -194,7 +273,7 @@ position = Vector2(80, 21)
 shape = SubResource("RectangleShape2D_u4cue")
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="walls_2/StaticBody2D"]
-position = Vector2(368, 18)
+position = Vector2(366.5, 18)
 shape = SubResource("RectangleShape2D_u4cue")
 
 [node name="Marker2D" type="Marker2D" parent="."]
@@ -261,3 +340,43 @@ position = Vector2(365, 43)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="door3"]
 position = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_2tyel")
+
+[node name="goblin" type="CharacterBody2D" parent="." groups=["enemy"]]
+position = Vector2(200, 120)
+script = ExtResource("23_tdtv1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="goblin"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_jl3ug")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="goblin"]
+position = Vector2(-1, -1)
+sprite_frames = SubResource("SpriteFrames_7worf")
+animation = &"goblin_run"
+
+[node name="AttackCooldownTimer" type="Timer" parent="goblin"]
+
+[node name="attacknoises" type="AudioStreamPlayer2D" parent="goblin"]
+stream = ExtResource("32_hlu58")
+volume_db = -2.0
+
+[node name="slug" type="CharacterBody2D" parent="." groups=["enemy"]]
+position = Vector2(227, 160)
+script = ExtResource("33_om8tl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="slug"]
+sprite_frames = SubResource("SpriteFrames_alay5")
+
+[node name="slug_box" type="CollisionShape2D" parent="slug"]
+position = Vector2(0, 1.75)
+shape = SubResource("RectangleShape2D_hlu58")
+
+[node name="SlugAttack" type="Timer" parent="slug"]
+
+[node name="attacknoises" type="AudioStreamPlayer2D" parent="slug"]
+stream = ExtResource("32_hlu58")
+volume_db = -2.0
+
+[node name="patrolMarker" type="Marker2D" parent="slug"]
+position = Vector2(-2, 36)
+script = ExtResource("38_kymty")

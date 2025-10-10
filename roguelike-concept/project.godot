@@ -25,6 +25,10 @@ window/size/viewport_width=480
 window/size/viewport_height=270
 window/stretch/mode="viewport"
 
+[global_group]
+
+player=""
+
 [input]
 
 move_right={
