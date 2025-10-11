@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=4 uid="uid://bmxlj3lsgh06t"]
+[gd_scene load_steps=55 format=4 uid="uid://bmxlj3lsgh06t"]
 
 [ext_resource type="TileSet" uid="uid://bwed0al80aii" path="res://room2_tile_set.tres" id="1_7hp4u"]
 [ext_resource type="Script" uid="uid://bgn2n3h1802dy" path="res://room_2game.gd" id="1_66el0"]
@@ -37,7 +37,6 @@
 [ext_resource type="Texture2D" uid="uid://d05dlafr4tjow" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/slug_anim_f1.png" id="34_om8tl"]
 [ext_resource type="Texture2D" uid="uid://w73ax430kkug" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/slug_anim_f2.png" id="35_kymty"]
 [ext_resource type="Texture2D" uid="uid://cv6dk4xg2yaam" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/slug_anim_f3.png" id="36_dk8dn"]
-[ext_resource type="Script" uid="uid://sl7snjeqdxab" path="res://marker_2d.gd" id="38_kymty"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_66el0"]
 
@@ -376,7 +375,3 @@ shape = SubResource("RectangleShape2D_hlu58")
 [node name="attacknoises" type="AudioStreamPlayer2D" parent="slug"]
 stream = ExtResource("32_hlu58")
 volume_db = -2.0
-
-[node name="patrolMarker" type="Marker2D" parent="slug"]
-position = Vector2(-2, 36)
-script = ExtResource("38_kymty")

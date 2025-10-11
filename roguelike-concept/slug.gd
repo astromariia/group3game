@@ -3,12 +3,12 @@ extends CharacterBody2D
 @export var speed = 0.5
 @onready var player : Node2D = %elf
 @onready var attackCooldown: Timer = $SlugAttack
-@onready var patrolPoint: Marker2D = $patrolMarker
+@export var patrollocations = PackedVector2Array([Vector2(350,160),Vector2(350,40)])
 #time in between attacks, in seconds
 var attackSpeed = 1
 #damage in HP
 var damage = 1
-
+var i = 0
 	
 func _ready():
 	attackCooldown.one_shot = true
@@ -19,14 +19,18 @@ func _ready():
 func move():
 	
 	var playerPos = player.global_position
-	var patrolPos = patrolPoint.global_position
-	var selfPos = global_position
+	var selfPos = self.global_position
 	var inRange = playerPos - selfPos
-	var input_direction = patrolPos - selfPos
+	var input_direction = patrollocations[i] - selfPos
 	
 	if (inRange.length() <= 20):
 		attack()
 	else:
+		if input_direction.length() <=10:
+			i+=1
+			print("!")
+			if i >= len(patrollocations):
+				i=0
 		velocity = input_direction.normalized() * speed
 
 	if input_direction.x < 0:
