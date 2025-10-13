@@ -48,7 +48,7 @@
 [ext_resource type="Texture2D" uid="uid://bw8kvtvo1ufrx" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/weapon_bow.png" id="36_iu0sx"]
 [ext_resource type="Script" uid="uid://sqiusg16xyyp" path="res://muddy.gd" id="37_kq12w"]
 [ext_resource type="AudioStream" uid="uid://4kiq032brx18" path="res://sounds/freefantasysfxtommusic/SFX/Attacks/Bow Attacks Hits and Blocks/Bow Attack 1.ogg" id="39_l1i01"]
-[ext_resource type="PackedScene" uid="uid://v03mwgihtv7x" path="res://Boss Fight/Boss Room.tscn" id="41_87ddb"]
+[ext_resource type="PackedScene" uid="uid://bmxlj3lsgh06t" path="res://room_2.tscn" id="41_87ddb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qhcbd"]
 texture = ExtResource("1_feb5d")

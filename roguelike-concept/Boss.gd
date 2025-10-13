@@ -33,7 +33,7 @@ var currentHealth: int = HP
 @export var orbit_orb_scene: PackedScene = preload("res://Boss Fight/OrbProjectile.tscn")
 
 # Hazard overrides (applied to BOTH orbiting & boomerang projectiles)
-@export var orb_damage: int = 1
+@export var orb_damage: int = 5
 @export var orb_collision_layer: int = 2
 @export var orb_collision_mask: int = 1
 
@@ -293,6 +293,13 @@ func _configure_orb_core(root: Node) -> void:
 		area.damage = orb_damage
 	else:
 		area.set("damage", orb_damage)
+		
+	if "instigator" in area: 
+		area.instigator = self 
+	else: area.set("instigator", self)
+	if "ignore_group" in area: 
+		area.ignore_group = "enemies" 
+	else: area.set("ignore_group", "enemies")
 
 	# Optional radius override (only if the scene uses a CircleShape2D)
 	if override_hit_radius_from_code:
