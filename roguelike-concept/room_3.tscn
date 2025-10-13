@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=4 uid="uid://cosl1ckj73gg2"]
+[gd_scene load_steps=53 format=4 uid="uid://cosl1ckj73gg2"]
 
 [ext_resource type="Texture2D" uid="uid://c7bbb16dxp1xi" path="res://Art/0x72_DungeonTilesetII_v1.7/atlas_floor-16x16.png" id="1_xflq3"]
 [ext_resource type="TileSet" uid="uid://e1xawx620cgc" path="res://new_tile_set.tres" id="2_vb6up"]
@@ -29,6 +29,7 @@
 [ext_resource type="AudioStream" uid="uid://sig3s3cton6h" path="res://sounds/freefantasysfxtommusic/SFX/Footsteps/Stone/Stone Walk 3.ogg" id="27_j208c"]
 [ext_resource type="AudioStream" uid="uid://d21k5k8htkfuq" path="res://sounds/freefantasysfxtommusic/SFX/Footsteps/Stone/Stone Walk 4.ogg" id="28_rl7fo"]
 [ext_resource type="AudioStream" uid="uid://jvaej5726log" path="res://sounds/freefantasysfxtommusic/SFX/Footsteps/Stone/Stone Walk 5.ogg" id="29_0uqg2"]
+[ext_resource type="Script" uid="uid://cr8eriayoxs1k" path="res://Boss Fight/spikes.gd" id="30_vb6up"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rpge5"]
 texture = ExtResource("1_xflq3")
@@ -195,6 +196,21 @@ size = Vector2(157, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1pp8l"]
 size = Vector2(95, 14.25)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrmgx"]
+size = Vector2(48.5, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6viu8"]
+size = Vector2(77, 11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_njtk3"]
+size = Vector2(31, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4jitk"]
+size = Vector2(16.5, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b2boi"]
+size = Vector2(49.75, 20)
+
 [node name="room_3" type="Node2D"]
 
 [node name="floor_3" type="TileMapLayer" parent="."]
@@ -210,6 +226,7 @@ tile_map_data = PackedByteArray("AAAHAP//AQAFAAcAAAAIAP//AQAFAAcAAAAJAP//AQAFAAc
 tile_set = ExtResource("3_0stco")
 
 [node name="walls_3_2" type="TileMapLayer" parent="walls_3"]
+visibility_layer = 15
 tile_map_data = PackedByteArray("AAAGAAEAAQADAAAAAAAFAAEAAQACAAYAAAADAAEAAQACAAYAAAACAAEAAQACAAYAAAAHAP7/AQACAAYAAAAIAP7/AQACAAYAAAAJAP7/AQACAAYAAAAKAP7/AQACAAYAAAALAP7/AQACAAYAAAAMAP7/AQACAAYAAAANAP7/AQACAAYAAAAGAP7/AQABAAAAAAAOAP7/AQADAAAAAAAOAAIAAQABAAQAAAAOAAMAAQACAAcAAAAZAA4AAQADAAYAAAAZAA8AAQADAAcAAAABAAgAAQABAAYAAAABAAkAAQABAAUAAAACAAgAAQACAAYAAAADAAgAAQACAAYAAAAEAAgAAQACAAYAAAAFAAgAAQACAAYAAAACAAkAAQACAAcAAAADAAkAAQACAAcAAAAEAAkAAQACAAcAAAAFAAkAAQACAAcAAAAGAAoAAQACAAcAAAAGAAsAAQACAAcAAAAGAAgAAQADAAAAAAAGAAkAAQACAAcAAAAEAAEAAQACAAYAAAAIAAAAAQAOAAEAAAALAAAAAQAOAAEAAAAIAP//AQAOAAAAAAALAP//AQAOAAAAAAACAAMAAQAPAAEAAAARAAQAAQAPAAEAAAAYAAQAAQAQAAEAAAAXAAQAAQAOAAUAAAAXAAMAAQAOAAQAAAAUAAMAAQAOAAQAAAAUAAQAAQAOAAUAAAAIAAYAAQAPAAcAAAAMAAYAAQAPAAcAAAAIAAUAAQAPAAYAAAAMAAUAAQAPAAYAAAAIAAQAAQAPAAUAAAAMAAQAAQAPAAUAAAAMAAoAAQAPAAcAAAAMAAkAAQAPAAYAAAAMAAgAAQAPAAYAAAAMAAcAAQAPAAUAAAAXAA0AAQAPAAcAAAAXAAwAAQAPAAYAAAAXAAsAAQAPAAUAAAAVAA0AAQAPAAcAAAAVAAwAAQAPAAUAAAAXAAkAAQAPAAcAAAAXAAgAAQAPAAUAAAA=")
 tile_set = ExtResource("3_0stco")
 
@@ -320,10 +337,6 @@ shape = SubResource("RectangleShape2D_7ra2c")
 position = Vector2(68.5, 164.5)
 shape = SubResource("RectangleShape2D_nymos")
 
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D/CollisionShape2D7"]
-position = Vector2(6.5, 48.5)
-shape = SubResource("RectangleShape2D_nymos")
-
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(225, 278)
 shape = SubResource("RectangleShape2D_eqn04")
@@ -334,10 +347,6 @@ shape = SubResource("RectangleShape2D_lbd1r")
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(224.5, 296.125)
-shape = SubResource("RectangleShape2D_1pp8l")
-
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D/CollisionShape2D10"]
-position = Vector2(-148.5, -75.125)
 shape = SubResource("RectangleShape2D_1pp8l")
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D"]
@@ -351,3 +360,69 @@ shape = SubResource("RectangleShape2D_1pp8l")
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(90, 286)
 shape = SubResource("RectangleShape2D_qbsot")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(75, 213)
+shape = SubResource("RectangleShape2D_nymos")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(76, 221)
+shape = SubResource("RectangleShape2D_1pp8l")
+
+[node name="Spikes" type="Area2D" parent="."]
+script = ExtResource("30_vb6up")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Spikes"]
+position = Vector2(279, 263)
+shape = SubResource("RectangleShape2D_xrmgx")
+debug_color = Color(0.869481, 0.312565, 0.424489, 0.42)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Spikes"]
+position = Vector2(169, 264)
+shape = SubResource("RectangleShape2D_xrmgx")
+debug_color = Color(0.994398, 0, 0.222713, 0.42)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes"]
+position = Vector2(296.5, 151.5)
+shape = SubResource("RectangleShape2D_6viu8")
+debug_color = Color(0.992953, 0, 0.244715, 0.42)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Spikes"]
+position = Vector2(256.5, 136)
+shape = SubResource("RectangleShape2D_njtk3")
+debug_color = Color(0.971679, 0, 0.4463, 0.42)
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Spikes"]
+position = Vector2(241, 120)
+shape = SubResource("RectangleShape2D_njtk3")
+debug_color = Color(0.971679, 0, 0.4463, 0.42)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Spikes"]
+position = Vector2(336, 135)
+shape = SubResource("RectangleShape2D_njtk3")
+debug_color = Color(0.971679, 0, 0.4463, 0.42)
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Spikes"]
+position = Vector2(232.5, 103)
+shape = SubResource("RectangleShape2D_4jitk")
+debug_color = Color(0.973995, 0.12719, 0.255596, 0.42)
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Spikes"]
+position = Vector2(168, 296)
+shape = SubResource("RectangleShape2D_4jitk")
+debug_color = Color(0.973995, 0.12719, 0.255596, 0.42)
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Spikes"]
+position = Vector2(280.25, 297)
+shape = SubResource("RectangleShape2D_4jitk")
+debug_color = Color(0.973995, 0.12719, 0.255596, 0.42)
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Spikes"]
+position = Vector2(169.125, 312)
+shape = SubResource("RectangleShape2D_b2boi")
+debug_color = Color(0.976969, 0, 0.407763, 0.42)
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Spikes"]
+position = Vector2(282, 313)
+shape = SubResource("RectangleShape2D_b2boi")
+debug_color = Color(0.976969, 0, 0.407763, 0.42)
