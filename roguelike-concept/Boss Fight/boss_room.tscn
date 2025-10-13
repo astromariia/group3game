@@ -1,34 +1,46 @@
-[gd_scene load_steps=33 format=4 uid="uid://cmi3q7jpp5wbo"]
+[gd_scene load_steps=47 format=4 uid="uid://bg0suudcuykbd"]
 
-[ext_resource type="Texture2D" uid="uid://c7bbb16dxp1xi" path="res://Art/0x72_DungeonTilesetII_v1.7/atlas_floor-16x16.png" id="1_any6y"]
-[ext_resource type="TileSet" uid="uid://bhge3u3jwyois" path="res://walls.tres" id="2_n8ie0"]
-[ext_resource type="Script" uid="uid://cnteeodvxavyd" path="res://elf.gd" id="3_mcrvp"]
-[ext_resource type="Texture2D" uid="uid://sbp4q3qfpd8r" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_hit_anim_f0.png" id="4_vjsws"]
-[ext_resource type="Texture2D" uid="uid://cd2gy0fi5i244" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_idle_anim_f0.png" id="5_5lq26"]
-[ext_resource type="Texture2D" uid="uid://djrkholtnq4qj" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_idle_anim_f1.png" id="6_1qrk0"]
-[ext_resource type="Texture2D" uid="uid://cygaq8cwuxcpt" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_idle_anim_f2.png" id="7_gvs86"]
-[ext_resource type="Texture2D" uid="uid://cdaorie6tys2p" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_idle_anim_f3.png" id="8_7hd0a"]
-[ext_resource type="Texture2D" uid="uid://b7827kjfsgamw" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_run_anim_f0.png" id="9_se6o5"]
-[ext_resource type="Texture2D" uid="uid://d1lgbdhjgkk6h" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_run_anim_f1.png" id="10_gchko"]
-[ext_resource type="Texture2D" uid="uid://bwua1sputwhs4" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_run_anim_f2.png" id="11_4hckl"]
-[ext_resource type="Texture2D" uid="uid://r2ud12pu53g2" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_run_anim_f3.png" id="12_um5m2"]
-[ext_resource type="Texture2D" uid="uid://b2oafgopivhk0" path="res://UI/healthbarUnder.png" id="13_dg0bh"]
-[ext_resource type="Texture2D" uid="uid://calheuxqupogm" path="res://UI/healthbarProgress.png" id="14_8mqhg"]
-[ext_resource type="Script" uid="uid://wkmi37677kk7" path="res://health_bar.gd" id="15_4o5kc"]
-[ext_resource type="PackedScene" uid="uid://u0mi3jwawbam" path="res://inventorySlot.tscn" id="16_gs2uj"]
-[ext_resource type="Script" uid="uid://cevffci2qirxs" path="res://bow.gd" id="17_fbhdx"]
-[ext_resource type="PackedScene" uid="uid://8vepqhl4tryp" path="res://arrow_projectile.tscn" id="18_m4n02"]
-[ext_resource type="Texture2D" uid="uid://bw8kvtvo1ufrx" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/weapon_bow.png" id="19_33aj2"]
-[ext_resource type="Texture2D" uid="uid://c1dexn2tle4t1" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/weapon_bow_2.png" id="20_w242f"]
-[ext_resource type="AudioStream" uid="uid://4kiq032brx18" path="res://sounds/freefantasysfxtommusic/SFX/Attacks/Bow Attacks Hits and Blocks/Bow Attack 1.ogg" id="21_mijfr"]
-[ext_resource type="AudioStream" uid="uid://emdob14a7i08" path="res://sounds/freefantasysfxtommusic/SFX/Footsteps/Stone/Stone Walk 1.ogg" id="22_7f5wd"]
-[ext_resource type="AudioStream" uid="uid://brx6fjbidl570" path="res://sounds/freefantasysfxtommusic/SFX/Footsteps/Stone/Stone Walk 2.ogg" id="23_4rg0b"]
-[ext_resource type="AudioStream" uid="uid://sig3s3cton6h" path="res://sounds/freefantasysfxtommusic/SFX/Footsteps/Stone/Stone Walk 3.ogg" id="24_m378r"]
-[ext_resource type="AudioStream" uid="uid://d21k5k8htkfuq" path="res://sounds/freefantasysfxtommusic/SFX/Footsteps/Stone/Stone Walk 4.ogg" id="25_rkhjn"]
-[ext_resource type="AudioStream" uid="uid://jvaej5726log" path="res://sounds/freefantasysfxtommusic/SFX/Footsteps/Stone/Stone Walk 5.ogg" id="26_vnc70"]
+[ext_resource type="Texture2D" uid="uid://c7bbb16dxp1xi" path="res://Art/0x72_DungeonTilesetII_v1.7/atlas_floor-16x16.png" id="1_0cvnm"]
+[ext_resource type="TileSet" uid="uid://bhge3u3jwyois" path="res://walls.tres" id="2_n7pxe"]
+[ext_resource type="Script" uid="uid://cnteeodvxavyd" path="res://elf.gd" id="3_xam4y"]
+[ext_resource type="Texture2D" uid="uid://sbp4q3qfpd8r" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_hit_anim_f0.png" id="4_fkrue"]
+[ext_resource type="Texture2D" uid="uid://cd2gy0fi5i244" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_idle_anim_f0.png" id="5_r3lyl"]
+[ext_resource type="Texture2D" uid="uid://djrkholtnq4qj" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_idle_anim_f1.png" id="6_045wf"]
+[ext_resource type="Texture2D" uid="uid://cygaq8cwuxcpt" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_idle_anim_f2.png" id="7_e65ft"]
+[ext_resource type="Texture2D" uid="uid://cdaorie6tys2p" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_idle_anim_f3.png" id="8_r6a1p"]
+[ext_resource type="Texture2D" uid="uid://b7827kjfsgamw" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_run_anim_f0.png" id="9_cnfq3"]
+[ext_resource type="Texture2D" uid="uid://d1lgbdhjgkk6h" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_run_anim_f1.png" id="10_kvr7q"]
+[ext_resource type="Texture2D" uid="uid://bwua1sputwhs4" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_run_anim_f2.png" id="11_0a45h"]
+[ext_resource type="Texture2D" uid="uid://r2ud12pu53g2" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_run_anim_f3.png" id="12_fqh73"]
+[ext_resource type="Texture2D" uid="uid://b2oafgopivhk0" path="res://UI/healthbarUnder.png" id="13_wf4nx"]
+[ext_resource type="Texture2D" uid="uid://calheuxqupogm" path="res://UI/healthbarProgress.png" id="14_aegqj"]
+[ext_resource type="Script" uid="uid://wkmi37677kk7" path="res://health_bar.gd" id="15_ifaon"]
+[ext_resource type="PackedScene" uid="uid://u0mi3jwawbam" path="res://inventorySlot.tscn" id="16_mblhi"]
+[ext_resource type="Script" uid="uid://cevffci2qirxs" path="res://bow.gd" id="17_ip4tw"]
+[ext_resource type="PackedScene" uid="uid://8vepqhl4tryp" path="res://arrow_projectile.tscn" id="18_4mnpf"]
+[ext_resource type="Texture2D" uid="uid://bw8kvtvo1ufrx" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/weapon_bow.png" id="19_bpg7i"]
+[ext_resource type="Texture2D" uid="uid://c1dexn2tle4t1" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/weapon_bow_2.png" id="20_i6akk"]
+[ext_resource type="AudioStream" uid="uid://4kiq032brx18" path="res://sounds/freefantasysfxtommusic/SFX/Attacks/Bow Attacks Hits and Blocks/Bow Attack 1.ogg" id="21_641je"]
+[ext_resource type="AudioStream" uid="uid://emdob14a7i08" path="res://sounds/freefantasysfxtommusic/SFX/Footsteps/Stone/Stone Walk 1.ogg" id="22_p084k"]
+[ext_resource type="AudioStream" uid="uid://brx6fjbidl570" path="res://sounds/freefantasysfxtommusic/SFX/Footsteps/Stone/Stone Walk 2.ogg" id="23_w8hd8"]
+[ext_resource type="AudioStream" uid="uid://sig3s3cton6h" path="res://sounds/freefantasysfxtommusic/SFX/Footsteps/Stone/Stone Walk 3.ogg" id="24_846mk"]
+[ext_resource type="AudioStream" uid="uid://d21k5k8htkfuq" path="res://sounds/freefantasysfxtommusic/SFX/Footsteps/Stone/Stone Walk 4.ogg" id="25_skb8s"]
+[ext_resource type="AudioStream" uid="uid://jvaej5726log" path="res://sounds/freefantasysfxtommusic/SFX/Footsteps/Stone/Stone Walk 5.ogg" id="26_d8krd"]
+[ext_resource type="Script" uid="uid://cdmq8jxi4ij7h" path="res://Boss.gd" id="27_k8rgl"]
+[ext_resource type="Texture2D" uid="uid://ciuvyclh5haii" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/big_demon_idle_anim_f0.png" id="28_ak8y2"]
+[ext_resource type="Texture2D" uid="uid://bfdyi13v6vn82" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/big_demon_idle_anim_f1.png" id="29_vw7fo"]
+[ext_resource type="Texture2D" uid="uid://bbgx2cdodjx4k" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/big_demon_idle_anim_f2.png" id="30_rrrsp"]
+[ext_resource type="Texture2D" uid="uid://cgd8bu25rq1kn" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/big_demon_idle_anim_f3.png" id="31_fekeo"]
+[ext_resource type="Texture2D" uid="uid://hppvdf8wfba3" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/big_demon_run_anim_f0.png" id="32_clju6"]
+[ext_resource type="Texture2D" uid="uid://byyon7frcxh60" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/big_demon_run_anim_f1.png" id="33_jjuxs"]
+[ext_resource type="Texture2D" uid="uid://ty7c3ulp3v1j" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/big_demon_run_anim_f2.png" id="34_mc4en"]
+[ext_resource type="Texture2D" uid="uid://cxe4rrdxrk0q8" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/big_demon_run_anim_f3.png" id="35_g0aih"]
+[ext_resource type="Script" uid="uid://bbefta1lpqh0f" path="res://pointy.gd" id="36_55tch"]
+[ext_resource type="AudioStream" uid="uid://bmhiulfewacnn" path="res://sounds/freefantasysfxtommusic/SFX/Spells/mudshot.ogg" id="37_owvfv"]
+[ext_resource type="PackedScene" uid="uid://dclfxak0qm0gw" path="res://mud_projectile.tscn" id="38_bcv2n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_chy0o"]
-texture = ExtResource("1_any6y")
+texture = ExtResource("1_0cvnm")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -82,7 +94,7 @@ sources/0 = SubResource("TileSetAtlasSource_chy0o")
 animations = [{
 "frames": [{
 "duration": 0.9,
-"texture": ExtResource("4_vjsws")
+"texture": ExtResource("4_fkrue")
 }],
 "loop": true,
 "name": &"elf_hit",
@@ -90,16 +102,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_5lq26")
+"texture": ExtResource("5_r3lyl")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_1qrk0")
+"texture": ExtResource("6_045wf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_gvs86")
+"texture": ExtResource("7_e65ft")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_7hd0a")
+"texture": ExtResource("8_r6a1p")
 }],
 "loop": true,
 "name": &"elf_m_idle",
@@ -107,16 +119,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("9_se6o5")
+"texture": ExtResource("9_cnfq3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_gchko")
+"texture": ExtResource("10_kvr7q")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_4hckl")
+"texture": ExtResource("11_0a45h")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_um5m2")
+"texture": ExtResource("12_fqh73")
 }],
 "loop": true,
 "name": &"elf_m_run",
@@ -135,16 +147,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("19_33aj2")
+"texture": ExtResource("19_bpg7i")
 }, {
 "duration": 1.0,
-"texture": ExtResource("20_w242f")
+"texture": ExtResource("20_i6akk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("20_w242f")
+"texture": ExtResource("20_i6akk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("19_33aj2")
+"texture": ExtResource("19_bpg7i")
 }],
 "loop": false,
 "name": &"shoot",
@@ -153,11 +165,46 @@ animations = [{
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_dt5oa"]
 streams_count = 5
-stream_0/stream = ExtResource("22_7f5wd")
-stream_1/stream = ExtResource("23_4rg0b")
-stream_2/stream = ExtResource("24_m378r")
-stream_3/stream = ExtResource("25_rkhjn")
-stream_4/stream = ExtResource("26_vnc70")
+stream_0/stream = ExtResource("22_p084k")
+stream_1/stream = ExtResource("23_w8hd8")
+stream_2/stream = ExtResource("24_846mk")
+stream_3/stream = ExtResource("25_skb8s")
+stream_4/stream = ExtResource("26_d8krd")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mn6qy"]
+size = Vector2(18.1098, 26.9088)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6x46a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_ak8y2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_vw7fo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_rrrsp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_fekeo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_clju6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_jjuxs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_mc4en")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_g0aih")
+}],
+"loop": true,
+"name": &"spit",
+"speed": 5.0
+}]
 
 [node name="boss_room" type="Node2D"]
 
@@ -167,21 +214,21 @@ tile_set = SubResource("TileSet_m2ex5")
 
 [node name="wall_boss" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAAIAAAAAQACAAUAAAAJAAAAAQACAAUAAAAKAAAAAQACAAUAAAALAAAAAQACAAUAAAAMAAAAAQACAAUAAAANAAAAAQACAAUAAAAOAAAAAQACAAUAAAAPAAAAAQACAAUAAAAQAAAAAQACAAUAAAARAAAAAQACAAUAAAASAAAAAQACAAUAAAATAAAAAQACAAUAAAAUAAAAAQACAAUAAAAVAAAAAQACAAUAAAAWAAAAAQACAAUAAAAXAAAAAQACAAUAAAAHAAAAAQACAAUAAAAYAAAAAQACAAUAAAAGAAAAAQAEAAUAAAAGAAEAAQAEAAUAAAAGAAIAAQAEAAUAAAAGAAMAAQAEAAUAAAAGAAQAAQAEAAUAAAAGAAUAAQAEAAUAAAAGAAYAAQAEAAUAAAAGAAcAAQAEAAUAAAAGAAgAAQAEAAUAAAAGAAkAAQAEAAUAAAAGAAoAAQAEAAUAAAAZAAAAAQAHAAUAAAAZAAEAAQAHAAUAAAAZAAIAAQAHAAUAAAAZAAMAAQAHAAUAAAAZAAQAAQAHAAUAAAAZAAUAAQAHAAUAAAAZAAYAAQAHAAUAAAAZAAcAAQAHAAUAAAAZAAgAAQAHAAUAAAAZAAkAAQAHAAUAAAAZAAoAAQAHAAUAAAAZAAsAAQAHAAUAAAAZAAwAAQAHAAUAAAAZAA0AAQAHAAUAAAAZAA4AAQAHAAUAAAAZAA8AAQAHAAUAAAAZABAAAQALAAcAAAAYABAAAQAJAAcAAAAXABAAAQAJAAcAAAAWABAAAQAJAAcAAAAVABAAAQAJAAcAAAAUABAAAQAJAAcAAAATABAAAQAJAAcAAAASABAAAQAJAAcAAAARABAAAQAJAAcAAAAQABAAAQAJAAcAAAAPABAAAQAJAAcAAAAOABAAAQAJAAcAAAANABAAAQAJAAcAAAAMABAAAQAJAAcAAAALABAAAQAJAAcAAAAKABAAAQAJAAcAAAAJABAAAQAJAAcAAAAIABAAAQAJAAcAAAAHABAAAQAJAAcAAAAGABAAAQAJAAcAAAAFABAAAQAJAAcAAAAEABAAAQAJAAcAAAADABAAAQAJAAcAAAACABAAAQAJAAcAAAABABAAAQAJAAcAAAAAABAAAQAIAAcAAAAAAA8AAQAEAAUAAAAAAA4AAQAEAAUAAAAAAA0AAQAEAAUAAAAAAAwAAQAEAAUAAAAAAAsAAQAEAAUAAAABAAsAAQAJAAcAAAACAAsAAQAJAAcAAAADAAsAAQAJAAcAAAAEAAsAAQAJAAcAAAAFAAsAAQAJAAcAAAAGAAsAAQAJAAcAAAAHAP//AQACAAYAAAAIAP//AQACAAYAAAAJAP//AQACAAYAAAAKAP//AQACAAYAAAALAP//AQACAAYAAAAMAP//AQACAAYAAAANAP//AQACAAYAAAAOAP//AQACAAYAAAAPAP//AQACAAYAAAAQAP//AQACAAYAAAARAP//AQACAAYAAAASAP//AQACAAYAAAATAP//AQACAAYAAAAUAP//AQACAAYAAAAVAP//AQACAAYAAAAWAP//AQACAAYAAAAXAP//AQACAAYAAAAYAP//AQACAAYAAAABAAoAAQACAAYAAAACAAoAAQACAAYAAAADAAoAAQACAAYAAAAEAAoAAQACAAYAAAAFAAoAAQACAAYAAAABAA8AAQACAAYAAAACAA8AAQACAAYAAAADAA8AAQACAAYAAAAEAA8AAQACAAYAAAAFAA8AAQACAAYAAAAGAA8AAQACAAYAAAAHAA8AAQACAAYAAAAIAA8AAQACAAYAAAAJAA8AAQACAAYAAAAKAA8AAQACAAYAAAALAA8AAQACAAYAAAAMAA8AAQACAAYAAAANAA8AAQACAAYAAAAOAA8AAQACAAYAAAAPAA8AAQACAAYAAAAQAA8AAQACAAYAAAARAA8AAQACAAYAAAASAA8AAQACAAYAAAATAA8AAQACAAYAAAAUAA8AAQACAAYAAAAVAA8AAQACAAYAAAAWAA8AAQACAAYAAAAXAA8AAQACAAYAAAAYAA8AAQACAAYAAAAGAP//AQABAAYAAAA=")
-tile_set = ExtResource("2_n8ie0")
+tile_set = ExtResource("2_n7pxe")
 
 [node name="wall_boss_2" type="TileMapLayer" parent="wall_boss"]
 tile_map_data = PackedByteArray("AAAAAAoAAQABAAQAAAAGAAoAAQADAAQAAAAAAA8AAQABAAQAAAAZAA8AAQADAAQAAAAZAP//AQADAAQAAAA=")
-tile_set = ExtResource("2_n8ie0")
+tile_set = ExtResource("2_n7pxe")
 
 [node name="door_boss" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAADAAwAAAACABAAAAAEAAwAAAADABAAAAADAAsAAAACAA8AAAAEAAsAAAADAA8AAAA=")
-tile_set = ExtResource("2_n8ie0")
+tile_set = ExtResource("2_n7pxe")
 
 [node name="elf" type="CharacterBody2D" parent="." groups=["player"]]
 unique_name_in_owner = true
 position = Vector2(63, 225)
 collision_mask = 2
-script = ExtResource("3_mcrvp")
+script = ExtResource("3_xam4y")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="elf"]
 position = Vector2(0, -1)
@@ -199,11 +246,11 @@ offset_left = 246.0
 offset_top = 77.0
 offset_right = 310.0
 offset_bottom = 117.0
-texture_under = ExtResource("13_dg0bh")
-texture_progress = ExtResource("14_8mqhg")
-script = ExtResource("15_4o5kc")
+texture_under = ExtResource("13_wf4nx")
+texture_progress = ExtResource("14_aegqj")
+script = ExtResource("15_ifaon")
 
-[node name="InventoryGui" parent="elf/CanvasLayer" instance=ExtResource("16_gs2uj")]
+[node name="InventoryGui" parent="elf/CanvasLayer" instance=ExtResource("16_mblhi")]
 offset_left = 282.0
 offset_top = 88.0
 offset_right = -172.0
@@ -211,8 +258,8 @@ offset_bottom = -156.0
 
 [node name="bow" type="CharacterBody2D" parent="elf"]
 position = Vector2(18.629, 6.46957)
-script = ExtResource("17_fbhdx")
-mud = ExtResource("18_m4n02")
+script = ExtResource("17_ip4tw")
+mud = ExtResource("18_4mnpf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="elf/bow"]
 position = Vector2(-2.6226e-06, -3.8147e-06)
@@ -226,12 +273,38 @@ position = Vector2(11.0671, 0)
 
 [node name="bowattack" type="AudioStreamPlayer2D" parent="elf/bow"]
 position = Vector2(-5.72205e-06, -1.43051e-06)
-stream = ExtResource("21_mijfr")
+stream = ExtResource("21_641je")
 volume_db = 1.333
 
-[node name="arrow" parent="elf" instance=ExtResource("18_m4n02")]
+[node name="arrow" parent="elf" instance=ExtResource("18_4mnpf")]
 visible = false
 position = Vector2(-93.048, 45.338)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="elf"]
 stream = SubResource("AudioStreamRandomizer_dt5oa")
+
+[node name="Boss" type="CharacterBody2D" parent="." groups=["enemy"]]
+position = Vector2(250, 120)
+script = ExtResource("27_k8rgl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boss"]
+position = Vector2(0.403229, 4.01181)
+shape = SubResource("RectangleShape2D_mn6qy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Boss"]
+position = Vector2(-1.90735e-06, 0)
+sprite_frames = SubResource("SpriteFrames_6x46a")
+animation = &"spit"
+
+[node name="POINTY" type="Marker2D" parent="Boss"]
+position = Vector2(21.1281, -0.996621)
+script = ExtResource("36_55tch")
+
+[node name="ShootyCooldown" type="Timer" parent="Boss"]
+
+[node name="mudshot" type="AudioStreamPlayer2D" parent="Boss"]
+stream = ExtResource("37_owvfv")
+
+[node name="muddy_mud" parent="Boss" instance=ExtResource("38_bcv2n")]
+visible = false
+position = Vector2(-29.177, 24.916)

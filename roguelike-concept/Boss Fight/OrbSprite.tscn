@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://o23rl77h8y3t"]
+
+[ext_resource type="Texture2D" uid="uid://dseviwgjmovwb" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/weapon_double_axe.png" id="1_rmxuc"]
+[ext_resource type="Script" uid="uid://bbujnhqiq5bhq" path="res://Boss Fight/orb_sprite.gd" id="1_w457k"]
+
+[node name="OrbSprite" type="Node2D"]
+script = ExtResource("1_w457k")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_rmxuc")

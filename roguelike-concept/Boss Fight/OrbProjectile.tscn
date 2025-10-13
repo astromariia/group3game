@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://bqk4hl3m7ipjb"]
+
+[ext_resource type="Script" uid="uid://d3y00m40vah8k" path="res://Boss Fight/OrbProjectile.gd" id="1_my4dw"]
+[ext_resource type="Texture2D" uid="uid://dseviwgjmovwb" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/weapon_double_axe.png" id="1_uwqkk"]
+[ext_resource type="Script" uid="uid://o8trbg4t6bkp" path="res://Boss Fight/orbit_hazard.gd" id="2_my4dw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ngk2l"]
+size = Vector2(14, 22)
+
+[node name="OrbProjectile" type="Node2D"]
+script = ExtResource("1_my4dw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_uwqkk")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_my4dw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_ngk2l")
