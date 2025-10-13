@@ -1,6 +1,6 @@
 extends Marker2D
 #code based on GPT input
-@onready var attatchedBeing : Node2D = $muddy
+@onready var attatchedBeing : Node2D = $Boss
 func pointAt(attachedBeing: Node2D, direction):
 	var distance = 20
 	var offset: Vector2 = Vector2.ZERO
