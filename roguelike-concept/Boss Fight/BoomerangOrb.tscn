@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://38q3vthdvmc6"]
+
+[ext_resource type="Script" uid="uid://ckfnm0uvg34gl" path="res://Boss Fight/BoomerangOrb.gd" id="1_85ykv"]
+[ext_resource type="Texture2D" uid="uid://bvj7tpj2kd280" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/weapon_golden_sword.png" id="2_85ykv"]
+[ext_resource type="Script" uid="uid://o8trbg4t6bkp" path="res://Boss Fight/orbit_hazard.gd" id="3_l50qj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_85ykv"]
+size = Vector2(9, 20)
+
+[node name="OrbSprite" type="Node2D"]
+script = ExtResource("1_85ykv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_85ykv")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("3_l50qj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_85ykv")

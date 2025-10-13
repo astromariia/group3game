@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://38q3vthdvmc6"]
+
+[ext_resource type="Script" uid="uid://ckfnm0uvg34gl" path="res://Boss Fight/BoomerangOrb.gd" id="1_85ykv"]
+[ext_resource type="Texture2D" uid="uid://bvj7tpj2kd280" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/weapon_golden_sword.png" id="2_85ykv"]
+
+[node name="OrbSprite" type="Node2D"]
+script = ExtResource("1_85ykv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_85ykv")
