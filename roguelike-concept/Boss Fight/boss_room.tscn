@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=4 uid="uid://bg0suudcuykbd"]
+[gd_scene load_steps=51 format=4 uid="uid://bg0suudcuykbd"]
 
 [ext_resource type="Texture2D" uid="uid://c7bbb16dxp1xi" path="res://Art/0x72_DungeonTilesetII_v1.7/atlas_floor-16x16.png" id="1_0cvnm"]
 [ext_resource type="TileSet" uid="uid://bhge3u3jwyois" path="res://walls.tres" id="2_n7pxe"]
@@ -206,6 +206,18 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0cvnm"]
+size = Vector2(109, 187)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n7pxe"]
+size = Vector2(408, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xam4y"]
+size = Vector2(20, 271.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fkrue"]
+size = Vector2(20, 102.5)
+
 [node name="boss_room" type="Node2D"]
 
 [node name="floor_boss" type="TileMapLayer" parent="."]
@@ -308,3 +320,25 @@ stream = ExtResource("37_owvfv")
 [node name="muddy_mud" parent="Boss" instance=ExtResource("38_bcv2n")]
 visible = false
 position = Vector2(-29.177, 24.916)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(53, 88)
+shape = SubResource("RectangleShape2D_0cvnm")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(210, 0)
+shape = SubResource("RectangleShape2D_n7pxe")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(414, 129.25)
+shape = SubResource("RectangleShape2D_xam4y")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(209, 263)
+shape = SubResource("RectangleShape2D_n7pxe")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2, 221.75)
+shape = SubResource("RectangleShape2D_fkrue")
