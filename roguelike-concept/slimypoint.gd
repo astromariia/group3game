@@ -1,6 +1,5 @@
 extends Marker2D
 #code based on GPT input
-@onready var attatchedBeing : Node2D = $Muddy
 func pointAt(attachedBeing: Node2D, direction):
 	var distance = 20
 	var offset: Vector2 = Vector2.ZERO
@@ -14,11 +13,11 @@ func pointAt(attachedBeing: Node2D, direction):
 		"right":
 			offset = Vector2(-distance,0)
 		"upleft":
-			offset = Vector2(0,distance)
+			offset = Vector2(distance,distance)
 		"downright":
-			offset = Vector2(0,-distance)
+			offset = Vector2(-distance,-distance)
 		"downleft":
-			offset = Vector2(distance,0)
+			offset = Vector2(distance,-distance)
 		"upright":
-			offset = Vector2(-distance,0)
+			offset = Vector2(-distance,distance)
 	self.global_position = attachedBeing.global_position + offset
