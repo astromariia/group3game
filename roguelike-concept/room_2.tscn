@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=4 uid="uid://bmxlj3lsgh06t"]
+[gd_scene load_steps=58 format=4 uid="uid://bmxlj3lsgh06t"]
 
 [ext_resource type="TileSet" uid="uid://bwed0al80aii" path="res://room2_tile_set.tres" id="1_7hp4u"]
 [ext_resource type="Script" uid="uid://bgn2n3h1802dy" path="res://room_2game.gd" id="1_66el0"]
@@ -35,15 +35,6 @@
 [ext_resource type="Script" uid="uid://bblaq1vj5kxod" path="res://door_open.gd" id="33_vwuv8"]
 [ext_resource type="PackedScene" uid="uid://cosl1ckj73gg2" path="res://room_3.tscn" id="34_08dkn"]
 [ext_resource type="Script" uid="uid://cr8eriayoxs1k" path="res://Boss Fight/spikes.gd" id="35_cf22k"]
-[ext_resource type="Script" uid="uid://camk5pr4f08c4" path="res://slimy.gd" id="36_7worf"]
-[ext_resource type="PackedScene" uid="uid://dclfxak0qm0gw" path="res://mud_projectile.tscn" id="37_7worf"]
-[ext_resource type="PackedScene" uid="uid://bs1ibom1qomtr" path="res://slime_projectile.tscn" id="37_ksxq5"]
-[ext_resource type="Texture2D" uid="uid://b6f7hpv6ieu2i" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/swampy_anim_f0.png" id="38_ksxq5"]
-[ext_resource type="Texture2D" uid="uid://4r1erhjqhmo" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/swampy_anim_f1.png" id="39_7om1s"]
-[ext_resource type="Texture2D" uid="uid://cmu4egdnhfra0" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/swampy_anim_f2.png" id="40_v6ghv"]
-[ext_resource type="Texture2D" uid="uid://buqf8364aw7ed" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/swampy_anim_f3.png" id="41_m8sas"]
-[ext_resource type="Script" uid="uid://dmma32p1efmjn" path="res://slimypoint.gd" id="42_7om1s"]
-[ext_resource type="AudioStream" uid="uid://bmhiulfewacnn" path="res://sounds/freefantasysfxtommusic/SFX/Spells/mudshot.ogg" id="43_fcbnk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cf22k"]
 size = Vector2(4, 236)
@@ -207,29 +198,6 @@ size = Vector2(16.5, 17)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ixoof"]
 size = Vector2(17, 15.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_42pht"]
-size = Vector2(18.0488, 14.9831)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_algyo"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("38_ksxq5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("39_7om1s")
-}, {
-"duration": 1.0,
-"texture": ExtResource("40_v6ghv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("41_m8sas")
-}],
-"loop": true,
-"name": &"spit",
-"speed": 5.0
-}]
 
 [node name="room_2" type="Node2D"]
 script = ExtResource("1_66el0")
@@ -456,30 +424,3 @@ debug_color = Color(0.976969, 0, 0.407763, 0.42)
 position = Vector2(312, 57)
 shape = SubResource("RectangleShape2D_m8sas")
 debug_color = Color(0.994398, 0, 0.222713, 0.42)
-
-[node name="slimy" type="CharacterBody2D" parent="." groups=["enemy"]]
-position = Vector2(183.11, 159.459)
-script = ExtResource("36_7worf")
-mud = ExtResource("37_ksxq5")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="slimy"]
-position = Vector2(-9.53674e-06, 0)
-shape = SubResource("RectangleShape2D_42pht")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="slimy"]
-position = Vector2(-1.90735e-06, 0)
-sprite_frames = SubResource("SpriteFrames_algyo")
-animation = &"spit"
-
-[node name="slimypoint" type="Marker2D" parent="slimy"]
-position = Vector2(21.1281, -0.996621)
-script = ExtResource("42_7om1s")
-
-[node name="ShootyCooldown" type="Timer" parent="slimy"]
-
-[node name="mudshot" type="AudioStreamPlayer2D" parent="slimy"]
-stream = ExtResource("43_fcbnk")
-
-[node name="muddy_mud2" parent="slimy" instance=ExtResource("37_7worf")]
-visible = false
-position = Vector2(-29.177, 24.916)
