@@ -8,7 +8,7 @@ extends CharacterBody2D
 @onready var attackCooldown: Timer = $ShootyCooldown
 
 
-var HP = 10
+var HP = 5
 var currentHealth = HP
 
 
