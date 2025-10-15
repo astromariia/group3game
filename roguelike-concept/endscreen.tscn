@@ -338,13 +338,14 @@ format = 2
 layer_0/tile_data = PackedInt32Array(262150, 917504, 2, 262151, 983040, 2, 327686, 917504, 3, 327687, 983040, 3)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
 offset_left = 4.0
 offset_top = 67.0
 offset_right = 469.0
 offset_bottom = 165.0
 theme_override_fonts/normal_font = ExtResource("2_nxgh7")
 theme_override_font_sizes/normal_font_size = 20
-text = "You avenged your father and brought glory to your people. The Goblin King will no longer terrorize the people of the Elf Kingdom. Live on in glory.
+text = "You avenged your father and brought glory to your people. The Demon King will no longer terrorize the people of the Elf Kingdom. Live on in glory.
 "
 visible_characters = 0
 visible_ratio = 0.0
@@ -380,3 +381,5 @@ script = ExtResource("3_5ywda")
 
 [node name="Audio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_xvvvd")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -17,7 +17,7 @@ const OrbitHazard := preload("res://Boss Fight/orbit_hazard.gd")
 @export var speed: float = 0.5
 @export var facingDir: String = "left"
 @export var mud: PackedScene
-var HP: int = 50
+var HP: int = 20
 var currentHealth: int = HP
 
 # -----------------------------
@@ -54,7 +54,7 @@ var currentHealth: int = HP
 # Wander (boss drift)
 # -----------------------------
 @export var wander_enabled: bool = true
-@export var wander_radius: float = 50.0
+@export var wander_radius: float = 100.0
 @export var wander_speed: float = 30.0
 @export var wander_pause_sec: float = 5.0
 @export var arrive_epsilon: float = 4.0
