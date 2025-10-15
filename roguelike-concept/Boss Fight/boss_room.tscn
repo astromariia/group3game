@@ -1,7 +1,9 @@
-[gd_scene load_steps=53 format=4 uid="uid://bg0suudcuykbd"]
+[gd_scene load_steps=51 format=4 uid="uid://bg0suudcuykbd"]
 
 [ext_resource type="Texture2D" uid="uid://c7bbb16dxp1xi" path="res://Art/0x72_DungeonTilesetII_v1.7/atlas_floor-16x16.png" id="1_0cvnm"]
+[ext_resource type="Script" uid="uid://br6yh7fegypv5" path="res://Boss Fight/boss_room.gd" id="1_n7pxe"]
 [ext_resource type="TileSet" uid="uid://bhge3u3jwyois" path="res://walls.tres" id="2_n7pxe"]
+[ext_resource type="PackedScene" uid="uid://cbka14n72ieru" path="res://endscreen.tscn" id="2_xam4y"]
 [ext_resource type="Script" uid="uid://cnteeodvxavyd" path="res://elf.gd" id="3_xam4y"]
 [ext_resource type="Texture2D" uid="uid://sbp4q3qfpd8r" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_hit_anim_f0.png" id="4_fkrue"]
 [ext_resource type="Texture2D" uid="uid://cd2gy0fi5i244" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_idle_anim_f0.png" id="5_r3lyl"]
@@ -38,7 +40,7 @@
 [ext_resource type="Script" uid="uid://bbefta1lpqh0f" path="res://pointy.gd" id="36_55tch"]
 [ext_resource type="AudioStream" uid="uid://bmhiulfewacnn" path="res://sounds/freefantasysfxtommusic/SFX/Spells/mudshot.ogg" id="37_owvfv"]
 [ext_resource type="PackedScene" uid="uid://dclfxak0qm0gw" path="res://mud_projectile.tscn" id="38_bcv2n"]
-[ext_resource type="Script" uid="uid://cr8eriayoxs1k" path="res://Boss Fight/spikes.gd" id="39_n7pxe"]
+[ext_resource type="Script" uid="uid://dwiyw4jhsq5jx" path="res://Spikes.gd" id="39_n7pxe"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_chy0o"]
 texture = ExtResource("1_0cvnm")
@@ -207,22 +209,12 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0cvnm"]
-size = Vector2(109, 187)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n7pxe"]
-size = Vector2(408, 20)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xam4y"]
-size = Vector2(20, 271.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fkrue"]
-size = Vector2(20, 102.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_r3lyl"]
-size = Vector2(17, 18)
+size = Vector2(14.5, 13)
 
 [node name="boss_room" type="Node2D"]
+script = ExtResource("1_n7pxe")
+target_scene = ExtResource("2_xam4y")
 
 [node name="floor_boss" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAABAAwAAAAAAAAAAAACAAwAAAAAAAAAAAADAAwAAAAAAAAAAAAEAAwAAAAAAAAAAAABAA0AAAAAAAAAAAABAA4AAAAAAAAAAAACAA4AAAAAAAAAAAABAA8AAAAAAAAAAAACAA8AAAAAAAAAAAADAA8AAAAAAAAAAAAEAA8AAAAAAAAAAAAEAA4AAAAAAAAAAAAEAA0AAAAAAAAAAAADAA0AAAAAAAAAAAACAA0AAAAAAAAAAAADAA4AAAAAAAAAAAAFAAwAAAAAAAAAAAAGAAwAAAAAAAAAAAAHAAwAAAAAAAAAAAAHAAsAAAAAAAAAAAAHAAoAAAAAAAAAAAAHAAkAAAAAAAAAAAAHAAgAAAAAAAAAAAAHAAcAAAAAAAAAAAAHAAYAAAAAAAAAAAAHAAUAAAAAAAAAAAAHAAQAAAAAAAAAAAAHAAMAAAAAAAAAAAAHAAIAAAAAAAAAAAAHAAEAAAAAAAAAAAAIAAEAAAAAAAAAAAAJAAEAAAAAAAAAAAAKAAEAAAAAAAAAAAALAAEAAAAAAAAAAAAMAAEAAAAAAAAAAAANAAEAAAAAAAAAAAAOAAEAAAAAAAAAAAAPAAEAAAAAAAAAAAAQAAEAAAAAAAAAAAARAAEAAAAAAAAAAAASAAEAAAAAAAAAAAATAAEAAAAAAAAAAAAUAAEAAAAAAAAAAAAVAAEAAAAAAAAAAAAYAAIAAAAAAAAAAAAWAAEAAAAAAAAAAAAXAAEAAAAAAAAAAAAYAAEAAAAAAAAAAAAYAAMAAAAAAAAAAAAYAAQAAAAAAAAAAAAYAAUAAAAAAAAAAAAYAAYAAAAAAAAAAAAYAAcAAAAAAAAAAAAYAAgAAAAAAAAAAAAYAAkAAAAAAAAAAAAYAAoAAAAAAAAAAAAYAAsAAAAAAAAAAAAYAAwAAAAAAAAAAAAYAA0AAAAAAAAAAAAYAA4AAAAAAAAAAAAFAA8AAAAAAAAAAAAGAA8AAAAAAAAAAAAHAA8AAAAAAAAAAAAIAA8AAAAAAAAAAAAJAA8AAAAAAAAAAAAKAA8AAAAAAAAAAAALAA8AAAAAAAAAAAAMAA8AAAAAAAAAAAANAA8AAAAAAAAAAAAOAA8AAAAAAAAAAAAPAA8AAAAAAAAAAAAQAA8AAAAAAAAAAAARAA8AAAAAAAAAAAASAA8AAAAAAAAAAAATAA8AAAAAAAAAAAAUAA8AAAAAAAAAAAAVAA8AAAAAAAAAAAAWAA8AAAAAAAAAAAAXAA8AAAAAAAAAAAAYAA8AAAAAAAAAAAAOAAoAAAAAAAAAAAAOAAkAAAAAAAAAAAAOAAgAAAAAAAAAAAAOAAcAAAAAAAAAAAAOAAYAAAAAAAAAAAAOAAUAAAAAAAAAAAAOAAQAAAAAAAAAAAAOAAMAAAAAAAAAAAAOAAIAAAAAAAAAAAANAAIAAAAAAAAAAAAMAAIAAAAAAAAAAAALAAIAAAAAAAAAAAAKAAIAAAAAAAAAAAAJAAIAAAAAAAAAAAAIAAIAAAAAAAAAAAAIAAMAAAAAAAAAAAAIAAQAAAAAAAAAAAAIAAUAAAAAAAAAAAAIAAYAAAAAAAAAAAAIAAcAAAAAAAAAAAAIAAgAAAAAAAAAAAAIAAkAAAAAAAAAAAAIAAoAAAAAAAAAAAAIAAsAAAAAAAAAAAAIAA0AAAAAAAAAAAAHAA0AAAAAAAAAAAAGAA0AAAAAAAAAAAAFAA0AAAAAAAAAAAAFAA4AAAAAAAAAAAAGAA4AAAAAAAAAAAAHAA4AAAAAAAAAAAAIAA4AAAAAAAAAAAAJAA4AAAAAAAAAAAAJAAwAAAADAAMAAAAJAAsAAAAAAAAAAAAJAAoAAAAAAAAAAAAJAAkAAAAAAAAAAAAJAAgAAAAAAAAAAAAJAAcAAAAAAAAAAAAJAAYAAAAAAAAAAAAJAAUAAAAAAAAAAAAJAAQAAAADAAMAAAAJAAMAAAAAAAAAAAAKAAMAAAADAAMAAAAKAAQAAAAAAAAAAAAKAAUAAAAAAAAAAAAKAAYAAAAAAAAAAAAKAAcAAAAAAAAAAAAKAAgAAAAAAAAAAAAKAAkAAAAAAAAAAAAKAAoAAAAAAAAAAAAKAAsAAAAAAAAAAAAKAAwAAAAAAAAAAAAKAA0AAAADAAMAAAAKAA4AAAAAAAAAAAALAA4AAAAAAAAAAAALAA0AAAAAAAAAAAALAAwAAAAAAAAAAAALAAsAAAAAAAAAAAALAAoAAAAAAAAAAAALAAkAAAAAAAAAAAALAAgAAAAAAAAAAAALAAcAAAAAAAAAAAALAAYAAAAAAAAAAAALAAUAAAAAAAAAAAALAAQAAAAAAAAAAAALAAMAAAAAAAAAAAAMAAMAAAAAAAAAAAAMAAQAAAAAAAAAAAAMAAUAAAAAAAAAAAAMAAYAAAAAAAAAAAAMAAcAAAAAAAAAAAAMAAgAAAAAAAAAAAAMAAkAAAAAAAAAAAAMAAoAAAAAAAAAAAAMAAsAAAAAAAAAAAAMAAwAAAAAAAAAAAAMAA0AAAAAAAAAAAAMAA4AAAAAAAAAAAANAA4AAAAAAAAAAAANAA0AAAAAAAAAAAANAAwAAAAAAAAAAAANAAsAAAAAAAAAAAANAAoAAAAAAAAAAAANAAkAAAAAAAAAAAANAAgAAAAAAAAAAAANAAcAAAAAAAAAAAANAAYAAAAAAAAAAAANAAUAAAAAAAAAAAANAAQAAAAAAAAAAAANAAMAAAAAAAAAAAAOAAsAAAAAAAAAAAAOAAwAAAAAAAAAAAAOAA0AAAAAAAAAAAAOAA4AAAAAAAAAAAAPAA4AAAAAAAAAAAAPAA0AAAAAAAAAAAAPAAwAAAAAAAAAAAAPAAsAAAAAAAAAAAAPAAoAAAAAAAAAAAAPAAkAAAAAAAAAAAAPAAgAAAAAAAAAAAAPAAcAAAAAAAAAAAAPAAYAAAAAAAAAAAAPAAUAAAAAAAAAAAAPAAQAAAAAAAAAAAAPAAMAAAAAAAAAAAAPAAIAAAAAAAAAAAAQAAIAAAAAAAAAAAAQAAMAAAAAAAAAAAAQAAQAAAAAAAAAAAAQAAUAAAAAAAAAAAAQAAYAAAAAAAAAAAAQAAcAAAAAAAAAAAAQAAgAAAAAAAAAAAAQAAkAAAAAAAAAAAAQAAoAAAAAAAAAAAAQAAsAAAAAAAAAAAAQAAwAAAAAAAAAAAAQAA0AAAAAAAAAAAAQAA4AAAAAAAAAAAARAA4AAAAAAAAAAAARAA0AAAAAAAAAAAARAAwAAAAAAAAAAAARAAsAAAAAAAAAAAARAAoAAAAAAAAAAAARAAkAAAAAAAAAAAARAAgAAAAAAAAAAAARAAcAAAAAAAAAAAARAAYAAAAAAAAAAAARAAUAAAAAAAAAAAARAAQAAAAAAAAAAAARAAMAAAAAAAAAAAARAAIAAAAAAAAAAAASAAIAAAAAAAAAAAASAAMAAAAAAAAAAAASAAQAAAAAAAAAAAASAAUAAAAAAAAAAAASAAYAAAAAAAAAAAASAAcAAAAAAAAAAAASAAgAAAAAAAAAAAASAAkAAAAAAAAAAAASAAoAAAAAAAAAAAASAAsAAAAAAAAAAAASAAwAAAAAAAAAAAASAA0AAAAAAAAAAAASAA4AAAAAAAAAAAATAA4AAAAAAAAAAAATAA0AAAAAAAAAAAATAAwAAAAAAAAAAAATAAsAAAAAAAAAAAATAAoAAAAAAAAAAAATAAkAAAAAAAAAAAATAAgAAAAAAAAAAAATAAcAAAAAAAAAAAATAAYAAAAAAAAAAAATAAUAAAAAAAAAAAATAAQAAAAAAAAAAAATAAMAAAAAAAAAAAATAAIAAAAAAAAAAAAUAAIAAAAAAAAAAAAUAAMAAAAAAAAAAAAUAAQAAAAAAAAAAAAUAAUAAAAAAAAAAAAUAAYAAAAAAAAAAAAUAAcAAAAAAAAAAAAUAAgAAAAAAAAAAAAUAAkAAAAAAAAAAAAUAAoAAAAAAAAAAAAUAAsAAAAAAAAAAAAUAAwAAAAAAAAAAAAUAA0AAAAAAAAAAAAUAA4AAAAAAAAAAAAVAA4AAAAAAAAAAAAVAAwAAAAAAAAAAAAVAAsAAAAAAAAAAAAVAAoAAAAAAAAAAAAVAAkAAAAAAAAAAAAVAAgAAAAAAAAAAAAVAAcAAAAAAAAAAAAVAAYAAAAAAAAAAAAVAAUAAAAAAAAAAAAVAAQAAAAAAAAAAAAVAAMAAAADAAMAAAAVAAIAAAAAAAAAAAAWAAIAAAAAAAAAAAAWAAMAAAAAAAAAAAAWAAQAAAADAAMAAAAWAAUAAAAAAAAAAAAWAAYAAAAAAAAAAAAWAAcAAAAAAAAAAAAWAAgAAAAAAAAAAAAWAAkAAAAAAAAAAAAWAAoAAAAAAAAAAAAWAAsAAAAAAAAAAAAWAAwAAAADAAMAAAAWAA0AAAAAAAAAAAAWAA4AAAAAAAAAAAAXAA4AAAAAAAAAAAAXAA0AAAAAAAAAAAAXAAwAAAAAAAAAAAAXAAsAAAAAAAAAAAAXAAoAAAAAAAAAAAAXAAkAAAAAAAAAAAAXAAgAAAAAAAAAAAAXAAcAAAAAAAAAAAAXAAYAAAAAAAAAAAAXAAUAAAAAAAAAAAAXAAQAAAAAAAAAAAAXAAMAAAAAAAAAAAAXAAIAAAAAAAAAAAAVAA0AAAADAAMAAAAIAAwAAAAAAAAAAAAJAA0AAAAAAAAAAAA=")
@@ -258,19 +250,19 @@ shape = SubResource("RectangleShape2D_gfcwx")
 [node name="CanvasLayer" type="CanvasLayer" parent="elf"]
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="elf/CanvasLayer"]
-offset_left = 246.0
-offset_top = 77.0
-offset_right = 310.0
-offset_bottom = 117.0
+offset_left = 337.0
+offset_top = 6.0
+offset_right = 401.0
+offset_bottom = 46.0
 texture_under = ExtResource("13_wf4nx")
 texture_progress = ExtResource("14_aegqj")
 script = ExtResource("15_ifaon")
 
 [node name="InventoryGui" parent="elf/CanvasLayer" instance=ExtResource("16_mblhi")]
-offset_left = 282.0
-offset_top = 88.0
-offset_right = -172.0
-offset_bottom = -156.0
+offset_left = 373.0
+offset_top = 17.0
+offset_right = -81.0
+offset_bottom = -227.0
 
 [node name="bow" type="CharacterBody2D" parent="elf"]
 position = Vector2(18.629, 6.46957)
@@ -325,60 +317,68 @@ stream = ExtResource("37_owvfv")
 visible = false
 position = Vector2(-29.177, 24.916)
 
-[node name="Walls" type="StaticBody2D" parent="."]
-collision_layer = 15
+[node name="Node2D" type="Node2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls"]
-position = Vector2(53, 88)
-shape = SubResource("RectangleShape2D_0cvnm")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls"]
-position = Vector2(210, 0)
-shape = SubResource("RectangleShape2D_n7pxe")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls"]
-position = Vector2(414, 129.25)
-shape = SubResource("RectangleShape2D_xam4y")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Walls"]
-position = Vector2(209, 263)
-shape = SubResource("RectangleShape2D_n7pxe")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="Walls"]
-position = Vector2(2, 221.75)
-shape = SubResource("RectangleShape2D_fkrue")
-
-[node name="Spikes" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="Node2D"]
+position = Vector2(40, 168)
 script = ExtResource("39_n7pxe")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Spikes"]
-position = Vector2(152, 201)
-shape = SubResource("RectangleShape2D_r3lyl")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Area2D"]
+position = Vector2(112, 32)
+shape = SubResource("RectangleShape2D_xam4y")
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="Spikes"]
-position = Vector2(168, 57)
-shape = SubResource("RectangleShape2D_r3lyl")
+[node name="Area2D2" type="Area2D" parent="Node2D"]
+position = Vector2(40, 168)
+script = ExtResource("39_n7pxe")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Spikes"]
-position = Vector2(360, 72)
-shape = SubResource("RectangleShape2D_r3lyl")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Area2D2"]
+position = Vector2(128, 48)
+shape = SubResource("RectangleShape2D_xam4y")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes"]
-position = Vector2(167.5, 216.5)
-shape = SubResource("RectangleShape2D_r3lyl")
+[node name="Area2D" type="Area2D" parent="Node2D/Area2D2/CollisionShape2D"]
+position = Vector2(40, 168)
+script = ExtResource("39_n7pxe")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Spikes"]
-position = Vector2(344, 57)
-shape = SubResource("RectangleShape2D_r3lyl")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Area2D2/CollisionShape2D/Area2D"]
+position = Vector2(136, -168)
+shape = SubResource("RectangleShape2D_xam4y")
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="Spikes"]
-position = Vector2(345, 216)
-shape = SubResource("RectangleShape2D_r3lyl")
+[node name="Area2D3" type="Area2D" parent="Node2D"]
+position = Vector2(40, 168)
+script = ExtResource("39_n7pxe")
 
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="Spikes"]
-position = Vector2(360, 199)
-shape = SubResource("RectangleShape2D_r3lyl")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Area2D3"]
+position = Vector2(320, 31)
+shape = SubResource("RectangleShape2D_xam4y")
 
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="Spikes"]
-position = Vector2(153, 72)
-shape = SubResource("RectangleShape2D_r3lyl")
+[node name="Area2D4" type="Area2D" parent="Node2D"]
+position = Vector2(40, 168)
+script = ExtResource("39_n7pxe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Area2D4"]
+position = Vector2(112, -96)
+shape = SubResource("RectangleShape2D_xam4y")
+
+[node name="Area2D5" type="Area2D" parent="Node2D"]
+position = Vector2(40, 168)
+script = ExtResource("39_n7pxe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Area2D5"]
+position = Vector2(128, -112)
+shape = SubResource("RectangleShape2D_xam4y")
+
+[node name="Area2D6" type="Area2D" parent="Node2D"]
+position = Vector2(40, 168)
+script = ExtResource("39_n7pxe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Area2D6"]
+position = Vector2(304, -112)
+shape = SubResource("RectangleShape2D_xam4y")
+
+[node name="Area2D7" type="Area2D" parent="Node2D"]
+position = Vector2(40, 168)
+script = ExtResource("39_n7pxe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Area2D7"]
+position = Vector2(320, -96)
+shape = SubResource("RectangleShape2D_xam4y")

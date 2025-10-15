@@ -1,5 +1,10 @@
-[gd_scene load_steps=53 format=4 uid="uid://cosl1ckj73gg2"]
 
+<<<<<<< HEAD
+[gd_scene load_steps=38 format=4 uid="uid://cosl1ckj73gg2"]
+
+=======
+>>>>>>> parent of 302c841 (Revert "Merge branch 'Audrey' of https://github.com/astromariia/group3game into Audrey")
+[ext_resource type="Script" uid="uid://d0gx4msdnfevi" path="res://room_3.gd" id="1_vb6up"]
 [ext_resource type="Texture2D" uid="uid://c7bbb16dxp1xi" path="res://Art/0x72_DungeonTilesetII_v1.7/atlas_floor-16x16.png" id="1_xflq3"]
 [ext_resource type="TileSet" uid="uid://e1xawx620cgc" path="res://new_tile_set.tres" id="2_vb6up"]
 [ext_resource type="TileSet" uid="uid://bhge3u3jwyois" path="res://walls.tres" id="3_0stco"]
@@ -29,7 +34,7 @@
 [ext_resource type="AudioStream" uid="uid://sig3s3cton6h" path="res://sounds/freefantasysfxtommusic/SFX/Footsteps/Stone/Stone Walk 3.ogg" id="27_j208c"]
 [ext_resource type="AudioStream" uid="uid://d21k5k8htkfuq" path="res://sounds/freefantasysfxtommusic/SFX/Footsteps/Stone/Stone Walk 4.ogg" id="28_rl7fo"]
 [ext_resource type="AudioStream" uid="uid://jvaej5726log" path="res://sounds/freefantasysfxtommusic/SFX/Footsteps/Stone/Stone Walk 5.ogg" id="29_0uqg2"]
-[ext_resource type="Script" uid="uid://cr8eriayoxs1k" path="res://Boss Fight/spikes.gd" id="30_vb6up"]
+[ext_resource type="Script" uid="uid://dwiyw4jhsq5jx" path="res://Spikes.gd" id="30_vb6up"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rpge5"]
 texture = ExtResource("1_xflq3")
@@ -166,52 +171,12 @@ stream_2/stream = ExtResource("27_j208c")
 stream_3/stream = ExtResource("28_rl7fo")
 stream_4/stream = ExtResource("29_0uqg2")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xflq3"]
-size = Vector2(5, 213)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vb6up"]
-size = Vector2(180.5, 84)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0stco"]
-size = Vector2(87, 61)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_68ahk"]
-size = Vector2(5, 134)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qbsot"]
-size = Vector2(108, 113)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ra2c"]
-size = Vector2(129.5, 5.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nymos"]
-size = Vector2(89, 49)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_eqn04"]
-size = Vector2(64, 82)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lbd1r"]
-size = Vector2(157, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1pp8l"]
-size = Vector2(95, 14.25)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrmgx"]
-size = Vector2(48.5, 48)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6viu8"]
-size = Vector2(77, 11)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_njtk3"]
-size = Vector2(31, 16)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4jitk"]
-size = Vector2(16.5, 14)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_b2boi"]
-size = Vector2(49.75, 20)
+size = Vector2(14.5, 13)
 
 [node name="room_3" type="Node2D"]
+position = Vector2(0, 24)
+script = ExtResource("1_vb6up")
 
 [node name="floor_3" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAAHAAEAAAAAAAAAAAACAAQAAAAAAAAAAAACAAUAAAAAAAAAAAACAAYAAAAAAAAAAAACAAcAAAAAAAAAAAACAAgAAAAAAAAAAAADAAgAAAAAAAAAAAAEAAgAAAAAAAAAAAAFAAgAAAAAAAAAAAAGAAgAAAAAAAAAAAAHAAgAAAAAAAAAAAAHAAkAAAAAAAAAAAAHAAoAAAAAAAAAAAAHAAsAAAAAAAAAAAAHAAwAAAAAAAAAAAAIAA4AAAAGAAIAAAALAA4AAAAAAAAAAAAMAA4AAAAGAAIAAAANAA4AAAAGAAIAAAAOAA4AAAAGAAIAAAAPAA4AAAAGAAIAAAAQAA4AAAAAAAAAAAARAA4AAAAAAAAAAAASAA4AAAAAAAAAAAATAA4AAAAGAAIAAAAUAA4AAAAGAAIAAAAVAA4AAAAGAAIAAAAWAA4AAAAAAAAAAAAXAA4AAAAAAAAAAAAYAA4AAAAAAAAAAAAYAA0AAAAAAAAAAAAYAAwAAAAAAAAAAAAYAAsAAAAAAAAAAAAYAAoAAAAAAAAAAAAYAAkAAAAAAAAAAAAYAAgAAAAAAAAAAAAYAAcAAAAAAAAAAAAYAAYAAAAAAAAAAAAYAAUAAAAAAAAAAAAYAAQAAAAAAAAAAAANAAEAAAAAAAAAAAANAAIAAAAAAAAAAAANAAMAAAAAAAAAAAANAAQAAAAAAAAAAAAOAAQAAAAAAAAAAAAPAAQAAAAAAAAAAAAQAAQAAAAAAAAAAAARAAQAAAAAAAAAAAASAAQAAAAAAAAAAAATAAQAAAAAAAAAAAAUAAQAAAAAAAAAAAAVAAQAAAAAAAAAAAAWAAQAAAAAAAAAAAAXAAQAAAAAAAAAAAAKAA4AAAAAAAAAAAAJAA4AAAAAAAAAAAAOAAYAAAADAAMAAAAOAAcAAAADAAMAAAAPAAcAAAADAAMAAAAPAAgAAAADAAMAAAAQAAgAAAADAAMAAAAQAAkAAAADAAMAAAARAAkAAAADAAMAAAASAAkAAAADAAMAAAATAAkAAAADAAMAAAAUAAkAAAADAAMAAAAUAAgAAAADAAMAAAAVAAgAAAADAAMAAAADAAMAAAABAAEAAAAEAAMAAAABAAEAAAACAAMAAAAAAAAAAAAFAAMAAAAAAAAAAAAGAAMAAAAAAAAAAAAHAAMAAAAAAAAAAAAHAAIAAAAAAAAAAAAHAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAALAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAANAAAAAAAAAAAAAAAJAA8AAAADAAMAAAAKAA8AAAADAAMAAAALAA8AAAADAAMAAAALABAAAAADAAMAAAAKABAAAAADAAMAAAAJABAAAAADAAMAAAAJABEAAAADAAMAAAAKABEAAAADAAMAAAALABEAAAADAAMAAAAKABIAAAADAAMAAAAKABMAAAADAAMAAAAJABMAAAADAAMAAAALABMAAAADAAMAAAAQAA8AAAADAAMAAAARAA8AAAADAAMAAAASAA8AAAADAAMAAAASABAAAAADAAMAAAASABEAAAADAAMAAAARABEAAAADAAMAAAAQABEAAAADAAMAAAAQABAAAAADAAMAAAARABAAAAADAAMAAAARABIAAAADAAMAAAARABMAAAADAAMAAAAQABMAAAADAAMAAAASABMAAAADAAMAAAAIAAIAAAADAAIAAAADAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAFAAQAAAAAAAAAAAAGAAQAAAAAAAAAAAAHAAQAAAAAAAAAAAAIAAQAAAAAAAAAAAAJAAQAAAAAAAAAAAAKAAQAAAAAAAAAAAALAAQAAAAAAAAAAAAMAAQAAAAAAAAAAAAMAAMAAAAAAAAAAAAMAAIAAAAAAAAAAAALAAIAAAAAAAAAAAALAAEAAAAAAAAAAAAKAAEAAAAAAAAAAAAJAAEAAAAAAAAAAAAIAAEAAAAAAAAAAAAKAAIAAAAAAAAAAAAKAAMAAAAAAAAAAAAJAAMAAAAAAAAAAAAJAAIAAAAAAAAAAAAIAAMAAAAAAAAAAAALAAMAAAAAAAAAAAAMAAEAAAAAAAAAAAAMAAUAAAAAAAAAAAALAAUAAAAAAAAAAAAKAAUAAAAAAAAAAAAJAAUAAAAAAAAAAAAIAAUAAAAAAAAAAAAHAAUAAAAAAAAAAAAGAAUAAAAAAAAAAAAFAAUAAAAAAAAAAAAEAAUAAAAAAAAAAAADAAUAAAAAAAAAAAADAAYAAAAAAAAAAAADAAcAAAAAAAAAAAAEAAcAAAAAAAAAAAAFAAYAAAAAAAAAAAAEAAYAAAAAAAAAAAAGAAYAAAAAAAAAAAAHAAYAAAAAAAAAAAAIAAYAAAAAAAAAAAAJAAYAAAAAAAAAAAAKAAYAAAAAAAAAAAALAAYAAAAAAAAAAAAMAAYAAAAAAAAAAAANAAYAAAAAAAAAAAANAAUAAAAAAAAAAAAOAAUAAAAAAAAAAAAPAAUAAAAAAAAAAAAQAAUAAAAAAAAAAAARAAUAAAAAAAAAAAASAAUAAAAAAAAAAAATAAUAAAAAAAAAAAAUAAUAAAAAAAAAAAAVAAUAAAAAAAAAAAAWAAUAAAAAAAAAAAAXAAUAAAAAAAAAAAAXAAYAAAAAAAAAAAAXAAcAAAAAAAAAAAAXAAgAAAAAAAAAAAAXAAkAAAAAAAAAAAAXAAoAAAAAAAAAAAAXAAsAAAAAAAAAAAAXAAwAAAAAAAAAAAAXAA0AAAAAAAAAAAAWAA0AAAAAAAAAAAAVAA0AAAAAAAAAAAAUAA0AAAAAAAAAAAATAA0AAAAAAAAAAAASAA0AAAAAAAAAAAARAA0AAAAAAAAAAAAQAA0AAAAAAAAAAAAPAA0AAAAAAAAAAAAOAA0AAAAAAAAAAAANAA0AAAAAAAAAAAAMAA0AAAAAAAAAAAALAA0AAAAAAAAAAAAKAA0AAAAAAAAAAAAJAA0AAAAAAAAAAAAIAA0AAAAAAAAAAAAIAAwAAAAAAAAAAAAIAAsAAAAAAAAAAAAIAAoAAAAAAAAAAAAHAAcAAAAAAAAAAAAIAAcAAAAAAAAAAAAIAAgAAAAAAAAAAAAIAAkAAAAAAAAAAAAJAAoAAAAAAAAAAAAJAAsAAAAAAAAAAAAJAAwAAAAAAAAAAAAKAAoAAAAAAAAAAAAKAAkAAAAAAAAAAAAKAAgAAAAAAAAAAAAKAAcAAAAAAAAAAAAJAAcAAAAAAAAAAAAJAAgAAAAAAAAAAAAJAAkAAAAAAAAAAAAKAAwAAAAAAAAAAAAKAAsAAAAAAAAAAAALAAoAAAAAAAAAAAALAAkAAAAAAAAAAAALAAgAAAAAAAAAAAALAAcAAAAAAAAAAAALAAsAAAAAAAAAAAALAAwAAAAAAAAAAAAMAAwAAAAAAAAAAAAMAAsAAAAAAAAAAAAMAAoAAAAAAAAAAAAMAAkAAAAAAAAAAAANAAkAAAAAAAAAAAANAAgAAAAAAAAAAAANAAcAAAAAAAAAAAAMAAcAAAAAAAAAAAAMAAgAAAAAAAAAAAAFAAcAAAAAAAAAAAAGAAcAAAAAAAAAAAANAAoAAAAAAAAAAAAOAAoAAAAAAAAAAAAPAAoAAAAAAAAAAAAQAAoAAAAAAAAAAAARAAoAAAAAAAAAAAASAAoAAAAAAAAAAAATAAoAAAAAAAAAAAAUAAoAAAAAAAAAAAAVAAoAAAAAAAAAAAAWAAoAAAAAAAAAAAAWAAsAAAAAAAAAAAAWAAwAAAAAAAAAAAAVAAwAAAAAAAAAAAAUAAwAAAAAAAAAAAATAAwAAAAAAAAAAAASAAwAAAAAAAAAAAARAAwAAAAAAAAAAAAQAAwAAAAAAAAAAAAPAAwAAAAAAAAAAAAOAAwAAAAAAAAAAAANAAwAAAAAAAAAAAANAAsAAAAAAAAAAAAPAAsAAAAAAAAAAAAQAAsAAAAAAAAAAAARAAsAAAAAAAAAAAASAAsAAAAAAAAAAAATAAsAAAAAAAAAAAAUAAsAAAAAAAAAAAAVAAsAAAAAAAAAAAAOAAsAAAAAAAAAAAATAAcAAAAAAAAAAAATAAYAAAAAAAAAAAASAAYAAAAAAAAAAAARAAYAAAAAAAAAAAAQAAYAAAAAAAAAAAAPAAYAAAAAAAAAAAAQAAcAAAAAAAAAAAARAAcAAAAAAAAAAAARAAgAAAAAAAAAAAASAAgAAAAAAAAAAAASAAcAAAAAAAAAAAATAAgAAAAAAAAAAAAUAAYAAAAAAAAAAAAUAAcAAAAAAAAAAAAVAAcAAAAAAAAAAAAVAAYAAAAAAAAAAAAWAAYAAAAAAAAAAAAWAAcAAAAAAAAAAAAWAAgAAAAAAAAAAAAWAAkAAAAAAAAAAAAVAAkAAAAAAAAAAAAOAAkAAAAAAAAAAAAOAAgAAAAAAAAAAAAPAAkAAAAAAAAAAAA=")
@@ -226,7 +191,6 @@ tile_map_data = PackedByteArray("AAAHAP//AQAFAAcAAAAIAP//AQAFAAcAAAAJAP//AQAFAAc
 tile_set = ExtResource("3_0stco")
 
 [node name="walls_3_2" type="TileMapLayer" parent="walls_3"]
-visibility_layer = 15
 tile_map_data = PackedByteArray("AAAGAAEAAQADAAAAAAAFAAEAAQACAAYAAAADAAEAAQACAAYAAAACAAEAAQACAAYAAAAHAP7/AQACAAYAAAAIAP7/AQACAAYAAAAJAP7/AQACAAYAAAAKAP7/AQACAAYAAAALAP7/AQACAAYAAAAMAP7/AQACAAYAAAANAP7/AQACAAYAAAAGAP7/AQABAAAAAAAOAP7/AQADAAAAAAAOAAIAAQABAAQAAAAOAAMAAQACAAcAAAAZAA4AAQADAAYAAAAZAA8AAQADAAcAAAABAAgAAQABAAYAAAABAAkAAQABAAUAAAACAAgAAQACAAYAAAADAAgAAQACAAYAAAAEAAgAAQACAAYAAAAFAAgAAQACAAYAAAACAAkAAQACAAcAAAADAAkAAQACAAcAAAAEAAkAAQACAAcAAAAFAAkAAQACAAcAAAAGAAoAAQACAAcAAAAGAAsAAQACAAcAAAAGAAgAAQADAAAAAAAGAAkAAQACAAcAAAAEAAEAAQACAAYAAAAIAAAAAQAOAAEAAAALAAAAAQAOAAEAAAAIAP//AQAOAAAAAAALAP//AQAOAAAAAAACAAMAAQAPAAEAAAARAAQAAQAPAAEAAAAYAAQAAQAQAAEAAAAXAAQAAQAOAAUAAAAXAAMAAQAOAAQAAAAUAAMAAQAOAAQAAAAUAAQAAQAOAAUAAAAIAAYAAQAPAAcAAAAMAAYAAQAPAAcAAAAIAAUAAQAPAAYAAAAMAAUAAQAPAAYAAAAIAAQAAQAPAAUAAAAMAAQAAQAPAAUAAAAMAAoAAQAPAAcAAAAMAAkAAQAPAAYAAAAMAAgAAQAPAAYAAAAMAAcAAQAPAAUAAAAXAA0AAQAPAAcAAAAXAAwAAQAPAAYAAAAXAAsAAQAPAAUAAAAVAA0AAQAPAAcAAAAVAAwAAQAPAAUAAAAXAAkAAQAPAAcAAAAXAAgAAQAPAAUAAAA=")
 tile_set = ExtResource("3_0stco")
 
@@ -263,19 +227,21 @@ shape = SubResource("RectangleShape2D_2vm6r")
 [node name="CanvasLayer" type="CanvasLayer" parent="elf"]
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="elf/CanvasLayer"]
-offset_left = 246.0
-offset_top = 77.0
-offset_right = 310.0
-offset_bottom = 117.0
+offset_left = 341.0
+offset_top = 55.0
+offset_right = 405.0
+offset_bottom = 95.0
 texture_under = ExtResource("16_8bc7b")
 texture_progress = ExtResource("17_u6dx0")
 script = ExtResource("18_l05by")
+metadata/_edit_use_anchors_ = true
 
 [node name="InventoryGui" parent="elf/CanvasLayer" instance=ExtResource("19_ph3bf")]
-offset_left = 282.0
-offset_top = 88.0
-offset_right = -172.0
-offset_bottom = -156.0
+offset_left = 377.0
+offset_top = 66.0
+offset_right = -77.0
+offset_bottom = -178.0
+metadata/_edit_use_anchors_ = true
 
 [node name="bow" type="CharacterBody2D" parent="elf"]
 position = Vector2(18.629, 6.46957)
@@ -288,7 +254,7 @@ sprite_frames = SubResource("SpriteFrames_37sth")
 animation = &"shoot"
 
 [node name="Marker2D" type="Marker2D" parent="elf/bow"]
-position = Vector2(11.0671, 0)
+position = Vector2(7.37101, 21.5304)
 
 [node name="Timer" type="Timer" parent="elf/bow"]
 
@@ -305,124 +271,308 @@ position = Vector2(-93.048, 45.338)
 position = Vector2(0, -3)
 stream = SubResource("AudioStreamRandomizer_8k4iu")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-collision_layer = 15
-collision_mask = 15
+[node name="Spikes" type="Node2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(408.5, 147.5)
-shape = SubResource("RectangleShape2D_xflq3")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(319.75, 21)
-shape = SubResource("RectangleShape2D_vb6up")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(63.5, 8.5)
-shape = SubResource("RectangleShape2D_0stco")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(24.5, 98)
-shape = SubResource("RectangleShape2D_68ahk")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(358, 287.5)
-shape = SubResource("RectangleShape2D_qbsot")
-
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(169.75, -17.25)
-shape = SubResource("RectangleShape2D_7ra2c")
-
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(68.5, 164.5)
-shape = SubResource("RectangleShape2D_nymos")
-
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(225, 278)
-shape = SubResource("RectangleShape2D_eqn04")
-
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(224.5, 332)
-shape = SubResource("RectangleShape2D_lbd1r")
-
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(224.5, 296.125)
-shape = SubResource("RectangleShape2D_1pp8l")
-
-[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(340, 297)
-shape = SubResource("RectangleShape2D_1pp8l")
-
-[node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(108, 298)
-shape = SubResource("RectangleShape2D_1pp8l")
-
-[node name="CollisionShape2D13" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(90, 286)
-shape = SubResource("RectangleShape2D_qbsot")
-
-[node name="CollisionShape2D14" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(75, 213)
-shape = SubResource("RectangleShape2D_nymos")
-
-[node name="CollisionShape2D15" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(76, 221)
-shape = SubResource("RectangleShape2D_1pp8l")
-
-[node name="Spikes" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
 script = ExtResource("30_vb6up")
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="Spikes"]
-position = Vector2(279, 263)
-shape = SubResource("RectangleShape2D_xrmgx")
-debug_color = Color(0.869481, 0.312565, 0.424489, 0.42)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D"]
+position = Vector2(192, -64)
+shape = SubResource("RectangleShape2D_0stco")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Spikes"]
-position = Vector2(169, 264)
-shape = SubResource("RectangleShape2D_xrmgx")
-debug_color = Color(0.994398, 0, 0.222713, 0.42)
+[node name="Area2D2" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("30_vb6up")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes"]
-position = Vector2(296.5, 151.5)
-shape = SubResource("RectangleShape2D_6viu8")
-debug_color = Color(0.992953, 0, 0.244715, 0.42)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D2"]
+position = Vector2(192, -49)
+shape = SubResource("RectangleShape2D_0stco")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Spikes"]
-position = Vector2(256.5, 136)
-shape = SubResource("RectangleShape2D_njtk3")
-debug_color = Color(0.971679, 0, 0.4463, 0.42)
+[node name="Area2D3" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("30_vb6up")
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="Spikes"]
-position = Vector2(241, 120)
-shape = SubResource("RectangleShape2D_njtk3")
-debug_color = Color(0.971679, 0, 0.4463, 0.42)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D3"]
+position = Vector2(208, -49)
+shape = SubResource("RectangleShape2D_0stco")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Spikes"]
-position = Vector2(336, 135)
-shape = SubResource("RectangleShape2D_njtk3")
-debug_color = Color(0.971679, 0, 0.4463, 0.42)
+[node name="Area2D4" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("30_vb6up")
 
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="Spikes"]
-position = Vector2(232.5, 103)
-shape = SubResource("RectangleShape2D_4jitk")
-debug_color = Color(0.973995, 0.12719, 0.255596, 0.42)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D4"]
+position = Vector2(208, -32)
+shape = SubResource("RectangleShape2D_0stco")
 
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="Spikes"]
-position = Vector2(168, 296)
-shape = SubResource("RectangleShape2D_4jitk")
-debug_color = Color(0.973995, 0.12719, 0.255596, 0.42)
+[node name="Area2D5" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("30_vb6up")
 
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="Spikes"]
-position = Vector2(280.25, 297)
-shape = SubResource("RectangleShape2D_4jitk")
-debug_color = Color(0.973995, 0.12719, 0.255596, 0.42)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D5"]
+position = Vector2(224, -32)
+shape = SubResource("RectangleShape2D_0stco")
 
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="Spikes"]
-position = Vector2(169.125, 312)
-shape = SubResource("RectangleShape2D_b2boi")
-debug_color = Color(0.976969, 0, 0.407763, 0.42)
+[node name="Area2D6" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("30_vb6up")
 
-[node name="CollisionShape2D11" type="CollisionShape2D" parent="Spikes"]
-position = Vector2(282, 313)
-shape = SubResource("RectangleShape2D_b2boi")
-debug_color = Color(0.976969, 0, 0.407763, 0.42)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D6"]
+position = Vector2(224, -17)
+shape = SubResource("RectangleShape2D_0stco")
+
+[node name="Area2D7" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("30_vb6up")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D7"]
+position = Vector2(240, -17)
+shape = SubResource("RectangleShape2D_0stco")
+
+[node name="Area2D8" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("30_vb6up")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D8"]
+position = Vector2(256, -16)
+shape = SubResource("RectangleShape2D_0stco")
+
+[node name="Area2D9" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("30_vb6up")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D9"]
+position = Vector2(272, -16)
+shape = SubResource("RectangleShape2D_0stco")
+
+[node name="Area2D10" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("30_vb6up")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D10"]
+position = Vector2(288, -16)
+shape = SubResource("RectangleShape2D_0stco")
+
+[node name="Area2D11" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("30_vb6up")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D11"]
+position = Vector2(288, -32)
+shape = SubResource("RectangleShape2D_0stco")
+
+[node name="Area2D12" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("30_vb6up")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D12"]
+position = Vector2(304, -32)
+shape = SubResource("RectangleShape2D_0stco")
+
+[node name="Area2D13" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("30_vb6up")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D13"]
+position = Vector2(112, 80)
+shape = SubResource("RectangleShape2D_0stco")
+
+[node name="Area2D14" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("30_vb6up")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D14"]
+position = Vector2(128, 80)
+shape = SubResource("RectangleShape2D_0stco")
+
+[node name="Area2D15" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("30_vb6up")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D15"]
+position = Vector2(144, 80)
+shape = SubResource("RectangleShape2D_0stco")
+
+[node name="Area2D16" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("30_vb6up")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D16"]
+position = Vector2(112, 96)
+shape = SubResource("RectangleShape2D_0stco")
+
+[node name="Area2D17" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("30_vb6up")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D17"]
+position = Vector2(128, 96)
+shape = SubResource("RectangleShape2D_0stco")
+
+[node name="Area2D18" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("30_vb6up")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D18"]
+position = Vector2(144, 96)
+shape = SubResource("RectangleShape2D_0stco")
+
+[node name="Area2D19" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("30_vb6up")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D19"]
+position = Vector2(112, 112)
+shape = SubResource("RectangleShape2D_0stco")
+
+[node name="Area2D20" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("30_vb6up")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D20"]
+position = Vector2(128, 112)
+shape = SubResource("RectangleShape2D_0stco")
+
+[node name="Area2D21" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("30_vb6up")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D21"]
+position = Vector2(144, 112)
+shape = SubResource("RectangleShape2D_0stco")
+
+[node name="Area2D22" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("30_vb6up")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D22"]
+position = Vector2(128, 128)
+shape = SubResource("RectangleShape2D_0stco")
+
+[node name="Area2D23" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("30_vb6up")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D23"]
+position = Vector2(112, 144)
+shape = SubResource("RectangleShape2D_0stco")
+
+[node name="Area2D24" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("30_vb6up")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D24"]
+position = Vector2(128, 144)
+shape = SubResource("RectangleShape2D_0stco")
+
+[node name="Area2D25" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("30_vb6up")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D25"]
+position = Vector2(144, 144)
+shape = SubResource("RectangleShape2D_0stco")
+
+[node name="Area2D26" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("30_vb6up")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D26"]
+position = Vector2(224, 80)
+shape = SubResource("RectangleShape2D_0stco")
+
+[node name="Area2D27" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("30_vb6up")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D27"]
+position = Vector2(240, 80)
+shape = SubResource("RectangleShape2D_0stco")
+
+[node name="Area2D28" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("30_vb6up")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D28"]
+position = Vector2(256, 80)
+shape = SubResource("RectangleShape2D_0stco")
+
+[node name="Area2D29" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("30_vb6up")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D29"]
+position = Vector2(224, 96)
+shape = SubResource("RectangleShape2D_0stco")
+
+[node name="Area2D30" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("30_vb6up")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D30"]
+position = Vector2(240, 96)
+shape = SubResource("RectangleShape2D_0stco")
+
+[node name="Area2D31" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("30_vb6up")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D31"]
+position = Vector2(256, 96)
+shape = SubResource("RectangleShape2D_0stco")
+
+[node name="Area2D32" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("30_vb6up")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D32"]
+position = Vector2(224, 112)
+shape = SubResource("RectangleShape2D_0stco")
+
+[node name="Area2D33" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("30_vb6up")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D33"]
+position = Vector2(240, 112)
+shape = SubResource("RectangleShape2D_0stco")
+
+[node name="Area2D34" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("30_vb6up")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D34"]
+position = Vector2(256, 112)
+shape = SubResource("RectangleShape2D_0stco")
+
+[node name="Area2D35" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("30_vb6up")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D35"]
+position = Vector2(240, 128)
+shape = SubResource("RectangleShape2D_0stco")
+
+[node name="Area2D36" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("30_vb6up")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D36"]
+position = Vector2(224, 144)
+shape = SubResource("RectangleShape2D_0stco")
+
+[node name="Area2D37" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("30_vb6up")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D37"]
+position = Vector2(240, 144)
+shape = SubResource("RectangleShape2D_0stco")
+
+[node name="Area2D38" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("30_vb6up")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D38"]
+position = Vector2(256, 144)
+shape = SubResource("RectangleShape2D_0stco")

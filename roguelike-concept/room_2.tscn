@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=4 uid="uid://bmxlj3lsgh06t"]
+[gd_scene load_steps=46 format=4 uid="uid://bmxlj3lsgh06t"]
 
 [ext_resource type="TileSet" uid="uid://bwed0al80aii" path="res://room2_tile_set.tres" id="1_7hp4u"]
 [ext_resource type="Script" uid="uid://bgn2n3h1802dy" path="res://room_2game.gd" id="1_66el0"]
@@ -33,50 +33,8 @@
 [ext_resource type="Texture2D" uid="uid://d2orcfdtjq2pq" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_run_anim_f3.png" id="31_alay5"]
 [ext_resource type="AudioStream" uid="uid://7c7pvausheuo" path="res://sounds/Minifantasy_Dungeon_SFX/17_orc_atk_sword_1.wav" id="32_hlu58"]
 [ext_resource type="Script" uid="uid://bblaq1vj5kxod" path="res://door_open.gd" id="33_vwuv8"]
-[ext_resource type="PackedScene" uid="uid://cosl1ckj73gg2" path="res://room_3.tscn" id="34_08dkn"]
-[ext_resource type="Script" uid="uid://cr8eriayoxs1k" path="res://Boss Fight/spikes.gd" id="35_cf22k"]
-[ext_resource type="Script" uid="uid://camk5pr4f08c4" path="res://slimy.gd" id="36_7worf"]
-[ext_resource type="PackedScene" uid="uid://dclfxak0qm0gw" path="res://mud_projectile.tscn" id="37_7worf"]
-[ext_resource type="PackedScene" uid="uid://bs1ibom1qomtr" path="res://slime_projectile.tscn" id="37_ksxq5"]
-[ext_resource type="Texture2D" uid="uid://b6f7hpv6ieu2i" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/swampy_anim_f0.png" id="38_ksxq5"]
-[ext_resource type="Texture2D" uid="uid://4r1erhjqhmo" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/swampy_anim_f1.png" id="39_7om1s"]
-[ext_resource type="Texture2D" uid="uid://cmu4egdnhfra0" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/swampy_anim_f2.png" id="40_v6ghv"]
-[ext_resource type="Texture2D" uid="uid://buqf8364aw7ed" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/swampy_anim_f3.png" id="41_m8sas"]
-[ext_resource type="Script" uid="uid://dmma32p1efmjn" path="res://slimypoint.gd" id="42_7om1s"]
-[ext_resource type="AudioStream" uid="uid://bmhiulfewacnn" path="res://sounds/freefantasysfxtommusic/SFX/Spells/mudshot.ogg" id="43_fcbnk"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cf22k"]
-size = Vector2(4, 236)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rybfj"]
-size = Vector2(114.5, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_om8tl"]
-size = Vector2(50, 51)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kymty"]
-size = Vector2(164, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dk8dn"]
-size = Vector2(178, 52)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_alay5"]
-size = Vector2(160, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hlu58"]
-size = Vector2(37.75, 37.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7worf"]
-size = Vector2(36, 14.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ksxq5"]
-size = Vector2(8, 49)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7om1s"]
-size = Vector2(164, 34)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_v6ghv"]
-size = Vector2(94, 29)
+[ext_resource type="PackedScene" uid="uid://jsvhf436ijag" path="res://room_3.tscn" id="34_08dkn"]
+[ext_resource type="Script" uid="uid://dwiyw4jhsq5jx" path="res://Spikes.gd" id="35_cf22k"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hlu58"]
 animations = [{
@@ -196,38 +154,46 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_08dkn"]
 size = Vector2(9.05494, 20)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_m8sas"]
-size = Vector2(16.25, 16.5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rybfj"]
+size = Vector2(14.5, 13)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sycg5"]
-size = Vector2(33.5, 16)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cf22k"]
+size = Vector2(10, 10)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fcbnk"]
-size = Vector2(16.5, 17)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ixoof"]
-size = Vector2(17, 15.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_42pht"]
-size = Vector2(18.0488, 14.9831)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_algyo"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_rybfj"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("38_ksxq5")
+"texture": ExtResource("24_vwuv8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("39_7om1s")
+"texture": ExtResource("25_08dkn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("40_v6ghv")
+"texture": ExtResource("26_cf22k")
 }, {
 "duration": 1.0,
-"texture": ExtResource("41_m8sas")
+"texture": ExtResource("27_rybfj")
 }],
 "loop": true,
-"name": &"spit",
+"name": &"goblin_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_om8tl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_kymty")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_dk8dn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_alay5")
+}],
+"loop": true,
+"name": &"goblin_run",
 "speed": 5.0
 }]
 
@@ -254,72 +220,8 @@ tile_set = ExtResource("2_h83ob")
 tile_map_data = PackedByteArray("AAAEAAIAAQARAAcAAAAFAAIAAQASAAcAAAAEAAEAAQARAAYAAAAFAAEAAQASAAYAAAAWAAEAAAACABAAAAAXAAEAAAADABAAAAAWAAAAAAACAA8AAAAXAAAAAAADAA8AAAAVAAEAAAABABAAAAAYAAEAAAABABAAAAA=")
 tile_set = ExtResource("2_h83ob")
 
-[node name="Walls" type="StaticBody2D" parent="walls_2"]
-collision_layer = 15
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="walls_2/Walls"]
-position = Vector2(25, 117)
-shape = SubResource("RectangleShape2D_cf22k")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="walls_2/Walls"]
-position = Vector2(425, 122)
-shape = SubResource("RectangleShape2D_cf22k")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="walls_2/Walls"]
-position = Vector2(80.75, 3)
-shape = SubResource("RectangleShape2D_rybfj")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="walls_2/Walls"]
-position = Vector2(47, 246.5)
-shape = SubResource("RectangleShape2D_om8tl")
-
-[node name="CollisionShape2D15" type="CollisionShape2D" parent="walls_2/Walls"]
-position = Vector2(167, 103)
-shape = SubResource("RectangleShape2D_om8tl")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="walls_2/Walls"]
-position = Vector2(154, 263)
-shape = SubResource("RectangleShape2D_kymty")
-
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="walls_2/Walls"]
-position = Vector2(224, 21)
-shape = SubResource("RectangleShape2D_dk8dn")
-
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="walls_2/Walls"]
-position = Vector2(312, 247)
-shape = SubResource("RectangleShape2D_alay5")
-
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="walls_2/Walls"]
-position = Vector2(408.125, 239.25)
-shape = SubResource("RectangleShape2D_hlu58")
-
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="walls_2/Walls"]
-position = Vector2(332, 22)
-shape = SubResource("RectangleShape2D_7worf")
-
-[node name="CollisionShape2D16" type="CollisionShape2D" parent="walls_2/Walls"]
-position = Vector2(146, 102.25)
-shape = SubResource("RectangleShape2D_7worf")
-
-[node name="CollisionShape2D14" type="CollisionShape2D" parent="walls_2/Walls"]
-position = Vector2(367, 0)
-shape = SubResource("RectangleShape2D_7worf")
-
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="walls_2/Walls"]
-position = Vector2(407, 17)
-shape = SubResource("RectangleShape2D_7worf")
-
-[node name="CollisionShape2D11" type="CollisionShape2D" parent="walls_2/Walls"]
-position = Vector2(139, 74.5)
-shape = SubResource("RectangleShape2D_ksxq5")
-
-[node name="CollisionShape2D12" type="CollisionShape2D" parent="walls_2/Walls"]
-position = Vector2(221, 62)
-shape = SubResource("RectangleShape2D_7om1s")
-
-[node name="CollisionShape2D13" type="CollisionShape2D" parent="walls_2/Walls"]
-position = Vector2(190, 79.5)
-shape = SubResource("RectangleShape2D_v6ghv")
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(77, 71)
 
 [node name="elf" type="CharacterBody2D" parent="." groups=["player"]]
 unique_name_in_owner = true
@@ -376,7 +278,7 @@ stream = ExtResource("22_alay5")
 volume_db = 1.333
 
 [node name="goblin" type="CharacterBody2D" parent="." groups=["enemy"]]
-position = Vector2(200, 120)
+position = Vector2(100, 130)
 script = ExtResource("23_tdtv1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="goblin"]
@@ -404,82 +306,125 @@ target_scene = ExtResource("34_08dkn")
 position = Vector2(-1.00001, 2)
 shape = SubResource("RectangleShape2D_08dkn")
 
-[node name="Spikes" type="Area2D" parent="."]
+[node name="Spikes" type="Node2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
 script = ExtResource("35_cf22k")
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="Spikes"]
-position = Vector2(136, 231)
-shape = SubResource("RectangleShape2D_m8sas")
-debug_color = Color(0.869481, 0.312565, 0.424489, 0.42)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D"]
+shape = SubResource("RectangleShape2D_rybfj")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Spikes"]
-position = Vector2(41, 167)
-shape = SubResource("RectangleShape2D_m8sas")
-debug_color = Color(0.994398, 0, 0.222713, 0.42)
+[node name="Area2D2" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("35_cf22k")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Spikes"]
-position = Vector2(271, 88)
-shape = SubResource("RectangleShape2D_sycg5")
-debug_color = Color(0.971679, 0, 0.4463, 0.42)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D2"]
+position = Vector2(96, 63)
+shape = SubResource("RectangleShape2D_rybfj")
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="Spikes"]
-position = Vector2(127, 248)
-shape = SubResource("RectangleShape2D_sycg5")
-debug_color = Color(0.971679, 0, 0.4463, 0.42)
+[node name="Area2D3" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("35_cf22k")
 
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="Spikes"]
-position = Vector2(392, 103)
-shape = SubResource("RectangleShape2D_fcbnk")
-debug_color = Color(0.973995, 0.12719, 0.255596, 0.42)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D3"]
+position = Vector2(80, 79)
+shape = SubResource("RectangleShape2D_rybfj")
 
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="Spikes"]
-position = Vector2(216, 137)
-shape = SubResource("RectangleShape2D_fcbnk")
-debug_color = Color(0.973995, 0.12719, 0.255596, 0.42)
+[node name="Area2D4" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("35_cf22k")
 
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="Spikes"]
-position = Vector2(249, 218)
-shape = SubResource("RectangleShape2D_fcbnk")
-debug_color = Color(0.973995, 0.12719, 0.255596, 0.42)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D4"]
+position = Vector2(96, 79)
+shape = SubResource("RectangleShape2D_rybfj")
 
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="Spikes"]
-position = Vector2(312, 201)
-shape = SubResource("RectangleShape2D_ixoof")
-debug_color = Color(0.976969, 0, 0.407763, 0.42)
+[node name="Area2D5" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("35_cf22k")
 
-[node name="CollisionShape2D11" type="CollisionShape2D" parent="Spikes"]
-position = Vector2(329, 184)
-shape = SubResource("RectangleShape2D_ixoof")
-debug_color = Color(0.976969, 0, 0.407763, 0.42)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D5"]
+position = Vector2(176, -32)
+shape = SubResource("RectangleShape2D_rybfj")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Spikes"]
-position = Vector2(312, 57)
-shape = SubResource("RectangleShape2D_m8sas")
-debug_color = Color(0.994398, 0, 0.222713, 0.42)
+[node name="Area2D" type="Area2D" parent="Spikes/Area2D5/CollisionShape2D"]
+position = Vector2(40, 168)
+script = ExtResource("35_cf22k")
 
-[node name="slimy" type="CharacterBody2D" parent="." groups=["enemy"]]
-position = Vector2(183.11, 159.459)
-script = ExtResource("36_7worf")
-mud = ExtResource("37_ksxq5")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D5/CollisionShape2D/Area2D"]
+position = Vector2(8, -216)
+shape = SubResource("RectangleShape2D_rybfj")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="slimy"]
-position = Vector2(-9.53674e-06, 0)
-shape = SubResource("RectangleShape2D_42pht")
+[node name="Area2D" type="Area2D" parent="Spikes/Area2D5/CollisionShape2D/Area2D/CollisionShape2D"]
+position = Vector2(40, 168)
+script = ExtResource("35_cf22k")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="slimy"]
-position = Vector2(-1.90735e-06, 0)
-sprite_frames = SubResource("SpriteFrames_algyo")
-animation = &"spit"
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D5/CollisionShape2D/Area2D/CollisionShape2D/Area2D"]
+position = Vector2(-24, -168)
+shape = SubResource("RectangleShape2D_rybfj")
 
-[node name="slimypoint" type="Marker2D" parent="slimy"]
-position = Vector2(21.1281, -0.996621)
-script = ExtResource("42_7om1s")
+[node name="Area2D" type="Area2D" parent="Spikes/Area2D5/CollisionShape2D/Area2D/CollisionShape2D/Area2D/CollisionShape2D"]
+position = Vector2(40, 168)
+script = ExtResource("35_cf22k")
 
-[node name="ShootyCooldown" type="Timer" parent="slimy"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D5/CollisionShape2D/Area2D/CollisionShape2D/Area2D/CollisionShape2D/Area2D"]
+position = Vector2(-72, -41)
+shape = SubResource("RectangleShape2D_rybfj")
 
-[node name="mudshot" type="AudioStreamPlayer2D" parent="slimy"]
-stream = ExtResource("43_fcbnk")
+[node name="Area2D" type="Area2D" parent="Spikes/Area2D5/CollisionShape2D/Area2D/CollisionShape2D/Area2D/CollisionShape2D/Area2D/CollisionShape2D"]
+position = Vector2(40, 168)
+script = ExtResource("35_cf22k")
 
-[node name="muddy_mud2" parent="slimy" instance=ExtResource("37_7worf")]
-visible = false
-position = Vector2(-29.177, 24.916)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D5/CollisionShape2D/Area2D/CollisionShape2D/Area2D/CollisionShape2D/Area2D/CollisionShape2D/Area2D"]
+shape = SubResource("RectangleShape2D_rybfj")
+
+[node name="Area2D6" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("35_cf22k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D6"]
+position = Vector2(272, 32)
+shape = SubResource("RectangleShape2D_rybfj")
+
+[node name="Area2D7" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("35_cf22k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D7"]
+position = Vector2(288, 15)
+shape = SubResource("RectangleShape2D_rybfj")
+
+[node name="Area2D8" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("35_cf22k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D8"]
+position = Vector2(352, -65)
+shape = SubResource("RectangleShape2D_rybfj")
+
+[node name="Area2D9" type="Area2D" parent="Spikes"]
+position = Vector2(40, 168)
+script = ExtResource("35_cf22k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D9"]
+position = Vector2(272, -112)
+shape = SubResource("RectangleShape2D_rybfj")
+
+[node name="goblin2" type="CharacterBody2D" parent="." groups=["enemy"]]
+position = Vector2(300, 120)
+script = ExtResource("23_tdtv1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="goblin2"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_cf22k")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="goblin2"]
+position = Vector2(-1, -1)
+sprite_frames = SubResource("SpriteFrames_rybfj")
+animation = &"goblin_run"
+
+[node name="AttackCooldownTimer" type="Timer" parent="goblin2"]
+
+[node name="attacknoises" type="AudioStreamPlayer2D" parent="goblin2"]
+stream = ExtResource("32_hlu58")
+volume_db = -2.0
