@@ -8,7 +8,7 @@ extends CharacterBody2D
 @onready var attackCooldown: Timer = $ShootyCooldown
 
 
-var HP = 10
+var HP = 15
 var currentHealth = HP
 
 
@@ -36,7 +36,7 @@ func facing():
 #time in between attacks, in seconds
 var attackSpeed = 1
 #damage in HP
-var damage = 1
+var damage = 4
 
 func _ready():
 	attackCooldown.one_shot = true

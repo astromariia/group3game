@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://bs1ibom1qomtr"]
 
 [ext_resource type="Script" uid="uid://ebh7s3q1sxjg" path="res://area_2d.gd" id="1_ilxag"]
-[ext_resource type="Texture2D" uid="uid://du8smtt3y0brp" path="res://sounds/freefantasysfxtommusic/SFX/Footsteps/Stone/slimeframes.png" id="2_13lsj"]
+[ext_resource type="Texture2D" uid="uid://cld2k75dhlixp" path="res://slimeframes.png" id="2_13lsj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bnpwn"]
 size = Vector2(8.04879, 7.97296)

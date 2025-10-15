@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var speed = 1
 @onready var weapon: Node2D = $bow
 @export var maxHealth = 30
-@onready var currentHealth: int
+static var currentHealth: int
 signal healthChanged
 @export var facingDir = "right"
 
