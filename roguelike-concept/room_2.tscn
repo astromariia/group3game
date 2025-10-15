@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=4 uid="uid://bmxlj3lsgh06t"]
+[gd_scene load_steps=55 format=4 uid="uid://bmxlj3lsgh06t"]
 
 [ext_resource type="TileSet" uid="uid://bwed0al80aii" path="res://room2_tile_set.tres" id="1_7hp4u"]
 [ext_resource type="Script" uid="uid://bgn2n3h1802dy" path="res://room_2game.gd" id="1_66el0"]
@@ -33,7 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://d2orcfdtjq2pq" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_run_anim_f3.png" id="31_alay5"]
 [ext_resource type="AudioStream" uid="uid://7c7pvausheuo" path="res://sounds/Minifantasy_Dungeon_SFX/17_orc_atk_sword_1.wav" id="32_hlu58"]
 [ext_resource type="Script" uid="uid://bblaq1vj5kxod" path="res://door_open.gd" id="33_vwuv8"]
-[ext_resource type="PackedScene" uid="uid://jsvhf436ijag" path="res://room_3.tscn" id="34_08dkn"]
+[ext_resource type="PackedScene" uid="uid://cosl1ckj73gg2" path="res://room_3.tscn" id="34_08dkn"]
 [ext_resource type="Script" uid="uid://dwiyw4jhsq5jx" path="res://Spikes.gd" id="35_cf22k"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hlu58"]
@@ -196,6 +196,33 @@ animations = [{
 "name": &"goblin_run",
 "speed": 5.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_om8tl"]
+size = Vector2(11, 254)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kymty"]
+size = Vector2(59.5, 52)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dk8dn"]
+size = Vector2(165, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_alay5"]
+size = Vector2(161, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hlu58"]
+size = Vector2(39, 51.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7worf"]
+size = Vector2(118, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ksxq5"]
+size = Vector2(171, 72)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7om1s"]
+size = Vector2(100.5, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v6ghv"]
+size = Vector2(56.5, 20)
 
 [node name="room_2" type="Node2D"]
 script = ExtResource("1_66el0")
@@ -376,6 +403,7 @@ position = Vector2(40, 168)
 script = ExtResource("35_cf22k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D5/CollisionShape2D/Area2D/CollisionShape2D/Area2D/CollisionShape2D/Area2D/CollisionShape2D/Area2D"]
+position = Vector2(47, -56)
 shape = SubResource("RectangleShape2D_rybfj")
 
 [node name="Area2D6" type="Area2D" parent="Spikes"]
@@ -428,3 +456,66 @@ animation = &"goblin_run"
 [node name="attacknoises" type="AudioStreamPlayer2D" parent="goblin2"]
 stream = ExtResource("32_hlu58")
 volume_db = -2.0
+
+[node name="room2walls" type="StaticBody2D" parent="."]
+collision_layer = 15
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="room2walls"]
+position = Vector2(20.5, 113)
+shape = SubResource("RectangleShape2D_om8tl")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="room2walls"]
+position = Vector2(425, 113)
+shape = SubResource("RectangleShape2D_om8tl")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="room2walls"]
+position = Vector2(44.75, 246)
+shape = SubResource("RectangleShape2D_kymty")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="room2walls"]
+position = Vector2(311.5, 255)
+shape = SubResource("RectangleShape2D_dk8dn")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="room2walls"]
+position = Vector2(151.5, 263)
+shape = SubResource("RectangleShape2D_alay5")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="room2walls"]
+position = Vector2(409.5, 245.25)
+shape = SubResource("RectangleShape2D_hlu58")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="room2walls"]
+position = Vector2(81, 3)
+shape = SubResource("RectangleShape2D_7worf")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="room2walls"]
+position = Vector2(81, 3)
+shape = SubResource("RectangleShape2D_7worf")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="room2walls"]
+position = Vector2(217.5, 43)
+shape = SubResource("RectangleShape2D_ksxq5")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="room2walls"]
+position = Vector2(189.75, 86)
+shape = SubResource("RectangleShape2D_7om1s")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="room2walls"]
+position = Vector2(408.5, 18)
+shape = SubResource("RectangleShape2D_v6ghv")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="room2walls"]
+position = Vector2(319, 19)
+shape = SubResource("RectangleShape2D_v6ghv")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="room2walls"]
+position = Vector2(370, 6)
+shape = SubResource("RectangleShape2D_v6ghv")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="room2walls"]
+position = Vector2(166, 101)
+shape = SubResource("RectangleShape2D_v6ghv")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="room2walls"]
+position = Vector2(169, 119)
+shape = SubResource("RectangleShape2D_v6ghv")

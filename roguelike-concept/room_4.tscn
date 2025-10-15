@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=4 uid="uid://dauv77ks4i25b"]
+[gd_scene load_steps=50 format=4 uid="uid://dauv77ks4i25b"]
 
 [ext_resource type="Texture2D" uid="uid://c7bbb16dxp1xi" path="res://Art/0x72_DungeonTilesetII_v1.7/atlas_floor-16x16.png" id="1_btylj"]
 [ext_resource type="Script" uid="uid://b0l1jod7ujgrk" path="res://room_4.gd" id="1_ndr13"]
@@ -30,6 +30,8 @@
 [ext_resource type="AudioStream" uid="uid://d21k5k8htkfuq" path="res://sounds/freefantasysfxtommusic/SFX/Footsteps/Stone/Stone Walk 4.ogg" id="27_jf5wy"]
 [ext_resource type="AudioStream" uid="uid://jvaej5726log" path="res://sounds/freefantasysfxtommusic/SFX/Footsteps/Stone/Stone Walk 5.ogg" id="28_046er"]
 [ext_resource type="Script" uid="uid://dwiyw4jhsq5jx" path="res://Spikes.gd" id="29_ndr13"]
+[ext_resource type="PackedScene" uid="uid://dbjutbit0x8vu" path="res://slimy.tscn" id="31_rujdd"]
+[ext_resource type="PackedScene" uid="uid://p3gy2gn8tdln" path="res://muddy.tscn" id="32_2lcj1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_an4vd"]
 texture = ExtResource("1_btylj")
@@ -220,8 +222,28 @@ stream_4/stream = ExtResource("28_046er")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qymr6"]
 size = Vector2(14.5, 13)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_epkmu"]
+size = Vector2(278, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rujdd"]
+size = Vector2(89, 34.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2lcj1"]
+size = Vector2(7, 131)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cv7x8"]
+size = Vector2(20, 135)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_my61o"]
+size = Vector2(229, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0cmcb"]
+size = Vector2(100.5, 16.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c3t8d"]
+size = Vector2(33.5, 32.5)
+
 [node name="room_4" type="Node2D"]
-position = Vector2(2, 23)
 script = ExtResource("1_ndr13")
 
 [node name="floor_4" type="TileMapLayer" parent="."]
@@ -288,7 +310,7 @@ offset_bottom = -224.0
 metadata/_edit_use_anchors_ = true
 
 [node name="bow" type="CharacterBody2D" parent="elf"]
-position = Vector2(18.629, 6.46957)
+position = Vector2(12, 0)
 script = ExtResource("19_xg4x6")
 mud = ExtResource("20_hnjyu")
 
@@ -395,3 +417,59 @@ script = ExtResource("29_ndr13")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D10"]
 position = Vector2(272, 48)
 shape = SubResource("RectangleShape2D_qymr6")
+
+[node name="room4walls" type="StaticBody2D" parent="."]
+collision_layer = 15
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="room4walls"]
+position = Vector2(210, 247)
+shape = SubResource("RectangleShape2D_epkmu")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="room4walls"]
+position = Vector2(100.5, 110.25)
+shape = SubResource("RectangleShape2D_rujdd")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="room4walls"]
+position = Vector2(98, -31)
+shape = SubResource("RectangleShape2D_rujdd")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="room4walls"]
+position = Vector2(318, 114)
+shape = SubResource("RectangleShape2D_rujdd")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="room4walls"]
+position = Vector2(56.5, 45.5)
+shape = SubResource("RectangleShape2D_2lcj1")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="room4walls"]
+position = Vector2(361, 45)
+shape = SubResource("RectangleShape2D_2lcj1")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="room4walls"]
+position = Vector2(65, 189.5)
+shape = SubResource("RectangleShape2D_cv7x8")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="room4walls"]
+position = Vector2(352, 188)
+shape = SubResource("RectangleShape2D_cv7x8")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="room4walls"]
+position = Vector2(243.5, -11)
+shape = SubResource("RectangleShape2D_my61o")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="room4walls"]
+position = Vector2(207.75, 7.25)
+shape = SubResource("RectangleShape2D_0cmcb")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="room4walls"]
+position = Vector2(207.25, 16.25)
+shape = SubResource("RectangleShape2D_c3t8d")
+
+[node name="slimy" parent="." instance=ExtResource("31_rujdd")]
+position = Vector2(205, 121)
+
+[node name="muddy" parent="." instance=ExtResource("32_2lcj1")]
+position = Vector2(120, 183)
+
+[node name="muddy2" parent="." instance=ExtResource("32_2lcj1")]
+position = Vector2(312, 39)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=4 uid="uid://bg0suudcuykbd"]
+[gd_scene load_steps=56 format=4 uid="uid://bg0suudcuykbd"]
 
 [ext_resource type="Texture2D" uid="uid://c7bbb16dxp1xi" path="res://Art/0x72_DungeonTilesetII_v1.7/atlas_floor-16x16.png" id="1_0cvnm"]
 [ext_resource type="Script" uid="uid://br6yh7fegypv5" path="res://Boss Fight/boss_room.gd" id="1_n7pxe"]
@@ -212,6 +212,21 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xam4y"]
 size = Vector2(14.5, 13)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fkrue"]
+size = Vector2(102, 190.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r3lyl"]
+size = Vector2(6, 279.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_045wf"]
+size = Vector2(307, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e65ft"]
+size = Vector2(406, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r6a1p"]
+size = Vector2(6, 99)
+
 [node name="boss_room" type="Node2D"]
 script = ExtResource("1_n7pxe")
 target_scene = ExtResource("2_xam4y")
@@ -382,3 +397,26 @@ script = ExtResource("39_n7pxe")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Area2D7"]
 position = Vector2(320, -96)
 shape = SubResource("RectangleShape2D_xam4y")
+
+[node name="bossroomwalls" type="StaticBody2D" parent="."]
+collision_layer = 15
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bossroomwalls"]
+position = Vector2(56, 91.25)
+shape = SubResource("RectangleShape2D_fkrue")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="bossroomwalls"]
+position = Vector2(409, 132.25)
+shape = SubResource("RectangleShape2D_r3lyl")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="bossroomwalls"]
+position = Vector2(254.5, 7)
+shape = SubResource("RectangleShape2D_045wf")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="bossroomwalls"]
+position = Vector2(209, 261)
+shape = SubResource("RectangleShape2D_e65ft")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="bossroomwalls"]
+position = Vector2(6, 222.5)
+shape = SubResource("RectangleShape2D_r6a1p")

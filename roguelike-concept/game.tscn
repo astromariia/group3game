@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=4 uid="uid://dg4rr1xjfhdqi"]
+[gd_scene load_steps=55 format=4 uid="uid://dg4rr1xjfhdqi"]
 
 [ext_resource type="Texture2D" uid="uid://c7bbb16dxp1xi" path="res://Art/0x72_DungeonTilesetII_v1.7/atlas_floor-16x16.png" id="1_feb5d"]
 [ext_resource type="Script" uid="uid://c2h8kh1qod130" path="res://game.gd" id="1_klri6"]
@@ -15,40 +15,24 @@
 [ext_resource type="Texture2D" uid="uid://d1lgbdhjgkk6h" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_run_anim_f1.png" id="10_rvswv"]
 [ext_resource type="Texture2D" uid="uid://bwua1sputwhs4" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_run_anim_f2.png" id="11_boyg6"]
 [ext_resource type="Texture2D" uid="uid://r2ud12pu53g2" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/elf_m_run_anim_f3.png" id="12_e36ub"]
-[ext_resource type="Texture2D" uid="uid://bty58ouvfrwxs" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_idle_anim_f0.png" id="13_e36ub"]
-[ext_resource type="Texture2D" uid="uid://cs6ocv3c60cwy" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_idle_anim_f1.png" id="14_hb5m1"]
-[ext_resource type="Script" uid="uid://tkxsny8wfjtd" path="res://goblin.gd" id="14_x5p1p"]
 [ext_resource type="Script" uid="uid://wkmi37677kk7" path="res://health_bar.gd" id="15_36jdj"]
-[ext_resource type="Texture2D" uid="uid://bpom3fwhdeni" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_idle_anim_f2.png" id="15_x5p1p"]
 [ext_resource type="Texture2D" uid="uid://b2oafgopivhk0" path="res://UI/healthbarUnder.png" id="16_dhpj7"]
-[ext_resource type="Texture2D" uid="uid://vqac4hylcoq1" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_idle_anim_f3.png" id="16_qhcbd"]
 [ext_resource type="Texture2D" uid="uid://calheuxqupogm" path="res://UI/healthbarProgress.png" id="17_7knny"]
-[ext_resource type="Texture2D" uid="uid://cruasmneh0e83" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_run_anim_f0.png" id="17_f1jbl"]
-[ext_resource type="Texture2D" uid="uid://b1g8du7fdoylr" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_run_anim_f1.png" id="18_vaj68"]
 [ext_resource type="PackedScene" uid="uid://u0mi3jwawbam" path="res://inventorySlot.tscn" id="19_eu6ph"]
-[ext_resource type="Texture2D" uid="uid://vqdd7q78qyo" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_run_anim_f2.png" id="19_i2p71"]
-[ext_resource type="Texture2D" uid="uid://d2orcfdtjq2pq" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/goblin_run_anim_f3.png" id="20_xa8c5"]
 [ext_resource type="Script" uid="uid://bblaq1vj5kxod" path="res://door_open.gd" id="24_f1jbl"]
-[ext_resource type="Texture2D" uid="uid://bioylb4ul2av6" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/muddy_anim_f0.png" id="25_5b14r"]
-[ext_resource type="PackedScene" uid="uid://dclfxak0qm0gw" path="res://mud_projectile.tscn" id="25_bnpwn"]
 [ext_resource type="AudioStream" uid="uid://emdob14a7i08" path="res://sounds/freefantasysfxtommusic/SFX/Footsteps/Stone/Stone Walk 1.ogg" id="25_lwlx3"]
 [ext_resource type="AudioStream" uid="uid://brx6fjbidl570" path="res://sounds/freefantasysfxtommusic/SFX/Footsteps/Stone/Stone Walk 2.ogg" id="26_0de7l"]
-[ext_resource type="Texture2D" uid="uid://y7xdqjysnb78" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/muddy_anim_f1.png" id="26_bnpwn"]
-[ext_resource type="Texture2D" uid="uid://dn0dd3uoo0v0y" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/muddy_anim_f2.png" id="27_36jdj"]
 [ext_resource type="AudioStream" uid="uid://sig3s3cton6h" path="res://sounds/freefantasysfxtommusic/SFX/Footsteps/Stone/Stone Walk 3.ogg" id="27_87ddb"]
-[ext_resource type="AudioStream" uid="uid://7c7pvausheuo" path="res://sounds/Minifantasy_Dungeon_SFX/17_orc_atk_sword_1.wav" id="27_klri6"]
 [ext_resource type="AudioStream" uid="uid://d21k5k8htkfuq" path="res://sounds/freefantasysfxtommusic/SFX/Footsteps/Stone/Stone Walk 4.ogg" id="28_mljfx"]
-[ext_resource type="Texture2D" uid="uid://bajqxu1jcb0db" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/muddy_anim_f3.png" id="28_xfvwf"]
 [ext_resource type="AudioStream" uid="uid://jvaej5726log" path="res://sounds/freefantasysfxtommusic/SFX/Footsteps/Stone/Stone Walk 5.ogg" id="29_qpefm"]
-[ext_resource type="Script" uid="uid://bbefta1lpqh0f" path="res://pointy.gd" id="33_7knny"]
+[ext_resource type="PackedScene" uid="uid://duhj5dt3slr61" path="res://goblin.tscn" id="30_7knny"]
 [ext_resource type="PackedScene" uid="uid://8vepqhl4tryp" path="res://arrow_projectile.tscn" id="34_082n1"]
-[ext_resource type="AudioStream" uid="uid://bmhiulfewacnn" path="res://sounds/freefantasysfxtommusic/SFX/Spells/mudshot.ogg" id="34_r62pu"]
 [ext_resource type="Texture2D" uid="uid://c1dexn2tle4t1" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/weapon_bow_2.png" id="35_aa0lp"]
 [ext_resource type="Script" uid="uid://cevffci2qirxs" path="res://bow.gd" id="35_iu0sx"]
 [ext_resource type="Texture2D" uid="uid://bw8kvtvo1ufrx" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/weapon_bow.png" id="36_iu0sx"]
-[ext_resource type="Script" uid="uid://sqiusg16xyyp" path="res://muddy.gd" id="37_kq12w"]
 [ext_resource type="AudioStream" uid="uid://4kiq032brx18" path="res://sounds/freefantasysfxtommusic/SFX/Attacks/Bow Attacks Hits and Blocks/Bow Attack 1.ogg" id="39_l1i01"]
 [ext_resource type="PackedScene" uid="uid://bmxlj3lsgh06t" path="res://room_2.tscn" id="41_87ddb"]
+[ext_resource type="PackedScene" uid="uid://p3gy2gn8tdln" path="res://muddy.tscn" id="42_eu6ph"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qhcbd"]
 texture = ExtResource("1_feb5d")
@@ -2118,7 +2102,10 @@ texture = ExtResource("3_7jktm")
 [sub_resource type="TileSet" id="TileSet_7jktm"]
 sources/0 = SubResource("TileSetAtlasSource_36jdj")
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_hb5m1"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vaj68"]
+size = Vector2(9.05494, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7knny"]
 animations = [{
 "frames": [{
 "duration": 0.9,
@@ -2163,10 +2150,10 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_iotsf"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_082n1"]
 size = Vector2(15, 19)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_4v2jo"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_xex6t"]
 animations = [{
 "frames": [],
 "loop": true,
@@ -2191,79 +2178,13 @@ animations = [{
 "speed": 6.0
 }]
 
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_tb2lt"]
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_aa0lp"]
 streams_count = 5
 stream_0/stream = ExtResource("25_lwlx3")
 stream_1/stream = ExtResource("26_0de7l")
 stream_2/stream = ExtResource("27_87ddb")
 stream_3/stream = ExtResource("28_mljfx")
 stream_4/stream = ExtResource("29_qpefm")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5b14r"]
-size = Vector2(10, 10)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_bnpwn"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("13_e36ub")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_hb5m1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_x5p1p")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_qhcbd")
-}],
-"loop": true,
-"name": &"goblin_idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("17_f1jbl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_vaj68")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_i2p71")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_xa8c5")
-}],
-"loop": true,
-"name": &"goblin_run",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vaj68"]
-size = Vector2(9.05494, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dhpj7"]
-size = Vector2(18.0488, 14.9831)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_7knny"]
-animations = [{
-"frames": [{
-"duration": 0.9,
-"texture": ExtResource("25_5b14r")
-}, {
-"duration": 0.9,
-"texture": ExtResource("26_bnpwn")
-}, {
-"duration": 0.9,
-"texture": ExtResource("27_36jdj")
-}, {
-"duration": 0.9,
-"texture": ExtResource("28_xfvwf")
-}],
-"loop": true,
-"name": &"spit",
-"speed": 5.0
-}]
 
 [node name="Start" type="Node2D"]
 scale = Vector2(0.993936, 1.00339)
@@ -2314,47 +2235,64 @@ tile_set = SubResource("TileSet_ryrav")
 tile_map_data = PackedByteArray("AAABAP7/AAARAAYAAAABAP//AAARAAcAAAACAP//AAASAAcAAAACAP7/AAASAAYAAAA=")
 tile_set = SubResource("TileSet_7jktm")
 
+[node name="goblin" parent="." instance=ExtResource("30_7knny")]
+position = Vector2(200, 120)
+
+[node name="Door_open" type="Area2D" parent="."]
+position = Vector2(231.403, 84.7128)
+collision_layer = 2
+script = ExtResource("24_f1jbl")
+target_scene = ExtResource("41_87ddb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door_open"]
+position = Vector2(6.19888e-06, 0)
+shape = SubResource("RectangleShape2D_vaj68")
+
+[node name="muddy" parent="." instance=ExtResource("42_eu6ph")]
+position = Vector2(183.11, 159.459)
+
 [node name="elf" type="CharacterBody2D" parent="." groups=["player"]]
 unique_name_in_owner = true
-position = Vector2(250, 150)
+position = Vector2(259.574, 166.436)
 collision_mask = 2
 script = ExtResource("4_iotsf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="elf"]
-position = Vector2(0, -2)
-sprite_frames = SubResource("SpriteFrames_hb5m1")
+position = Vector2(0, -1)
+sprite_frames = SubResource("SpriteFrames_7knny")
 animation = &"elf_hit"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="elf"]
 auto_translate_mode = 1
-position = Vector2(0, -1)
-shape = SubResource("RectangleShape2D_iotsf")
+shape = SubResource("RectangleShape2D_082n1")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="elf"]
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="elf/CanvasLayer"]
-offset_left = 246.0
-offset_top = 77.0
-offset_right = 310.0
-offset_bottom = 117.0
+offset_left = 262.0
+offset_top = 24.0
+offset_right = 326.0
+offset_bottom = 64.0
 texture_under = ExtResource("16_dhpj7")
 texture_progress = ExtResource("17_7knny")
 script = ExtResource("15_36jdj")
+metadata/_edit_use_anchors_ = true
 
 [node name="InventoryGui" parent="elf/CanvasLayer" instance=ExtResource("19_eu6ph")]
-offset_left = 282.0
-offset_top = 88.0
-offset_right = -172.0
-offset_bottom = -156.0
+offset_left = 297.0
+offset_top = 38.0
+offset_right = -157.0
+offset_bottom = -206.0
+metadata/_edit_use_anchors_ = true
 
 [node name="bow" type="CharacterBody2D" parent="elf"]
-position = Vector2(18.629, 6.46957)
+position = Vector2(12, 0)
 script = ExtResource("35_iu0sx")
 mud = ExtResource("34_082n1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="elf/bow"]
 position = Vector2(-2.6226e-06, -3.8147e-06)
-sprite_frames = SubResource("SpriteFrames_4v2jo")
+sprite_frames = SubResource("SpriteFrames_xex6t")
 animation = &"shoot"
 
 [node name="Marker2D" type="Marker2D" parent="elf/bow"]
@@ -2372,62 +2310,4 @@ visible = false
 position = Vector2(-93.048, 45.338)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="elf"]
-stream = SubResource("AudioStreamRandomizer_tb2lt")
-
-[node name="goblin" type="CharacterBody2D" parent="." groups=["enemy"]]
-position = Vector2(200, 120)
-script = ExtResource("14_x5p1p")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="goblin"]
-position = Vector2(0, 1)
-shape = SubResource("RectangleShape2D_5b14r")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="goblin"]
-position = Vector2(-1, -1)
-sprite_frames = SubResource("SpriteFrames_bnpwn")
-animation = &"goblin_run"
-frame_progress = 0.128271
-
-[node name="AttackCooldownTimer" type="Timer" parent="goblin"]
-
-[node name="attacknoises" type="AudioStreamPlayer2D" parent="goblin"]
-stream = ExtResource("27_klri6")
-volume_db = -2.0
-
-[node name="Door_open" type="Area2D" parent="."]
-position = Vector2(231.403, 84.7128)
-collision_layer = 2
-script = ExtResource("24_f1jbl")
-target_scene = ExtResource("41_87ddb")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Door_open"]
-position = Vector2(6.19888e-06, 0)
-shape = SubResource("RectangleShape2D_vaj68")
-
-[node name="muddy" type="CharacterBody2D" parent="." groups=["enemy"]]
-position = Vector2(183.11, 159.459)
-script = ExtResource("37_kq12w")
-mud = ExtResource("25_bnpwn")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="muddy"]
-position = Vector2(-9.53674e-06, 0)
-shape = SubResource("RectangleShape2D_dhpj7")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="muddy"]
-position = Vector2(-1.90735e-06, 0)
-sprite_frames = SubResource("SpriteFrames_7knny")
-animation = &"spit"
-frame_progress = 0.0676391
-
-[node name="POINTY" type="Marker2D" parent="muddy"]
-position = Vector2(21.1281, -0.996621)
-script = ExtResource("33_7knny")
-
-[node name="ShootyCooldown" type="Timer" parent="muddy"]
-
-[node name="mudshot" type="AudioStreamPlayer2D" parent="muddy"]
-stream = ExtResource("34_r62pu")
-
-[node name="muddy_mud" parent="muddy" instance=ExtResource("25_bnpwn")]
-visible = false
-position = Vector2(-29.177, 24.916)
+stream = SubResource("AudioStreamRandomizer_aa0lp")

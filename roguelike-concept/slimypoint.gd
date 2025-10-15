@@ -1,0 +1,23 @@
+extends Marker2D
+#code based on GPT input
+func pointAt(attachedBeing: Node2D, direction):
+	var distance = 20
+	var offset: Vector2 = Vector2.ZERO
+	match direction.to_lower():
+		"up":
+			offset = Vector2(0,distance)
+		"down":
+			offset = Vector2(0,-distance)
+		"left":
+			offset = Vector2(distance,0)
+		"right":
+			offset = Vector2(-distance,0)
+		"upleft":
+			offset = Vector2(distance,distance)
+		"downright":
+			offset = Vector2(-distance,-distance)
+		"downleft":
+			offset = Vector2(distance,-distance)
+		"upright":
+			offset = Vector2(-distance,distance)
+	self.global_position = attachedBeing.global_position + offset

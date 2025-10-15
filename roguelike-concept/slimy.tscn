@@ -1,0 +1,60 @@
+[gd_scene load_steps=12 format=3 uid="uid://dbjutbit0x8vu"]
+
+[ext_resource type="Script" uid="uid://camk5pr4f08c4" path="res://slimy.gd" id="1_axdrm"]
+[ext_resource type="PackedScene" uid="uid://bs1ibom1qomtr" path="res://slime_projectile.tscn" id="2_tampl"]
+[ext_resource type="Texture2D" uid="uid://b6f7hpv6ieu2i" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/swampy_anim_f0.png" id="3_mu2ei"]
+[ext_resource type="Texture2D" uid="uid://4r1erhjqhmo" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/swampy_anim_f1.png" id="4_sv0jb"]
+[ext_resource type="Texture2D" uid="uid://cmu4egdnhfra0" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/swampy_anim_f2.png" id="5_8fnoo"]
+[ext_resource type="Texture2D" uid="uid://buqf8364aw7ed" path="res://Art/0x72_DungeonTilesetII_v1.7/frames/swampy_anim_f3.png" id="6_25qg4"]
+[ext_resource type="Script" uid="uid://dmma32p1efmjn" path="res://slimypoint.gd" id="7_127r1"]
+[ext_resource type="AudioStream" uid="uid://bmhiulfewacnn" path="res://sounds/freefantasysfxtommusic/SFX/Spells/mudshot.ogg" id="8_alcf1"]
+[ext_resource type="PackedScene" uid="uid://dclfxak0qm0gw" path="res://mud_projectile.tscn" id="9_oaiu4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_42pht"]
+size = Vector2(18.0488, 14.9831)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_algyo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_mu2ei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_sv0jb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8fnoo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_25qg4")
+}],
+"loop": true,
+"name": &"spit",
+"speed": 5.0
+}]
+
+[node name="slimy" type="CharacterBody2D" groups=["enemy"]]
+script = ExtResource("1_axdrm")
+mud = ExtResource("2_tampl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-9.53674e-06, 0)
+shape = SubResource("RectangleShape2D_42pht")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1.90735e-06, 0)
+sprite_frames = SubResource("SpriteFrames_algyo")
+animation = &"spit"
+
+[node name="slimypoint" type="Marker2D" parent="."]
+position = Vector2(21.1281, -0.996621)
+script = ExtResource("7_127r1")
+
+[node name="ShootyCooldown" type="Timer" parent="."]
+
+[node name="mudshot" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_alcf1")
+
+[node name="muddy_mud2" parent="." instance=ExtResource("9_oaiu4")]
+visible = false
+position = Vector2(-29.177, 24.916)
